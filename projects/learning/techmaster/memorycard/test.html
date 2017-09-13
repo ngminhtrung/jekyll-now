@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Memory Card Game - Trung (Travis) Nguyen @ Techmaster Vietnam</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="jquery.flip.min.js"></script>
+	<style type="text/css">
+		
+		#card {
+			width: 200px;
+			margin:;
+			background-color: green;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="card"> 
+		<div class="front"> 
+			Front content
+		</div> 
+		<div class="back">
+			Back content
+		</div> 
+	</div>
+
+	<script type="text/javascript">
+
+	var	clickCount = 0;
+
+		$("#card").flip({
+			trigger: 'manual'
+		});
+
+
+		$("#card").click(function () {
+
+			clickCount +=1; 
+			if (clickCount % 2 == 0) {$("#card").flip(true);}
+			else {$("#card").flip(false);}
+
+			console.log(clickCount);
+		});
+
+		
+
+	</script>
+
+</body>
+</html>
