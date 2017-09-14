@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Techmaster Fitness club - Registration Form</title>
+	<!-- Latest compiled and minified CSS -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+
+		.body {
+
+
+		}
+		
+		.container {
+			width: 600px;
+			margin-top: 10px;
+			padding: 30px;
+		}
+
+		.equal {
+			display: flex;
+			display: -webkit-flex;
+			flex-wrap: wrap;
+		}
+
+		.col-sm-6 {
+			padding-top: 10px;
+		}
+
+		#info {
+			background-color: #DFF0D8;
+		}
+
+	</style>
+
+
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="panel panel-default panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title text-center"> Techmaster Fitness Club - Welcome</h3> 
+			</div>
+			<div class="panel-body">
+
+				<p>Hello <span class="firstName"></span> !</p>
+				<p>Welcome you to the Techmaster Fitness Club! </p>
+				<p class="text-justify">Please read again your personal information below. In case of any mistake, please email us at <a href="mailto:fitness-club@techmaster.vn?Subject=Hello%20again" target="_top">fitness-club@techmaster.vn</a> for correction. Thanks for your interest and support in Techmaster Fitness Club! </p>
+				<p>Best Regards</p>
+				<p>On behalf of the club president </p>
+				<p>Phan Khuê</p>
+
+				<div class="panel panel-default" id="info">
+					<div class="panel-body">
+						<h5>Your personal information:</h4>
+
+							<dl class="dl-horizontal">
+								<dt>Name</dt>
+								<dd><span class="firstName">  </span></dd>
+								<dt>Gender</dt>
+								<dd><span id="gender">  </span></dd>
+								<dt>Email Address:</dt>
+								<dd><span id="emailAdd"> </span></dd>
+								<dt>Mobile Number:</dt>
+								<dd><span id="mobileNumber"> </span></dd>
+								<dt>Year of Birth:</dt>
+								<dd><span id="yearOfBirth"> </span></dd>
+							</dl>
+
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<script>
+
+			formData = getSearchObject();
+
+
+			function getSearchObject() {
+
+
+				if (location.search === "") return {};
+
+				var o = {},
+			// nvPairs stand for name-value Paris 
+			// location.search is querrystring part of the url (the part after and includes "?")
+			// get nvParis by substr (deleting) the 1st character ("?"), replacing all "+" characters (appearing because of spaces in original input values), then splitting the string upon character "&". 
+
+			nvPairs = location.search.substr(1).replace(/\+/g, " ").split("&");
+
+			// looping through each element of nvParis
+
+			nvPairs.forEach( function (pair) {
+				// searching for location of "="
+				var e = pair.indexOf('=');
+				// getting the name. If "=" doesn't exist, return the element itself. Otherwise, taking only string from position 0 until position e. Decode the result to get rid of "%" characters. 
+				var n = decodeURIComponent(e < 0 ? pair : pair.substr(0,e)),
+				// getting the value. If "=" doesn't exist, return the null, otherwise, taking only string from position e + 1 to pair.length - e. 
+				v = (e < 0 || e + 1 == pair.length) 
+				? "" : 
+				decodeURIComponent(pair.substr(e + 1,pair.length - e));
+				
+				// not really understand the below part
+				if (!(n in o))
+					o[n] = v;
+				else if (o[n] instanceof Array)
+					o[n].push(v);
+				else
+					o[n] = [o[n] , v];
+			});
+			return o;
+		}
+
+		function loadData(formData) {
+
+
+			if (formData["gender"] === "Female") {
+				document.getElementsByClassName("firstName")[0].innerText = "Ms. " + upCaseFirstCharacter(formData["firstName"]);
+
+				document.getElementById("info").style.backgroundColor ="#F2DEDE";
+			}
+
+			else if (formData["gender"] === "Male") {
+
+				document.getElementsByClassName("firstName")[0].innerText = "Mr. " + upCaseFirstCharacter(formData["firstName"]);
+				document.getElementById("info").style.backgroundColor ="#DFF0D8";
+			} else {
+
+				document.getElementsByClassName("firstName")[0].innerText = upCaseFirstCharacter(formData["firstName"]);
+				document.getElementById("info").style.backgroundColor ="#DFF0D8";
+			}
+
+			document.getElementsByClassName("firstName")[1].innerText = upCaseFirstCharacter(formData["lastName"]) + " " + upCaseFirstCharacter(formData["firstName"]);
+			
+			if (formData["gender"] === undefined) 
+				document.getElementById("gender").innerText ="";
+			else 
+				document.getElementById("gender").innerText = formData["gender"];
+			
+			document.getElementById("emailAdd").innerText = formData["emailAdd"];
+			document.getElementById("mobileNumber").innerText = formData["mobileNumber"];
+			document.getElementById("yearOfBirth").innerText = formData["yearOfBirth"];
+		}
+
+
+		loadData(formData);
+
+		function upCaseFirstCharacter(str) {
+			str = str.toLowerCase().split(" ");
+			str2 = "";
+			for (var i=0; i<str.length; i++) {
+
+				str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+				str2 = str2.concat(" ", str[i]);
+
+			}
+			return str2;
+		}
+
+	</script>
+</body>
+</html>
