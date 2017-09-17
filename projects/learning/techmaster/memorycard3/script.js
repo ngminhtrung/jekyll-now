@@ -2,7 +2,7 @@ var imageNumber = 16;
 var pics;
 var	totalFlippedOn = 0;
 var normalLevelDuration = 40000;
-var hardLevelDuration = 20000; 
+var hardLevelDuration = 60000; 
 var remainingTime = 0;;
 var point = 0;
 
