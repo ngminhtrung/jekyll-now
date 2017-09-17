@@ -41,6 +41,8 @@ function configMusic() {
 	bgMusic.currentTime = 0;
 	correctSound.volume = 0.3;
 	incorrectSound.volume = 0.3;
+	booMusic.volume = 0.3;
+	congratsMusic.volume = 0.3;
 	$('#volumeBtn')[0].value = "volumeOn";
 	$('#volumeBtn')[0].children[0].className = "glyphicon glyphicon-volume-up";
 }
