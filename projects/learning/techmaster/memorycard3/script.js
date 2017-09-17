@@ -2,7 +2,7 @@ var imageNumber = 16;
 var pics;
 var	totalFlippedOn = 0;
 var normalLevelDuration = 40000;
-var hardLevelDuration = 60000; 
+var hardLevelDuration = 20000; 
 var remainingTime = 0;;
 var point = 0;
 
@@ -23,7 +23,7 @@ incorrectSound = document.getElementById("incorrect");
 $(function(){
 
 	start();
-	reset();
+	
 
 });
 
@@ -31,6 +31,7 @@ function start() {
 	
 	$("#beginningModal").modal({backdrop: 'static', keyboard: false});
 	configMusic();
+	point = 0;
 	
 }
 
@@ -98,11 +99,13 @@ function runGameAtLevel(level) {
 
 				if (remainingTime < 0) {
 					clearInterval(running);
-					$("#endingModal").modal();
+					$("#endingModal").modal({backdrop: 'static', keyboard: false});
 					bgMusic.pause();
 					booMusic.play();
 				} else {
 					remainingTime -= 50;
+					console.log(remainingTime);
+					console.log(point);
 					currentProgress = remainingTime/normalLevelDuration * 100 + "%";
 					$("#progress").css("width",currentProgress);
 					if (point == imageNumber/2) {
