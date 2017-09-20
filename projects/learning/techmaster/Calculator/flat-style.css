@@ -1,0 +1,245 @@
+
+body {
+
+	background-color: #2C3E50;
+
+}
+
+.description {
+	text-align: center;
+}
+
+h1 {
+	color: rgba(236, 240, 241, 1);
+	font-family: 'Quicksand', sans-serif;;
+	margin-top: 20px;
+	padding: 0;
+}
+
+h2 {
+	color: rgba(236, 240, 241, 1);
+	font-family: 'Quicksand', sans-serif;
+	margin-top: 5px;
+	padding: 0;
+}
+
+#btn-change {
+	color: white;
+	background-color: rgba(52, 152, 219, 1);
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    padding: 2px;
+    width: 100px;
+}
+
+
+.calculator {
+	margin: auto;
+	margin-top: 30px;
+	transition: width 0.2s ease-in-out;
+	width: 315px;
+}
+
+
+
+#userExpression {
+
+	color: #61c39a;
+	background-color: #ffffff;
+	font: 24px Monospace, sans-serif;
+	height: 60px;
+	line-height: 60px;
+	margin: 0;
+	opacity: 0.9;
+	text-align: right;
+	
+}
+
+#result {
+	color: #61c39a;
+	background-color: #ffffff;
+	font: 24px Monospace, sans-serif;
+	height: 60px;
+	line-height: 60px;
+	margin: 0;
+	opacity: 0.95;
+	text-align: right;
+}
+
+.option {
+	height: 30px;
+}
+
+.keyboard {
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.basic {
+	display: grid;
+	float: right;
+	grid-template-columns: repeat(4,75px);
+	grid-gap: 5px;
+}
+
+
+
+.btn {
+    background-color: rgba(52, 152, 219, 1); /* #393535 */
+    border: none;
+    color: white;
+    font-size: 16px;
+    height: 50px;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.operator-btn {
+	background-color: rgba(231, 76, 60, 1);
+	color: white;
+}
+
+.btn-advance {
+	background-color: rgba(52, 152, 219, 0.5);
+}
+
+#slide_wrapper {
+    	
+	display: block;
+	float: left;
+	overflow-x: hidden;
+	transition: width 0.2s ease-in-out;
+	width: 0px;
+ 
+}
+
+
+#RadDeg {
+	
+	color: #ffffff;
+	display: inline-block;
+	float: right;
+	
+	
+}
+
+#Rad, #Deg {
+
+	
+	height: 50px;
+	vertical-align: middle;
+	width: 20px;
+
+}
+
+#advanced_others {
+	display: grid;
+	float: right;
+	grid-template-columns: repeat(3,75px);
+	grid-gap: 5px;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+    border: 0;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    display: inline-block;
+    float: right;
+    position: relative;
+
+}
+
+#History, #Extend {
+    background-color: #2C3E50;
+    border: none;
+    color: white;
+    height: 30px;
+    padding: 0;
+    text-align: center;
+    width: 135px;
+    
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    background-color: #f9f9f9;
+    color: rgba(178, 126, 10, 1);
+    display: none;
+    font-size: 14px;
+   	position: absolute; 
+    width: 300px;
+    z-index: 1;    
+    
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    
+}
+
+div#myDropdown ul {
+	
+    margin: 0px;
+    padding: 0px;
+    width: 300px;
+}
+
+div#myDropdown ul li {
+	height: 20px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	display: block;
+	margin: 0;
+}
+
+div#myDropdown ul li p.r {
+	margin-right: 10px;
+	float: right;
+	text-align: right;
+	width: 45%;
+}
+
+div#myDropdown ul li p.l {
+	
+	float: left;
+	margin-left: 10px;
+	text-align: left;
+	width: 45%;
+}
+
+.historyRow {
+	height: 20px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+	display:block;
+}
+
+
+
+
