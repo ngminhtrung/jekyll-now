@@ -1,10 +1,10 @@
 ---
 id: 73
 title: Tại sao tôi chuyển sang nghề lập trình
-date: 2017-07-25T22:30:51+00:00
+date: 2017-07-25 22:30:51+00:00
 author: ngminhtrung
 layout: post
-guid: http://travisnguyen.net/?p=73
+guid: 
 permalink: /tai-sao-toi-chuyen-sang-nghe-lap-trinh/
 categories:
   - Không phân nhóm
