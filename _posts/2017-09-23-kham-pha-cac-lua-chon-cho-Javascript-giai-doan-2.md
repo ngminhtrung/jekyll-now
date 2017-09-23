@@ -1,6 +1,6 @@
 ---
 id: 73
-title: Tại sao tôi chuyển sang nghề lập trình
+title: Hello Javascript giai đoạn trưởng thành
 date: 2017-07-25 22:30:51+00:00
 author: ngminhtrung
 layout: post
