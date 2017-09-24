@@ -1,7 +1,7 @@
 ---
 id: 65
-title: 'Trò chuyện với Thuận Phạm - CTO Uber Global'
-date: 2017-07-25 
+title: 'Trò chuyện với Thuận Phạm CTO Uber Global'
+date: 2017-07-25T16:53:32+00:00
 author: ngminhtrung
 layout: post
 guid: 
