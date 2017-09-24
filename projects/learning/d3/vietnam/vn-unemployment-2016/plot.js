@@ -61,10 +61,10 @@ var controls = d3.select("body")
 var sort_btn = controls.append("button")
 					.html("Sort data: ascending")
 					.attr("state", 0)
-					
+
 
 function drawAxis(params) {
-	
+
 	if (params.intialize === true) {
 		// draw the gridlines and axes
 		this.append("g")
@@ -98,7 +98,7 @@ function drawAxis(params) {
 			.attr("x",0 - (height / 2))
 			.attr("dy", "1em")
 			.style("text-anchor", "middle")
-			.text("Unemployment Rate");    
+			.text("Unemployment Rate");
 
 		//This is the x label
 		this.select(".x.axis")
@@ -114,14 +114,14 @@ function drawAxis(params) {
             .attr("x", width/2)
             .attr("y", -50)
             .style("text-anchor", "middle")
-            .text(("Unemployment Rate in Vietnam - Data of 2015").toLocaleUpperCase());   
+            .text(("Unemployment Rate in Vietnam - Data of 2015").toLocaleUpperCase());
 
         this.append("text")
             .attr("x", width/2)
             .attr("y", -30)
             .style("text-anchor", "middle")
-            .text("Source: General Statistics Office Of Vietnam"); 
-      
+            .text("Source: General Statistics Office Of Vietnam");
+
 
 	} else if (params.intialize === false) {
 
@@ -154,8 +154,8 @@ function plot(params) {
 	drawAxis.call(this, params)
 
     // enter()
-    
-    
+
+
 
 	this.selectAll(".bar")
 		.data(data)
@@ -171,8 +171,8 @@ function plot(params) {
 			.on("mouseout", function(d,i){
 				d3.select(this).style("fill", ordinalColorScale(i));
 			});
-			
-			
+
+
 
 	this.selectAll(".bar-label")
 		.data(data)
@@ -218,20 +218,20 @@ function plot(params) {
             .text(function(d){
                 return (d.age1) + "%";
             });
-	
+
 	// exit()
 
 	this.selectAll(".bar")
 		.data(params.data)
 		.exit()
 		.remove();
-	
+
 	this.selectAll(".bar-label")
 		.data(params.data)
 		.exit()
 		.remove();
 
-	
+
 
 }
 

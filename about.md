@@ -1,15 +1,23 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Projects
+permalink: /project/
 ---
 
-Some information about you!
+List of projects I've made during the learning of JavaScript and front-end web design 
 
-### More Information
+### AngularJS
 
-A place to include any other types of information that you'd like to include about yourself.
+AngularJS 
+
+### Javascript
+
+Javascript
+
+### D3 - Data Visualization
+
+D3 - Data Visualization
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+Please email me at minhtrung dot nguyen @ live dot com
