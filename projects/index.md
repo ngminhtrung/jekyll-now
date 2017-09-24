@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /projects/projects.md
+title: A collection of my projects
+permalink: 
 ---
 
 Some information about you!
