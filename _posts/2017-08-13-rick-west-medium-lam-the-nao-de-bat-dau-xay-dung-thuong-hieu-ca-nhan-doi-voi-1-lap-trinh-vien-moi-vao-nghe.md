@@ -1,104 +1,88 @@
 ---
 id: 102
-title: '[Zell Well] Lựa chọn nào cho việc học Javascript'
-date: 2017-09-23T16:53:32+00:00
+title: '[Rick West @ Medium] &#8211; Làm thế nào đê bắt đầu xây dựng thương hiệu cá nhân đối với 1 lập trình viên mới vào nghề'
+date: 2017-08-13T16:53:32+00:00
 author: ngminhtrung
 layout: post
-guid: 
-permalink: 
+guid: http://travisnguyen.net/?p=102
+permalink: /rick-west-medium-lam-the-nao-de-bat-dau-xay-dung-thuong-hieu-ca-nhan-doi-voi-1-lap-trinh-vien-moi-vao-nghe/
 categories:
   - Dịch
 tags:
-  - javascript
-  - front-end
-  - framework
-  - node
-  - server
-  - database
-  - mongoDB
-  - Angular
-  - React
-  - Zell Liew
+  - branding
+  - developer
+  - Medium
+  - new
+  - turned
 ---
+Sau khi tôi đọc bài gốc trên <a href="https://medium.freecodecamp.org/building-your-personal-brand-as-a-new-web-developer-f6d4150fd217" target="_blank" rel="noopener">Medium,</a> thì trên [TechTalk](https://techtalk.vn/bat-dau-xay-dung-thuong-hieu-ca-nhan-nhu-mot-lap-trinh-vien-moi.html) đã có ngay bài dịch. Tuy vậy, do thấy bài dịch này có mùi Google Translate tương đối nặng, nên tôi quyết định dịch lại và bổ sung thêm liên kết đến một vài bài khác của tác giả (mà thiếu nó, người lập trình viên mới sẽ thiếu một bức tranh đầy đủ).
 
-Đây là 1 bài dịch từ 1 email của Zell Liew với tiêu đề "JSR - Exploring JavaScript peripherals (The Adult Phase)". Tôi đăng ký nhận thư của anh chàng này từ lúc nào không nhỡ, và thường nhận được những email có nội dung chưa được thú vị lắm. Email này trong chuỗi "Con đường khám phá JavaScript" của Zell, và anh ta đã gửi 1 - 2 thư trước về gia đoạn sơ sinh, rồi gia đoạn teen. Giờ là phần "trưởng thành" (Adult Phase). Vì tò mò, tôi đã đọc chứ không xoá đi như thường lệ, và quả thực tác giả nhắc đến những điều chưa ai nói với tôi. Còn bạn, đã ai nói với bạn là sau khi học cơ bản về HTML, CSS và Javascript, bạn muốn đi tiếp với Javascript thì sẽ nên đi như thế nào? một rừng lựa chọn ngoài kia, cái nào nghe cũng quen tai mà chẳng hiểu gì cả, từ front-end framework, node, nodejs, database, etc... Ở bài này, tôi sẽ dịch để bạn thấy tác giả đi thẳng vào vấn đề học và làm cái gì, không phân tích quá nhiều, khỏi mất công đau đầu.  
+Lưu ý: Ngoài bài này, các bạn nên đọc thêm cái khác liên quan trên blog của Rick West để hiểu thêm [về anh](https://rickwest.co.uk/about-me), [về lý do tại sao anh đổi nghề](http://rickwest.co.uk/why-programming) và [quá trình chuyển đổi đó đã phải có những tính toán, những rủi ro như thế nào](https://rickwest.co.uk/first-web-development-job). Khi tôi thấy anh ghi dòng chữ &#8220;_Former Heating Engineer <span style="color: #ff0000;">turned</span> PHP Developer. Loving the new adventure! _&#8221; dưới tên anh trên Medium, tôi thấy đồng cảm vô cùng, vì bản thân cũng là một kỹ sư điện/ kỹ sư dự án chuyển sang làm Front-End Developer. Những bài viết của anh về việc &#8220;turning&#8221; này rất chân thực, thể hiện rành mạch những lo lắng của 1 người bố của 2 đứa trẻ, người chồng trong 1 gia đình trước 1 quyết định lớn của đời. Dù sao anh cũng đã thực hiện nó một cách thành công. Xin chúc mừng anh!
 
-= = = = = = = = = = = = 
+======================
 
-Sau khi đã đạt đến một trình độ cơ bản nhất định về JavaScript, đây là các lựa chọn bạn có thể xem xét:
-1. Học một front-end framework nào đó (như Angular, React)
-2. Học Node để làm backend.
-3. Học những kiến thức Javascript nâng cao. 
+**Làm thế nào đê bắt đầu xây dựng thương hiệu cá nhân đối với 1 lập trình viên mới vào nghề**
 
-<h2>Học front-end frameworks</h2>
+Từ khi bắt đầu viết bài trên Medium, tôi để ý rằng lượng truy cập vào tài khoản blog và mạng xã hội của mình tăng lên nhất định. Điều đấy khiến tôi thấy được động viên rất nhiều, cho dù đó chỉ là một lượng tăng nhỏ. Điều đấy cũng khiến tôi suy nghĩ về ý tưởng chưa bao giờ có trong tâm trí tôi từ trước đến giờ, thứ mà tôi luôn bỏ qua, đấy là thương hiệu cá nhân của tôi.
 
-Việc sử dụng một framework nào đó đồng nghĩ với việc bạn đã bị khóa trong không gian tư duy của framework đấy. Việc thay đổi là rất tốt kém. Vì thế trước khi chọn học cái nào, hãy tự hỏi bản thân bạn cần cái gì. 
+Xin đừng hiểu nhầm, tôi đã một công việc tuyệt vời và không hề đang tìm việc mới. Chỉ là tôi đã đánh giá thấp sự quan trọng của việc mình hiện diện trên thế giới trực tuyến như thế nào, nhất là qua một sự kiện tuyển dụng tại công ty tôi tuần trước. Nơi tôi làm việc nhận được rất nhiều đơn ứng tuyển cho một vài vị trí.  Thật đáng ngạc nhiên, tôi thấy sếp mình google tên của các ứng viên để đánh giá xem họ &#8220;có gì&#8221; trên mạng, bao gồm bất kỳ những đóng góp/ thông tin tích cực về họ. Sếp của tôi không sử dụng Facebook để tìm thông tin mà ông hứng thú với việc:
 
-Chẳng phải ai cũng cần một framework, bởi đôi khi, Javascript thuần đã là quá đủ. Thử đọc <a href="https://zellwk.com/blog/learn-tools/?ck_subscriber_id=131432563">bài này (08.03.2017) </a> nhé trước khi ra quyết định. 
+  * Liệu ứng viên này có blog hay không?
+  * Anh ta có sở thích gì đặc biệt?
+  * Anh ta có dự án nào là đam mê ngoài công việc?
 
-*Ok, giờ giả sử ta thực sự cần một framework chứ JavaScript thuần không đủ, vậy thì sao?*
+Điều này khiến tôi nghĩ về &#8220;thương hiệu cá nhân&#8221; của mình, và thôi thúc ám ảm tôi bắt đầu xây dựng hình ảnh online của mình. Dưới đây là chia sẻ của tôi với những gì tôi đã làm, đã quan sát, và cả vài hướng dẫn đơn giản cho bạn nữa.
 
-Bạn cần quyết định xem học cái gì. Đây là một câu hỏi hại não mà nhiều người đã chết tắc ở đó. 
+<span style="color: #0000ff;"><strong>MỘT: Hãy bắt đầu viết blog và duy trì nó</strong></span>
 
-Hàng tá bài viết trên mạng phân tích và so sánh các frameworks, nhưng tốt nhất bạn chỉ nên dùng một (hoặc tối đa 2 tiếng) để đọc mấy bài đó thôi, sau đó thì quẳng đi và đi theo tiếng gọi trái tim, thấy thích thích cái gì thì học. 
+<p id="7497" class="graf graf--p graf-after--h3">
+  Nếu bạn chưa có blog nào, hãy thử và mua tên miền mang tên bạn, ví dụ {tên-bạn}.com. Nếu không thể lấy được .com, thì các lựa chọn khác cũng hoàn toàn chấp nhận được. Nếu bạn đang làm kinh doanh, thì một tên miền sáng tạo sẽ rất hữu ích. Tuy vậy, do đây là thương hiệu riêng của bạn, cho nên cứ làm nó trông &#8220;cá nhân&#8221; là được.
+</p>
 
-Việc chọn framework nào chưa quan trọng, kể cả việc bạn có chọn sai. Cứ tiếp tục bước tới và học framework đấy một cách bài bản đã. 
+Trước khi bạn bình luận gì hoặc dừng đọc tiếp bài viết này, hãy lưu ý là việc viết blog (blogging) còn lâu mới chết. Đây không phải việc đạt được 1,000 lượt truy cập vào blog của bạn, mà đây là việc phát triển một thương hiệu cá nhân. Hãy nghĩ trong tương lai khi ai đó (công ty mới/ khách hàng) gõ tên bạn vào Google thì điều gì sẽ hiện ra?
 
-Tôi nói vậy bởi các framework đều tương tự nhau, đều là những điều giống nhau (routing, DOM manipulation, kiểm soát states, v.v.). Một khi bạn đã vững framework đầu tiên, bạn sẽ dễ dàng tiếp cận các framework còn lại. 
+Bạn không cần làm blog của mình trông bóng bẩy hoặc đắt tiền. Chỉ cần một blog <a href="https://wordpress.org/" target="_blank" rel="noopener">WordPress</a> với theme miễn phí là quá đủ để bắt đầu. Bạn cũng có thể dùng những nền tảng viết blog khác như <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a> chẳng hạn. Với tôi thì WordPress thật dễ dàng khi cài đặt và một khi đã bắt đầu thì tôi chẳng thấy nhu cầu thử cái khác nữa.
 
-Nếu được, tự tạo ra một dự án nhỏ mà bạn có thể thực hành những gì mình học, bạn sẽ nhận ra những điều mình không thấy nếu chỉ đọc tài liệu không thôi. 
+Blog không phải là nơi khoe kỹ năng thiết kế hay dự án của bạn. Blog là để mọi người có thể tìm thấy bạn trên mạng, hiểu bạn là ai, và liên lạc với bạn khi cần. Đừng dành cả ngày để chải chuốt blog của bạn, đừng vì nó mà cắt xén thời gian học tập hoặc dành cho gia đình. Chỉ cần cố gắng viết một cách đều đặn và kiên định với nó. Cuối cùng, hãy nhớ rằng các bài viết của bạn không cần quá kỹ thuật. Dù bạn có là một người hoàn toàn mới trong lĩnh vực này thì bạn vẫn có kinh nghiệm của 1 ngày/ 1 tuần/ 1 tháng nhiều hơn ai đó để chia sẻ. Ai đó rồi sẽ tìm được giá trị trong nhưng gì bạn nói. Đừng lo lắng về việc viết những thứ không liên quan đến kỹ thuật. Viết lách là một thú vui. Hãy sử dụng blog như một cách để thể hiện tính cách và sở thích của bạn bên ngoài thế giới lập trình. Tuy thế, hãy tránh những đề tài quá nhạy cảm/ dễ gây tranh cãi.
 
-<h2> Các thư viện Javascript khác thì sao? </h2>
+<span style="color: #0000ff;"><strong>HAI: Hãy đăng ký một tài khoản Twitter. </strong></span>
 
-Bên cạnh frameworks, hãy cân nhắc rất nhiều thư viện JavaScript để bạn cân nhắc. Đơn cử như:
-1. <a href="https://greensock.com/gsap?ck_subscriber_id=131432563">GSAP</a> - GSAP là một thư viện để xây dựng animation có hiệu suất cực cao. Nếu bạn muốn làm những hiệu ứng vừa ngầu vừa phức tạp, đừng quên GSAP.
-2. <a href="https://d3js.org/">D3</a> - D3 là một thư viện để xào xáo DOM dựa trên số liệu. Nếu bạn muốn hiển thị một lượng lớn số liệu, hãy thử D3. Và bạn thực sự thích thú với biểu diễn dữ liệu - nhớ theo dõi <a href="http://www.datasketch.es/">Data Sketches</a> của Shirley Wu và Nadieh Bremer. 
-3. <a href="https://lodash.com">Lodash</a> - Lodash là một thư viện chức năng để giúp bạn làm việc dễ dàng hơn với JavaScript. 
-4. <a href="https://webpack.js.org">Wepack</a> - Wepack là thư viện thông dụng nhất để gói và bung các tài nguyên Javascript hiện tại. Một khi đã thành thạo với Wepack, bạn có thể cắt và thu nhỏ code Javascript của mình chỉ trong 1 bước. 
-5. <a href="https://gulpjs.com">Gulp</a> - một task runner thông dụng. 
+Tôi không phải là người thích mạng xã hội. Nhưng khi cân nhắc về thương hiệu cá nhân, tôi quyết định đăng ký một tài khoản Twitter. Twitter là một cách dễ dàng để kết nối với những người nổi tiếng trong cộng đồng lập trình. Ví dụ, gần đây tôi đặt 1 tweet bày tỏ mối quan tâm của mình với việc học framework Slim. Và thật ngạc nhiên sau đó tweet của tôi nhận được phản hồi đầu tiên đến từ một trong những người đóng góp trụ cột của framework này. Còn ai tốt hơn để xin lời khuyên và hướng dẫn hơn nữa? Twitter còn là một nơi thuận tiện để cập nhận thông tin về ngành và các sự kiện. Nó cũng là phương tiện để &#8220;chào ai&#8221; đó trước khi gặp họ ngoài đời trong các hội thảo hoặc sự kiện meet-up.
 
-<h2> Học để xây dựng phần backend </h2>
+Hãy nhớ là các tweets của bạn ở đó và cả thế giới sẽ nhìn vào. Vậy làm hơn hãy tỏ ra có ích và chia sẻ những gì đem lại giá trị. Những tweets vô bổ về bữa ăn tối hay cái lưng đau của bà dì sẽ khiến cho bạn sớm bị người khác &#8220;unfollowed&#8221;.
 
-Nếu bạn muốn dựng backend thì tốt nhất là chơi với <a href="https://nodejs.org">Node</a> nó là ngôn ngữ Javascript cho server. Node hoàn toàn có thể so găng với những người khổng lồ trong ngôn ngữ server như Ruby và Python. Rất nhiều công ty lớn như Netflic, Paypal, và LinkedIn sử dụng Node. 
+<span style="color: #0000ff;"><strong>BA: Hãy thống nhất hình ảnh của bạn ở các nơi. </strong></span>
 
-Có hai ưu điểm khi bạn học Node:
+Khi bạn nghĩ về thương hiệu cá nhân, chắc chắn bạn sẽ gắn nó với một logo, khẩu hiệu, hoặc một hình ảnh nhất định. Và người khác khi đọc và đánh giá về bạn cũng sẽ nhìn vào những điều này. Vậy hãy chắc chắn là bạn sử dụng cùng một hình ảnh và miêu tả bản thân giống nhau ở tất cả các trang. Tôi đã từng sai lầm khi có ảnh đại diện trên Medium khác với trên Twitter. Điều này khiến cho mọi người không thể đánh giá ngay được liệu đây có phải là cùng một người. Phải nhớ là mục đích của bạn là để người khác nhận diện ra bạn và thương hiệu của bạn bất kể ở chỗ nào.
 
-1. Bạn sẽ học Node nhanh hơn vì đã có nền tàng về Javascript (ý là nếu bạn chưa biết ngôn ngữ server nào cả thì học Node sẽ nhanh hơn.)
+<span style="color: #0000ff;"><strong>BỐN: Bạn LÀ một lập trình viên</strong></span>
 
-2. Học xong Node, bạn sẽ tận dụng được luôn những công cụ như Wepack và Gulp vốn được xây dựng trên Node. Bạn có thể dụng npm như công cụ quản lý gói thư viện. 
+Kể cả dù bạn đang học hay còn lạ lẫm với công việc lập trình, đừng cản trở cơ hội kiếm việc của bạn. Blog và tài khoản xã hội của bạn mô tả bạn là &#8220;một lập trình viên triển vọng&#8221;? hay là một &#8220;lập trình viên đang trong quá trình đào tạo&#8221;? Thật tào lao! Liệu nhà tuyển vọng có hứng thú với những mô tả như thế? Chắc chắn họ sẽ loại bạn ra ngay từ cái nhìn đầu tiên. Thế nên, kể cả khi bạn vẫn đang làm 1 công việc khác vào ban sáng, và học lập trình vào buổi tối, bạn vẫn là một &#8220;lập trình viên&#8221;. Bạn sẽ có nhiều cơ hội để trình bày về khả năng và kinh nghiệm lập trình sau này, còn bây giờ hãy để cho &#8220;ấn tượng ban đầu&#8221; sạch và đi thẳng vào vấn đề. Bạn là một lâp trình viên, và đang tìm kiếm một công việc liên quan đến lập trình, hãy chắc chắn là bạn nói về bản thân như một chỉnh thể thống nhất.
 
-Bên cạnh Node, bạn cần 2 thứ nữa: một server framework và một ngôn ngữ cơ sở dữ liệu. 
+<span style="color: #0000ff;"><strong>NĂM: Từ &#8220;Junior&#8221; có ý nghĩa gì? </strong></span>
 
-<h3> Server </h3>
+Ngày xưa có thời điểm tôi nhận ra mình mô tả bản thân là một &#8220;junior developer&#8221; trên blog và mạng xã hội. Thế nhưng ở tuổi 30, vậy tôi có chẳng còn &#8220;junior&#8221; nữa. Nghiêm túc mà nói, từ &#8220;junior&#8221; chẳng có ý nghĩa gì. Nó chỉ là quan niệm của một cá nhân. Một &#8220;junior developer&#8221; đồng nghĩa với lập trình viên đó có ít kinh nghiệm. Nhưng sẽ nói thế nào cho một người viết code 10 năm trong thời gian rảnh? Họ có junior hay không?Hoặc ai đó có vài năm kinh nghiệm nhưng kỹ năng lập trình vẫn không tôt?
 
-Một server framework sẽ giúp bạn tiến vào thế giới backend nhanh hơn mà không phải gõ quá nhiều code. Tất nhiên, nếu thích thì bạn có thể tự xây dựng server, nhưng tôi nghĩ là không cần thiết. 
+Thế nên, hãy dừng lại nếu bạn đang nói về bản thân là một junior developer. Nó chẳng giúp ích gì cho bạn mà chỉ giới hạn tiềm năng công việc. Các công ty/ người tuyển dụng liệu có cân nhắc tuyển &#8220;junior&#8221; cho vị trí lập trình viên ở mức trung? Liệu bạn có muố nghe từ họ rằng &#8220;Đợi một chút. Anh/ chị đáp ứng đủ mọi yêu cầu và có vài năm kinh nghiệm. Tuy nhiện, xin lỗi chúng tôi không tìm kiếm một junior.&#8221;
 
-Tôi khuyên bạn nên thử với server framework thông dụng nhất cho Node là Express.js. 
+<span style="color: #0000ff;"><strong>SÁU: Nếu bạn có một kỹ năng gì chuyên biệt, hãy nhấn mạnh vào nó.</strong></span>
 
-<h3> Cơ sở dữ liệu </h3>
+Tôi đã tự nhận mình là một lập trình viên web trên blog và tài khoản xã hội. Chuẩn, tôi là các ứng dụng web thông qua các công nghệ xây dựng website. Cụ thể hơn, tôi là một lập trình viên PHP. Kỹ năng Javascript của tôi không có gì đặc biệt, và tôi sẽ không tìm kiếm một vị trí liên quan đến Javascript trong tương lai gần. Tôi chỉ làm ứng dụng trên Ruby on Rails thông qua một tutorial trong 1 tiếng, vì thế Ruby on Rails cũng không được nhắc đến. Vì thế, tôi quyết định thay đổi nhận diện thương hiệu của mình là một lập trình viên PHP. Nó phản ánh chính xác và cụ thể hơn kỹ năng của tôi. Vậy đó, nếu bạn muốn thu hút những cơ hội, bạn cần nghĩ xem mình muốn minh hoạ bản chân dung bản thân như thế nào.<figure id="attachment_106" style="width: 595px" class="wp-caption aligncenter">
 
-Cứ tưởng tượng cơ sở dữ liệu như ổ đĩa cứng trên máy của bạn. Và khi tạo server, bạn cần một thứ gì đó như ổ cứng để tổ chức và lưu thông tin. 
+<img class=" wp-image-106" src="http://travisnguyen.net/wp-content/uploads/2017/08/1-LSyxodXagu0CQppqJAbT5Q-300x175.jpeg" alt="Ảnh nhận dạng thương hiệu của Rick West" width="595" height="347" srcset="http://travisnguyen.net/wp-content/uploads/2017/08/1-LSyxodXagu0CQppqJAbT5Q-300x175.jpeg 300w, http://travisnguyen.net/wp-content/uploads/2017/08/1-LSyxodXagu0CQppqJAbT5Q-768x447.jpeg 768w, http://travisnguyen.net/wp-content/uploads/2017/08/1-LSyxodXagu0CQppqJAbT5Q.jpeg 800w" sizes="(max-width: 595px) 85vw, 595px" /><figcaption class="wp-caption-text">Ảnh nhận dạng thương hiệu của Rick West</figcaption></figure> 
 
-Có rất nhiều ngôn ngữ cơ sở dữ liệu, hầu hết được phân ra giữa ngôn ngữ hệ SQL và hệ không-SQL. Với hệ SQL, thông dụng nhất là Postgres, trong khi ở hệ không-SQL, thông dụng nhất là MongoDB. 
+**<span style="color: #0000ff;">BẢY: Hãy dọn dẹp tài khoản Github của bạn</span>**
 
-Bạn có là lĩnh mới trong lĩnh vực này không? Nếu đúng, chọn MongoDb vì câu lệnh của nó gần tương tự với JavaScript nên sẽ dễ cho bạn khi học. 
+Một đồng nghiệp cùng tôi lượn lờ ở tài khoản Github của tôi mấy tuần trước. Anh ý thấy ngạc nhiên về độ năng động của tôi ngoài công việc, nhưng rồi nhận ra tôi có hàng tá những dự án chưa hoàn thành và trông lộn xộng. Điều này thì không ấn tượng tí nào, nó chẳng giúp tôi tạo cảm giác tích cực cho người nào đó muốn xem các dự án tôi làm từ đầu đến cuối.
 
-Tôi đưa bạn 2 khoá hcoj để giúp bạn tìm hiểu về server nhanh chóng:
-1. <a href="https://zellwk.com/blog/crud-express-mongodb/?ck_subscriber_id=131432563">Xây dựng một ứng dụng CRUD đơn giản với Express và MongoDB. </a>
-2. <a href="https://learnnode.com/?ck_subscriber_id=131432563">Khoá học Node của Wes Bos. </a>
+Vì vậy, tôi khuyên bạn là hãy tích cực trên Github, nhưng nếu không thể hoàn thành 1 dự án nào đó thì hãy xoá nó đi. Cần chắc chắn là công ty/ nhà tuyển dụng nhìn thấy những dự án mà bạn đã hoàn thành và tự hào về chúng, chứ không phải những thư mà bạn &#8220;định làm nhưng chưa có thời gian&#8221;.
 
-<h2> Học Javascript nâng cao </h2>
+<span style="color: #0000ff;"><strong>TÁM: Thể hiện đam mê</strong></span>
 
-Kể cả khi bạn đang ở gia đoạn "trưởng thành", vẫn có quá nhiều thứ cần biết về JavaScript. Hãy chọn bất kỳ thứ nào dưới đây. 
+Hãy sử dụng blog, mạng xã hội, và Github để làm nổi bật lên đam mê của bạn với công việc. Bất kỳ lúc nào có thể, hãy thể hiện sự tự hào và niềm vui với của bạn với lập trình. Tôi sẽ để bạn lại với một trong những câu trả lời tôi thích nhất trên Stak-Overflow cho câu hỏi: Lựa chọn giữa 2 lập trình viên, một người có đam mê, một người có kinh nghiệm?
 
-1. Lập trình hướng đối tượng. 
-
-2. Lập trình hàm. 
-
-3. Những thay đổi mới nhất của Javascript. 
-
-4. Test Driven Development 
-
-
-Vậy đấy, có quá nhiều lựa chọn phải không? bạn tính đi tiếp đường nào?
-
+> Hãy tuyển một lập trình viên không có kinh nghiệm nhưng có đam mê với công việc. Một lập trình viên có đam mê sẽ học rất nhanh, tận tâm với công việc, và tìm được niềm vui trong đó. Tôi đã làm việc với cả 2 kiểu lập trình viên, và tôi luôn tuyển những người có đam mê thay vì chỉ có kinh nghiệm.
+> 
+> Những ai không tận tâm với công việc cuối cùng thường tạo ra các vấn đề chất lượng cũng như không thể hoàn thành công việc đúng hạn.
+> 
+> Do bạn [công ty của bạn] có chương trình đào tạo người mới, vậy có gì phải suy nghĩ về việc chọn người này hay người kia ở đây? Đơn giản hãy chọn lập trình viên có đam mê.
