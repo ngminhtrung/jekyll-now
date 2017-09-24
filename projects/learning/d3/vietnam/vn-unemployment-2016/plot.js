@@ -1,10 +1,12 @@
+//age1 = 15-24, age2 = 25-49, age3 = 50+
 var data = [
-{ "area": "Đồng bằng sông Hồng", "age1": 9.62, "age2": 1.45, "age3":20 },
-{ "area": "Trung du và miền núi phía Bắc", "age1": 2.95, "age2": 20, "age3":20},
-{ "area": "Bắc Trung Bộ và duyên hải miền Trung", "age1": 8.26, "age2": 20, "age3":20},
-{ "area": "Tây Nguyên", "age1": 2.47, "age2": 20, "age3":20 },
-{ "area": "Đông Nam Bộ", "age1": 8.02, "age2": 20, "age3":20},
-{ "area": "Đồng bằng sông Cửu Long", "age1": 8.19, "age2": 20, "age3":20}];
+	{ "area": "Red River Delta", "age1": 9.62, "age2": 1.45, "age3":20 },
+{ "area": "Northern midlands and moutain areas", "age1": 2.95, "age2": 20, "age3":20},
+{ "area": "North Central and Central Coastal area", "age1": 8.26, "age2": 20, "age3":20},
+{ "area": "Central Highlands", "age1": 2.47, "age2": 20, "age3":20 },
+{ "area": "South East", "age1": 8.02, "age2": 20, "age3":20},
+{ "area": "Mekong River Delta", "age1": 8.19, "age2": 20, "age3":20}];
+
 
 var barWidth = 85;
 var w = data.length * barWidth;
@@ -24,7 +26,8 @@ var x = d3.scaleBand()
 	.domain(data.map(function(entry){
 		return entry.area;
 	}))
-	.range([0, width]);
+	.range([0, width])
+	.paddingInner(0.1);
 
 
 var y = d3.scaleLinear()
@@ -111,7 +114,7 @@ function drawAxis(params) {
             .attr("x", width/2)
             .attr("y", -50)
             .style("text-anchor", "middle")
-            .text(("Unemployment Rate in Vietnam - Data of 2016").toLocaleUpperCase());   
+            .text(("Unemployment Rate in Vietnam - Data of 2015").toLocaleUpperCase());   
 
         this.append("text")
             .attr("x", width/2)
@@ -158,7 +161,16 @@ function plot(params) {
 		.data(data)
 		.enter()
 			.append("rect")
-			.classed("bar", true);
+			.classed("bar", true)
+			.on("mouseover", function(d,i){
+				d3.select(this).style("fill", "gray");
+			})
+			.on("mousemove", function(d,i){
+
+			})
+			.on("mouseout", function(d,i){
+				d3.select(this).style("fill", ordinalColorScale(i));
+			});
 			
 			
 
@@ -184,7 +196,7 @@ function plot(params) {
 				return height - y(d.age1);
 			})
 			.attr("width", function(d){
-				return x.bandwidth()-1;
+				return x.bandwidth();
 			})
 			.style("fill", function(d,i){
 				return ordinalColorScale(i);
