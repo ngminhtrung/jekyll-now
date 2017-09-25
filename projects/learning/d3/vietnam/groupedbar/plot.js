@@ -1,7 +1,7 @@
 var w = 900;
 var h = 600;
 
-margin = {top: 100, right: 100, bottom: 250, left: 100},
+margin = {top: 120, right: 100, bottom: 250, left: 100},
 width = w - margin.left - margin.right,
 height = h - margin.top - margin.bottom,
 
@@ -90,13 +90,12 @@ d3.csv("data.csv", function(d, i, columns) {
                     .classed("sub-categories", true)
                     .on("mouseover", function(d,i){
                         d3.select(this).style("fill", "purple");
-                        
                         div.transition()		
-                            .duration(200)		
+                            .duration(500)		
                             .style("opacity", .9);		
-                        div.html('<p> Thử nghiệm chút </p>')
-                        div.style("left", "200px")
-                        div.style("top", "100px");
+                        div.html('<p><strong>' + d.value + '% </strong></p>')
+                        div.style("left", (d3.event.pageX) + "px")
+                        div.style("top", (d3.event.pageY) + "px");
                         ;	
                     })
                     .on("mousemove", function(d,i){
@@ -172,7 +171,7 @@ d3.csv("data.csv", function(d, i, columns) {
             .attr("transform", function(d, i) { return "translate(0," + - (i * 20) + ")"; });
 
         legend.append("rect")
-            .attr("x", width - 19)
+            .attr("x", width)
             .attr("width", 19)
             .attr("height", 19)
             .attr("fill", z);
@@ -182,4 +181,19 @@ d3.csv("data.csv", function(d, i, columns) {
             .attr("y", 9.5)
             .attr("dy", "0.32em")
             .text(function(d) { return d; });
+
+
+        //This is the chart title
+        chart.append("text")
+            .classed("title", true)
+            .attr("x", width/2)
+            .attr("y", -70)
+            .style("text-anchor", "middle")
+            .text(("Unemployment Rate in Vietnam - Data of 2015").toLocaleUpperCase());
+
+        chart.append("text")
+            .attr("x", width/2)
+            .attr("y", -45)
+            .style("text-anchor", "middle")
+            .text("Source: General Statistics Office Of Vietnam");
 });

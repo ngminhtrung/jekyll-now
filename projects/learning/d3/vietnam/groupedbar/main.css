@@ -18,3 +18,28 @@ body,html{
 	text-anchor: middle;
 	font-size: 18px;
 }
+
+div.tooltip {	
+    position: absolute;			
+	text-align: center;	
+	/* vertical-align: middle;		 */
+    width: 100px;					
+    height: 30px;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background: #E0EEFF;	
+    border: 0px;		
+    border-radius: 8px;			
+	pointer-events: none;	
+	color: black;		
+	line-height: 1em;
+	margin: 0;
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
+	
+}
+
+.title {
+	font-size: 20px;
+}
