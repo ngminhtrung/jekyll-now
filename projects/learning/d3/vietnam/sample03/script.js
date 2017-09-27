@@ -70,7 +70,7 @@ var svg = d3.select("#chart").append("svg")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 function paintBlock(param) {
-  var colors = ["#aeeedb", "#fdaf94", "#d2e475", "#c9b2e1","#dcb3d3"];
+  var colors = ["#89BEFF", "#E899C1", "#94DBD1", "#FFF69C", "#FFDAFF"];
   return colors[param % colors.length];
 }
 
