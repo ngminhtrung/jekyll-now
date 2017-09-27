@@ -155,7 +155,6 @@ step_btn.on("click", function(){
 
     svg.append("g")
         .selectAll("filled-blocks")
-        .delay(100)
         .data(newLocation)
         .enter()
         .append("circle")
