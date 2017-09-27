@@ -156,12 +156,13 @@ step_btn.on("click", function(){
         .enter()
         .append("circle")
         .classed("filled-blocks", true)
-            
+        .transition()
             .attr("cx", function(d,i) {
               return d.x;})
             .attr("cy", function(d,i) {
               return d.y;})
             .attr("r", bee.r)
+            
             .style("fill", function(d,i) {
               return d.color;})
             .style("opacity", "0.8")
