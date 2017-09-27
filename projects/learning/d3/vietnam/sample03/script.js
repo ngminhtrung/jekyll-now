@@ -70,7 +70,7 @@ var svg = d3.select("#chart").append("svg")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 function paintBlock(param) {
-  var colors = ["#aeeedb", "#fdaf94", "#d2e475", "#d2e475","#dcb3d3"];
+  var colors = ["#aeeedb", "#fdaf94", "#d2e475", "#fcbe7e","#dcb3d3"];
   return colors[param % colors.length];
 }
 
@@ -149,9 +149,6 @@ step_btn.on("click", function(){
       })();
       newLocation.push(temp);
     }
-
-    console.log(newLocation); 
-  
 
     svg.append("g")
         .selectAll("filled-blocks")
