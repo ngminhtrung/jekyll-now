@@ -102,3 +102,18 @@ Kể cả khi bạn đang ở gia đoạn "trưởng thành", vẫn có quá nhi
 
 Vậy đấy, có quá nhiều lựa chọn phải không? bạn tính đi tiếp đường nào?
 
+
+{% highlight javascript %}
+
+var person = {
+    firstName: "Penelope",
+    lastName: "Barrymore",
+    fullName: function () {
+        ​// Lưu ý: Ở đây "this" được dùng tương tự như "he"/ "hắn" ở trong ví dụ trên
+        console.log(this.firstName + " " + this.lastName);
+    ​   // Ngoài ra t​a cũng có thể viết như sau
+        console.log(person.firstName + " " + person.lastName);
+    }
+}
+{% endhighlight %}
+
