@@ -127,7 +127,7 @@ var step_btn = controls.append("button")
 step_btn.on("click", function(){
 
     var newLocation = [];
-    for (var i = 0; i<18 ; i++) {
+    // for (var i = 0; i<18 ; i++) {
       var temp = {
         x: "",
         y: "",
@@ -148,19 +148,17 @@ step_btn.on("click", function(){
         }
       })();
       newLocation.push(temp);
-    }
+    // }
 
     console.log(newLocation); 
   
 
     svg.append("g")
         .selectAll("filled-blocks")
-        .delay(100)
         .data(newLocation)
         .enter()
         .append("circle")
         .classed("filled-blocks", true)
-            
             .attr("cx", function(d,i) {
               return d.x;})
             .attr("cy", function(d,i) {
@@ -169,10 +167,8 @@ step_btn.on("click", function(){
             .style("fill", function(d,i) {
               return d.color;})
             .style("opacity", "0.8")
-    
-    $("#step-count").text(Math.floor(bee.totalStep /18));
     }
-    
+  //   $("#step-count").text(Math.floor(bee.totalStep /18));
   // }
 
   
@@ -201,26 +197,26 @@ data[convertColRow2i(MapColumns/2,MapRows/2)].isFilled = true;
 
 // set the inital data of BEE
 var bee = {
-      x: data[convertColRow2i(center.col + 1,center.row - 1)].x,
-      y: data[convertColRow2i(center.col + 1,center.row - 1)].y,
-      r: data[convertColRow2i(center.col + 1,center.row - 1)].r/2,
-      col: center.col + 1,
-      row: center.row - 1,
-      totalStep: 1,
-      previousDirection: 3 // important initial setting. 
+      x: center.x,
+      y: center.y,
+      r: center.r/2,
+      col: center.col,
+      row: center.row,
+      totalStep: 0,
+      previousDirection: 0 // important initial setting. 
 };
 
 // mark the BEE's initial point
-svg.append("g")
-    .append("circle")
-    .attr("cx", bee.x)
-    .attr("cy", bee.y)
-    .attr("r", bee.r)
-    .style("fill", "green")
-    .style("opacity", "0.3");
+// svg.append("g")
+//     .append("circle")
+//     .attr("cx", bee.x)
+//     .attr("cy", bee.y)
+//     .attr("r", bee.r)
+//     .style("fill", "green")
+//     .style("opacity", "0.3");
 
 // set the point corresponding to BEE's inital location "Filled", bee will not move into this block in next step
-data[convertColRow2i(center.col + 1,center.row - 1)].isFilled = true;
+// data[convertColRow2i(center.col + 1,center.row - 1)].isFilled = true;
 
 // BEE to locate which neihbor block to move into
 function locateNeighbor(currentPoint) {
@@ -287,9 +283,11 @@ function locateNeighbor(currentPoint) {
 
   if (data[i].isFilled == false) {
     moveBee(direction);
+    console.log("New location is " + neighbor.col + ", " + neighbor.row);
 
   } else {
     moveBee(currentPoint.previousDirection);
+    console.log("New location is " + neighbor.col + ", " + neighbor.row);
   }
 }
 
