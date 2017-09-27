@@ -105,6 +105,8 @@ Vậy đấy, có quá nhiều lựa chọn phải không? bạn tính đi tiế
 
 {% highlight javascript %}
 
+``` javascript
+
 var person = {
     firstName: "Penelope",
     lastName: "Barrymore",
@@ -115,5 +117,7 @@ var person = {
         console.log(person.firstName + " " + person.lastName);
     }
 }
+
+```
 {% endhighlight %}
 
