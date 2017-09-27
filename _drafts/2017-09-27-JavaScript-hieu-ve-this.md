@@ -36,7 +36,7 @@ Bạn thấy cách dùng đại từ "he" (và "hắn") ở đây ko? Rõ ràng 
 Tuy thế trong văn viết lẫn văn nói, chẳng mấy người lặp lại John/ Trung như trên (tất nhiên là vẫn có thể dùng, nhưng nghe không lọt tai lắm, dù nói trong bất kỳ văn cảnh nào). Từ lối suy nghĩ như vậy, chúng ta gặp "**this**" trong Javascript như 1 cách dùng tắt, để chỉ tới một đối tượng nào đấy. Hãy xem các ví dụ sau: 
 
 {% highlight javascript %}
-
+```javascript
 var person = {
     firstName: "Penelope",
     lastName: "Barrymore",
@@ -47,6 +47,7 @@ var person = {
         console.log(person.firstName + " " + person.lastName);
     }
 }
+```
 {% endhighlight %}
 
 Có lẽ với những người mới học như tôi, việc dùng person.firstName và persona.lastName dễ hiểu, trực quan hơn. Variable *person* đã có sẵn đó, thêm dấu . để truy cập vào các biến bên trong, quá ngon rồi!!! Tuy vậy, thực hành thêm 1 thời gian sẽ hiểu nhận xét của tác giả rằng cách viết kiểu đó mới gây nhầm lẫn. Tại sao? Nhỡ đâu đoạn code của ta chỉ là 1 phần trong 1 đoạn code lớn hơn do người khác (hoặc chính bản thân ta) viết, và 1 biến cùng tên person đã có ở global context? Trong trường hợp như vậy, chương trình sẽ trỏ đến person kia (tức ở global context) chứ ko phải đến person trong đoạn code ta vừa viết. Điều này đặc biệt đúng khi ta chỉ là 1 phần trong 1 team nhiều người, và khi code viết ra ngày một lớn mà bản thân mình cũng chẳng nhớ hết bao nhiêu biến đã được đặt tên, sao để tránh trùng nhau, v.v. Với tác giả bài viết, sử dụng từ khoá "*this*" không những tăng tính "*thẩm mĩ*" của đoạn code, mà còn khiến cho code được trình duyệt đọc một cách chính xác, đúng như ý đồ của tác giả (ở đây, this.firstName trỏ và chỉ trỏ đến đúng person được khai báo sau var). 
@@ -61,9 +62,9 @@ Có lẽ với những người mới học như tôi, việc dùng person.first
 
 Thử xem ví dụ bên dưới: 
 
-``` javascript
-{% highlight javascript %}
 
+{% highlight javascript %}
+``` javascript
     var person = {
         firstName   :"Dũng",
         lastName    :"Nguyễn Minh",
@@ -76,14 +77,15 @@ Thử xem ví dụ bên dưới:
         }
     }
     person.showFullName (); // Dũng Nguyễn Minh
-
-{% endhighlight %}
 ```
+{% endhighlight %}
+
 
 Và 1 ví dụ khác dùng **this** trong jQuery: 
 
-``` javascript
+
 {% highlight javascript %}
+``` javascript
     // Đây là 1 đoạn code rất hay gặp trong jQuery
     $ ("button").click (function (event) {
         console.log ($ (this).prop ("name"));
@@ -91,8 +93,9 @@ Và 1 ví dụ khác dùng **this** trong jQuery:
     // bởi object​ button đã gọi method click()
     
     });
-{% endhighlight %}
 ```
+{% endhighlight %}
+
 Với ví dụ jQuery trên, hãy lưu ý một vài điểm sau:
 1. **button** (nút bấm) là 1 phần tử DOM của trang HTML, vì vậy nó là 1 object.
 2. Trong ví dụ này, vì chúng ta gói nó trong đô-la, ý là hàm jQuery $(), ta đã biết nó thành 1 object, nhưng là **jQuery object**.
@@ -107,8 +110,9 @@ Một khi đã hiểu nguyên lý cơ bản đầu tiên của từ khoá **this
 
 Trong phạm vi global, khi code được thực thi trong trình duyệt, thì mọi variables và hàm dạng global đều được định nghĩa trong object "window". Do đó, khi dùng **thi** trong hàm dạng global, nó sẽ trỏ tới (và mang giá trị) của object "window" (điều này ko đúng nữa trong strict mode khi đã nói ở trên). Lưu ý: object "window" là thằng quản toàn bộ các ứng dụng Javascript chạy trên nền web. 
 
-``` javascript
+
 {% highlight javascript %}
+``` javascript
     var firstName = "Phúc",
         lastName = "Nguyễn Văn";
 ​
@@ -136,8 +140,9 @@ Trong phạm vi global, khi code được thực thi trong trình duyệt, thì 
     window.showFullName (); // Phúc Nguyễn Văn
 ​
     person.showFullName (); // Dũng Nguyễn Tấn
-{% endhighlight %}
 ```
+{% endhighlight %}
+
 <h3>Những trường hợp mà **this** bị hiểu nhầm và trở nên rắc rối</h3>
 
 Một vài trường hợp khiến ta hiểu nhầm **this** là:
@@ -152,9 +157,9 @@ Một vài trường hợp khiến ta hiểu nhầm **this** là:
 
 Xem đoạn code JavaScript bên dưới:
 
-``` javascript
-{% highlight javascript %}
 
+{% highlight javascript %}
+``` javascript
 var person = {
    firstName   :"Sơn Tùng",
    lastName    :"MTP ",
@@ -181,9 +186,9 @@ person.showFullName.apply (anotherPerson); // Soobin Hoàng Sơn
 ​
 ​// Lưu ý: mặc dù trông thì có vẻ như object "person" gọi hàm showFullName(), 
 // Nhưng do dùng method apply() rồi, nên về thực tế là nó đã chuyển sang gọi thông qua object "anotherPerson"
-    
-{% endhighlight %}
 ```
+{% endhighlight %}
+
 
 Dưới đây là những trường hợp mà việc sử dụng từ khoá **this** trở nên phức tạp. Hãy cùng quan sát các ví dụ và cách xử lý.
 
@@ -194,6 +199,7 @@ Dưới đây là những trường hợp mà việc sử dụng từ khoá **th
 
 Khi ta gán 1 method vốn sử dụng **this** cho 1 variable, thì bạn **this** này vượt ra khỏi trí tưởng tượng, bị ràng buộc vào một object khác. Xem ví dụ dưới đây: 
 
+{% highlight javascript %}
 ``` javascript
 
 // Variable "data" ngay dưới đây là 1 global variable. Tạm gọi là data-g.
@@ -226,9 +232,10 @@ Khi ta gán 1 method vốn sử dụng **this** cho 1 variable, thì bạn **thi
     showUserData (); // Samantha 12 (from the global data array)​
 
 ```
+{% endhighlight %}
 
 Cách nào để xử lý vụ này? Hãy sử dụng method bind()
-
+{% highlight javascript %}
 ``` javascript
 
    // Ràng buộc method showData vào object "user"
@@ -238,13 +245,14 @@ Cách nào để xử lý vụ này? Hãy sử dụng method bind()
     showUserData (); // P. Mickelson 43
 
 ```
+{% endhighlight %}
 
 4. <h3> Khi "this" dùng trong method đi mượn </h3>
 
 Đi mượn method là một cách làm thường gặp trong lập trình JavaScript. Là một lập trình viên JavaScript, chúng ta chắc chắn sẽ gặp cách làm này nhiều lần, phải chỉnh sửa, hoặc viết lại nó. Chi tiết hơn thì bạn có thể [đọc thêm ở đây](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/).
 
 Trong giới hạn bài viết này, ta chỉ xem xét ví dụ sau: 
-
+{% highlight javascript %}
 ``` javascript
 
 // Ta có 2 objects. Object thứ nhất có 1 method tên là avg() trong khi objec thứ hai không có. 
@@ -275,11 +283,12 @@ Trong giới hạn bài viết này, ta chỉ xem xét ví dụ sau:
    // Lưu ý: Đừng chạy đoạn code đó, nó chỉ để minh hoạ; chúng ta cần giữ cho appController.avgScore = null.
 
 ```
+{% endhighlight %}
 
 Ví dụ trên cho thấy **this** trong method avg() sẽ không trỏ đến object "gameController", mà đến object "appController" do appController gọi hàm avg() chứ không phải là gameController. 
 
 Cách xử lý? Sử dụng method "apply()" để chắc chắn rằng **this** bên trong appController.avg() trỏ đến object "gameController". 
-
+{% highlight javascript %}
 ``` javascript 
 
     // Lưu ý: Chúng ta dùng method apply(), vì thế tham số thứ 2 truyền vào phải là 1 mảng
@@ -294,6 +303,7 @@ Cách xử lý? Sử dụng method "apply()" để chắc chắn rằng **this**
     console.log (appController.avgScore); // null
 
 ```
+{% endhighlight %}
 
 [Xem ví dụ trên ở JSBIN](http://jsbin.com/iwaver/1/edit)
 
