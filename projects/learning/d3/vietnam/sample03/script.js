@@ -70,7 +70,7 @@ var svg = d3.select("#chart").append("svg")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 function paintBlock(param) {
-  var colors = ["#aeeedb", "#fdaf94", "#d2e475", "#fcbe7e","#dcb3d3"];
+  var colors = ["#aeeedb", "#fdaf94", "#d2e475", "#c9b2e1","#dcb3d3"];
   return colors[param % colors.length];
 }
 
@@ -156,16 +156,18 @@ step_btn.on("click", function(){
         .enter()
         .append("circle")
         .classed("filled-blocks", true)
-        .transition()
             .attr("cx", function(d,i) {
               return d.x;})
             .attr("cy", function(d,i) {
               return d.y;})
             .attr("r", bee.r)
-            
+            .style("fill","white")
+            .transition()
+            .delay(function(d, i) { return i*100; })
             .style("fill", function(d,i) {
               return d.color;})
             .style("opacity", "0.8")
+            
     
     $("#step-count").text(Math.floor(bee.totalStep /18));
     }
