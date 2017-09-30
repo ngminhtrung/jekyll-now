@@ -155,8 +155,6 @@ function plot(params) {
 
     // enter()
 
-
-
 	this.selectAll(".bar")
 		.data(data)
 		.enter()
@@ -171,8 +169,6 @@ function plot(params) {
 			.on("mouseout", function(d,i){
 				d3.select(this).style("fill", ordinalColorScale(i));
 			});
-
-
 
 	this.selectAll(".bar-label")
 		.data(data)
@@ -230,8 +226,6 @@ function plot(params) {
 		.data(params.data)
 		.exit()
 		.remove();
-
-
 
 }
 
