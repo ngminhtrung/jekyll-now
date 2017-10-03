@@ -37,7 +37,7 @@ var div = d3.select("body").append("div")
 var tool_tip = d3.tip()
             .attr("class", "d3-tip")
             .offset([-8, 0])
-            .html(function(d,i) { return "Unemployment rate is: <span style='color:red'>" + d.value + "%</span>"; });
+            .html(function(d,i) { return "Unemployment rate: <span style='color:red'>" + d.value + "%</span>"; });
 svg.call(tool_tip);
           
 
