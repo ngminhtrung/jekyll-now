@@ -4,13 +4,15 @@ body,html{
 	font-family: "Arial", sans-serif;
 	font-size: 0.95em;
 	text-align: center;
+	
 }
 #chart{
+	margin-top: 100px;
 	background-color: #F5F2EB;
 	border: 1px solid #CCC;
 }
-.bar{
-	fill: purple;
+.sub-categories:hover{
+	fill: red;
 	shape-rendering: crispEdges;
 }
 .bar-label{
@@ -19,26 +21,35 @@ body,html{
 	font-size: 18px;
 }
 
-div.tooltip {	
-    position: absolute;			
-	text-align: center;	
-	/* vertical-align: middle;		 */
-    width: 100px;					
-    height: 30px;					
-    padding: 2px;				
-    font: 12px sans-serif;		
-    background: #E0EEFF;	
-    border: 0px;		
-    border-radius: 8px;			
-	pointer-events: none;	
-	color: black;		
-	line-height: 1em;
-	margin: 0;
-	display: flex;
-	justify-content: center; /* align horizontal */
-	align-items: center; /* align vertical */
-	
-}
+
+.d3-tip {
+	line-height: 1;
+	padding: 6px;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	border-radius: 4px;
+	font-size: 12px;
+  }
+
+  /* Creates a small triangle extender for the tooltip */
+  .d3-tip:after {
+	box-sizing: border-box;
+	display: inline;
+	font-size: 10px;
+	width: 100%;
+	line-height: 1;
+	color: rgba(0, 0, 0, 0.8);
+	content: "\25BC";
+	position: absolute;
+	text-align: center;
+  }
+
+  /* Style northward tooltips specifically */
+  .d3-tip.n:after {
+	margin: -2px 0 0 0;
+	top: 100%;
+	left: 0;
+  }
 
 .title {
 	font-size: 20px;
