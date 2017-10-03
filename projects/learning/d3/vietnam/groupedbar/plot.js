@@ -12,13 +12,13 @@ x0 = d3.scaleBand()
 
 // set scale for sub-groups
 var x1 = d3.scaleBand()
-.padding(0.05);
+            .padding(0.05);
 
 var y = d3.scaleLinear()
-.rangeRound([height, 0]);
+            .rangeRound([height, 0]);
 
 var z = d3.scaleOrdinal()
-.range(["#a05d56", "#d0743c", "#ff8c00"]);
+            .range(["#a05d56", "#d0743c", "#ff8c00"]);
 
 
 var svg = d3.select("body").append("svg")
@@ -33,6 +33,13 @@ var chart = svg.append("g")
 var div = d3.select("body").append("div")	
             .attr("class", "tooltip")				
             .style("opacity", 0);
+
+var tool_tip = d3.tip()
+            .attr("class", "d3-tip")
+            .offset([-8, 0])
+            .html(function(d,i) { return "Unemployment rate is: <span style='color:red'>" + d.value + "%</span>"; });
+svg.call(tool_tip);
+          
 
 d3.csv("data.csv", function(d, i, columns) {
 
@@ -72,7 +79,8 @@ d3.csv("data.csv", function(d, i, columns) {
         x0.domain(data.map(function(d) { return d.Region; })); 
         
         // x1 gets domain starting from 0, ending at x0.bandwidth(), rounded to nearest integer number
-        x1.domain(keys).rangeRound([0, x0.bandwidth()]);
+        x1.domain(keys)
+            .rangeRound([0, x0.bandwidth()]);
         
         y.domain([0, d3.max(data, function(d) { return d3.max(keys, function(key) { return d[key]; }); })]).nice();
 
@@ -92,22 +100,9 @@ d3.csv("data.csv", function(d, i, columns) {
                         d3.select(this).style("fill", "purple");
                         div.transition()		
                             .duration(500)		
-                            .style("opacity", .9);		
-                        div.html('<p><strong>' + d.value + '% </strong></p>')
-                        div.style("left", (d3.event.pageX) + "px")
-                        div.style("top", (d3.event.pageY) + "px");
-                        ;	
-                    })
-                    .on("mousemove", function(d,i){
-        
-                    })
-                    .on("mouseout", function(d,i){
-                        d3.select(this).style("fill", function(d) { return z(d.key); });
-                        
-                        div.transition()		
-                            .duration(500)		
-                            .style("opacity", 0);	
-                    })
+                            .style("opacity", .9);	})	
+                    .on("mouseover",tool_tip.show)
+                    .on("mouseout", tool_tip.hide)
                     .attr("x", function(d) { return x1(d.key); })
                     .attr("y", function(d) { return y(d.value); })
                     .attr("width", x1.bandwidth())
