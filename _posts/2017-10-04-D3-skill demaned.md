@@ -87,6 +87,9 @@ Và đây là suy nghĩ về D3 của 1 huyền thoại trong giới lập trìn
 Nếu những điều trên còn chưa đủ để thuyết phục bạn về giá trị của d3.js thì tôi nghĩ chẳng thứ gì khác làm được. Thật khó để có thể quảng cáo về d3.js tốt hơn Ward Cunningham. 
 
 
+> **Hỏi**: Liệu d3.js có đáng để học nhìn từ khía cạnh đi xin việc? Nếu tôi đã biết React thì tôi có cần thêm D3.js? [(Is D3.js good to learn in terms of job prospect as of today? I already know React, so do I need D3.js?)][12]
+
+
 [1]: https://d3js.org/
 [2]: https://itviec.com/it-jobs/d3.js
 [3]: https://topdev.vn/search?q=D3.js&sid=&cid=
@@ -98,3 +101,4 @@ Nếu những điều trên còn chưa đủ để thuyết phục bạn về gi
 [9]: https://www.quora.com/Is-d3-js-worth-learning
 [10]: https://bost.ocks.org/mike/algorithms/
 [11]: http://www.drdobbs.com/architecture-and-design/interview-with-ward-cunningham/240000393?pgno=4
+[12]: https://www.quora.com/Is-D3-js-good-to-learn-in-terms-of-job-prospect-as-of-today-I-already-know-React-so-do-I-need-D3-js
