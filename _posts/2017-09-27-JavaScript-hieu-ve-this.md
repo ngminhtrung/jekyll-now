@@ -17,9 +17,9 @@ tags:
 
 Sau 2 tháng học Javascript, tôi vẫn không thể thấy thoải mái và tự tin khi nhìn thấy từ khoá "this" trong các đoạn code của người và của ... bản thân. Mọi thứ cứ lờ mờ khó nắm bắt. Mà "this" dùng tương đối phổ biến ở rất nhiều code mẫu, dẫu có thể hiểu được đại khái là code mẫu hoạt động ra sao, nhưng vì không rõ bản chất nên khi muốn tự viết đoạn code đó ra thì chịu. Tôi đã tham khảo phần này trong Javascript Definitive Guide, trong Professional Javascript, hay [bài của Phạm Huy Hoàng](https://toidicodedao.com/2016/01/26/series-javascript-sida-luan-ban-ve-cai-dit-this-trong-javascript/), và [của Jell Liew](https://zellwk.com/blog/should-you-use-this/) vẫn không thấy ổn lắm. Hôm nay ngó [Javascript Is Sexy thấy tác giả (Richard Bovell) liên hệ "this"](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/) với cách dùng ngôn từ ngoài đời thực, bài viết lại liệt kê rõ ràng các trường hợp dễ nhầm lẫn. Có lẽ bài này phù hợp cho dân nhập môn như tôi, bắt đầu với cách tiệm cận này là chuẩn. Tôi đọc, ghi chú, và dịch lại bài để nhớ lâu và tiện quay lại tra cứu sau này. 
 
-= = = = = = = = = = = = 
+***
 
-<h2>Hiểu rõ JavaScript “this” và thuần thục cách dùng nó</h2>
+## Hiểu rõ JavaScript “this” và thuần thục cách dùng nó
 
 **Đồng thời hiểu luôn trong những hoàn cảnh nào "this" bị hiểu nhầm**
 
@@ -186,7 +186,8 @@ Dưới đây là những trường hợp mà việc sử dụng từ khoá **th
 
 ![alt text][photo01]
 
-<h3> 1. Khi "this" được dùng trong hàm callback </h3>
+### 1. Khi "this" được dùng trong hàm callback
+***
 
 Ví dụ 6:
 {% highlight javascript %}
@@ -236,7 +237,9 @@ thành:
 {% endhighlight %}
 
 
-<h3>2. Khi "this" được dùng bên trong closure </h3>
+### 2. Khi "this" được dùng bên trong closure 
+
+***
 
 Một trường hợp khác dễ bị hiểu sai, đó là khi có **this** trong closure. Lưu ý là closure không thể truy cập vào **this** của function bên ngoài (outer function). 
 
@@ -303,7 +306,9 @@ var user = {
 
 Nếu đọc nhiều code mẫu, bạn sẽ thấy các lập trình viên JavaScript hay thích truyền **this** sang 1 variable tên là **that**. Cách đặt tên này ("that") không mang nhiều thông tin (dù nghe có vẻ ngồ ngộ), vì vậy một lời khuyên là hãy dùng tên gì có tính mô tả hơn, như là "theUserObj" trong ví dụ trên. 
 
-<h3> 3. Khi "this" đặt trong 1 method, mà method này lại được gán vào 1 variable </h3>
+### 3. Khi "this" đặt trong 1 method, mà method này lại được gán vào 1 variable
+
+***
 
 Khi ta gán 1 method vốn sử dụng **this** cho 1 variable, thì bạn **this** này bị ràng buộc vào một object khác. Xem ví dụ dưới đây: 
 
@@ -350,7 +355,9 @@ Ví dụ 10:
     showUserData(); // P. Mickelson 43
 {% endhighlight %}
 
-<h3>4. Khi "this" dùng trong method đi mượn </h3>
+### 4. Khi "this" dùng trong method đi mượn
+
+***
 
 Đi mượn method là một cách làm thường gặp trong lập trình JavaScript. Là một lập trình viên JavaScript, chúng ta chắc chắn sẽ gặp cách làm này nhiều lần, phải chỉnh sửa, hoặc viết lại nó. Chi tiết hơn thì bạn có thể [đọc thêm ở đây](http://javascriptissexy.com/javascript-apply-call-and-bind-methods-are-essential-for-javascript-professionals/).
 
@@ -411,13 +418,16 @@ Ví dụ 12:
 
 [Xem ví dụ trên ở JSBIN](http://jsbin.com/iwaver/1/edit)
 
-<h2> Thay lời kết </h2>
+## Thay lời kết
+
+***
 
 Rất hy vọng là những gì tác giả của "JavaScript Is Sexy" và phần dịch của tôi đã giúp bạn hiểu thêm về **this** trong JavaScript. Bây giờ, bạn đa có thêm những vũ khí mới (bind, apply, và call) để chinh phục **this** trong mọi trường hợp. 
 
 Như bạn thấy, **this** bắt đầu trở nên đỏng đảnh trong những tình huống context gốc (nơi mà định nghĩa **this**) thay đổi, đặc biệt trong (1) *hàm callback*, (2) *trỏ đến **this** từ 1 object khác*, hoặc (3) *method đi mượn*. Tuy vậy, hãy luôn nhớ là **this** chỉ được truyền cho giá trị của object mà gọi được hàm (hàm này chứa xác định về **this**).
 
-#Cập nhật 
+## Cập nhật 
+
 ***
 
 - 05.10.2017: Bài khác để tham khảo ["Bàn về this trong JavaScript - Làm thế nào để xác định this?"][1]
