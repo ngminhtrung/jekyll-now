@@ -83,7 +83,7 @@ Có rất nhiều ngôn ngữ cơ sở dữ liệu, hầu hết được phân r
 
 Bạn có là lĩnh mới trong lĩnh vực này không? Nếu đúng, chọn MongoDb vì câu lệnh của nó gần tương tự với JavaScript nên sẽ dễ cho bạn khi học. 
 
-Tôi đưa bạn 2 khoá hcoj để giúp bạn tìm hiểu về server nhanh chóng:
+Tôi đưa bạn 2 khoá học để giúp bạn tìm hiểu về server nhanh chóng:
 1. <a href="https://zellwk.com/blog/crud-express-mongodb/?ck_subscriber_id=131432563">Xây dựng một ứng dụng CRUD đơn giản với Express và MongoDB. </a>
 2. <a href="https://learnnode.com/?ck_subscriber_id=131432563">Khoá học Node của Wes Bos. </a>
 

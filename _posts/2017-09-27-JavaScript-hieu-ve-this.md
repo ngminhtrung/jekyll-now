@@ -417,4 +417,11 @@ Rất hy vọng là những gì tác giả của "JavaScript Is Sexy" và phần
 
 Như bạn thấy, **this** bắt đầu trở nên đỏng đảnh trong những tình huống context gốc (nơi mà định nghĩa **this**) thay đổi, đặc biệt trong (1) *hàm callback*, (2) *trỏ đến **this** từ 1 object khác*, hoặc (3) *method đi mượn*. Tuy vậy, hãy luôn nhớ là **this** chỉ được truyền cho giá trị của object mà gọi được hàm (hàm này chứa xác định về **this**).
 
+#Cập nhật 
+***
+
+- 05.10.2017: Bài khác để tham khảo ["Bàn về this trong JavaScript - Làm thế nào để xác định this?"][1]
+
 [photo01]: https://ngminhtrung.github.io/images/PostIMG/20170928-img-01.png "Các trường hợp dễ nhầm lẫn khi sử dụng "this""
+
+[1]: https://viblo.asia/p/ban-ve-this-trong-javascript-lam-the-nao-de-xac-dinh-this-GrLZDb1O5k0
