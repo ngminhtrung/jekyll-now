@@ -37,7 +37,7 @@ Bạn thấy cách dùng đại từ "*he*" (và "*hắn*") ở đây ko? Rõ r�
 Tuy thế trong văn viết lẫn văn nói, chẳng mấy người lặp lại John/ Trung như trên (tất nhiên là vẫn có thể dùng, nhưng nghe không lọt tai lắm, dù trong bất kỳ văn cảnh nào). Từ lối suy nghĩ như vậy, chúng ta gặp "**this**" trong Javascript như 1 cách dùng tắt, để chỉ tới một đối tượng nào đấy. Hãy xem các ví dụ sau: 
 
 Ví dụ 1
-{% highlight javascript %}
+{% highlight javascript linenos%}
 var person = {
     firstName: "Hưng",
     lastName: "Đàm Vĩnh",
@@ -64,7 +64,7 @@ Có lẽ với những người mới học, việc dùng *person.firstName* và
 Thử xem ví dụ bên dưới: 
 
 Ví dụ 2:
-{% highlight javascript %}
+{% highlight javascript linenos%}
     var person = {
         firstName   :"Hà",
         lastName    :"Hồ Ngọc",
@@ -82,7 +82,7 @@ Ví dụ 2:
 Và 1 ví dụ khác dùng **this** trong jQuery: 
 
 Ví dụ 3: 
-{% highlight javascript %}
+{% highlight javascript linenos%}
     // Đây là 1 đoạn code rất hay gặp trong jQuery
     $ ("button").click (function (event) {
         console.log ($ (this).prop ("name"));
@@ -106,7 +106,7 @@ Một khi đã hiểu nguyên lý cơ bản đầu tiên của từ khoá **this
 Trong phạm vi global, khi code được thực thi trong trình duyệt, thì mọi variables và hàm dạng global đều được định nghĩa trong object "*window*". Vì thế, khi dùng **this** trong hàm dạng global, nó sẽ trỏ tới (và mang giá trị) của object "window" (điều này không đúng nữa trong strict mode như đã nói ở trên). Lưu ý: object "window" là thằng quản toàn bộ các ứng dụng Javascript chạy trên nền web. 
 
 Ví dụ 4: 
-{% highlight javascript %}
+{% highlight javascript linenos%}
     var firstName = "Nhung",
         lastName = "Nguyễn Hồng";
 ​
@@ -153,7 +153,7 @@ Xem đoạn code JavaScript bên dưới:
 
 Ví dụ 5:
 
-{% highlight javascript %}
+{% highlight javascript linenos%}
 var person = {
    firstName   :"Sơn Tùng",
    lastName    :"MTP ",
@@ -190,7 +190,7 @@ Dưới đây là những trường hợp mà việc sử dụng từ khoá **th
 ***
 
 Ví dụ 6:
-{% highlight javascript %}
+{% highlight javascript linenos%}
 
  // Ta tạo 1 object đơn giản tên là "user", có method là 
  // clickHandle() để gọi ra mỗi lần ấn vào 1 nút nào đó 
@@ -245,7 +245,7 @@ Một trường hợp khác dễ bị hiểu sai, đó là khi có **this** tron
 
 Ví dụ 7: 
 
-{% highlight javascript %}
+{% highlight javascript linenos%}
 var user = {
     tournament:"The Masters",
     data      :[
@@ -280,7 +280,7 @@ Giải pháp? Hãy dùng 1 cách làm thường gặp trong lập trình JavaScr
 
 Ví dụ 8: 
 
-{% highlight javascript %}
+{% highlight javascript linenos%}
 ``` javascript
 var user = {
     tournament:"The Masters",
@@ -313,7 +313,7 @@ Nếu đọc nhiều code mẫu, bạn sẽ thấy các lập trình viên JavaS
 Khi ta gán 1 method vốn sử dụng **this** cho 1 variable, thì bạn **this** này bị ràng buộc vào một object khác. Xem ví dụ dưới đây: 
 
 Ví dụ 9: 
-{% highlight javascript %}
+{% highlight javascript linenos%}
 // Variable "data" ngay dưới đây là 1 global variable. 
 // Tạm gọi là data-g.
     var data = [
@@ -348,7 +348,7 @@ Ví dụ 9:
 Cách nào để xử lý vụ này? Hãy *sử dụng method bind()*!.
 
 Ví dụ 10:
-{% highlight javascript %}
+{% highlight javascript linenos%}
    // Ràng buộc method showData vào object "user"
     var showUserData = user.showData.bind(user);
     // Giờ ta lấy được dữ liệu từ object "user", bởi "this" đã được chỉ định cho object này. 
@@ -364,7 +364,7 @@ Ví dụ 10:
 Trong giới hạn bài viết này, ta chỉ xem xét ví dụ sau: 
 
 Ví dụ 11: 
-{% highlight javascript %}
+{% highlight javascript linenos%}
 // Ta có 2 objects. Object thứ nhất có 1 method tên là 
 // avg() trong khi objec thứ hai không có. 
 // Để tiết kiệm thời gian, ta không đi viết lại 
@@ -402,7 +402,7 @@ Ví dụ trên cho thấy **this** trong method avg() sẽ không trỏ đến o
 Cách xử lý? Sử dụng method "*apply()*" để chắc chắn rằng **this** bên trong appController.avg() trỏ đến object "gameController". 
 
 Ví dụ 12:
-{% highlight javascript %}
+{% highlight javascript linenos%}
     // Lưu ý: Chúng ta dùng method apply(), vì thế 
     // tham số thứ 2 truyền vào phải là 1 mảng
     // Mảng này sẽ được truyền cho method appController.avg() ​
