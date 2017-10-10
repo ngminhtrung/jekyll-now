@@ -1,7 +1,7 @@
 ---
 id: 106
 title: '[John Sonmez] Tự học lập trình? Dễ hay khó? Nên chăng?'
-date: 2017-10-06
+date: 2017-10-11
 author: ngminhtrung
 layout: post
 guid: 
@@ -60,9 +60,5 @@ Tự học lập trình có thể giúp bạn tiết kiệm cả một gia tài.
 Và kể cả có chi tiền cho các học liêu trên, thì vẫn rẻ hơn nhiều so với đi học ở Cao đẳng/ Đại học, hoặc tham gia các bootcamp. Nếu không học ở những nơi này (Cao đẳng/ Đại học/ Bootcamp), bạn sẽ có đủ tiền để mua một lượng sách đọc cả đời không hết, và truy cập vào hàng nghìn khoá học online trên các trang như [Pluralsight](https://simpleprogrammer.com/cg9-pluralsight), Lynda or Udemy.
 
 Nếu bạn đang cháy túi thì đương nhiên không có con đường nào khác ngoài tự học.
-
-
-
-
 
 [photo01]: https://ngminhtrung.github.io/images/PostIMG/20170928-img-01.jpg "Các trường hợp dễ nhầm lẫn khi sử dụng "this""
