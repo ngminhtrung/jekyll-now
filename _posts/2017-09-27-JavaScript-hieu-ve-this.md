@@ -430,8 +430,12 @@ Như bạn thấy, **this** bắt đầu trở nên đỏng đảnh trong nhữn
 
 ***
 
-- 05.10.2017: Bài khác để tham khảo ["Bàn về this trong JavaScript - Làm thế nào để xác định this?"][1]
+- 05.10.2017: Bài khác để tham khảo sau này ["Bàn về this trong JavaScript - Làm thế nào để xác định this?"][1]
+- 07.10.2017: Bài khác để tham khảo sau này ["The many faces of `this` in javascript"][2]
+
 
 [photo01]: https://ngminhtrung.github.io/images/PostIMG/20170928-img-01.png "Các trường hợp dễ nhầm lẫn khi sử dụng "this""
 
 [1]: https://viblo.asia/p/ban-ve-this-trong-javascript-lam-the-nao-de-xac-dinh-this-GrLZDb1O5k0
+
+[2] https://blog.pragmatists.com/the-many-faces-of-this-in-javascript-5f8be40df52e

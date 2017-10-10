@@ -1,12 +1,11 @@
 //age1 = 15-24, age2 = 25-49, age3 = 50+
 var data = [
 	{ "area": "Red River Delta", "age1": 9.62, "age2": 1.45, "age3":20 },
-{ "area": "Northern midlands and moutain areas", "age1": 2.95, "age2": 20, "age3":20},
-{ "area": "North Central and Central Coastal area", "age1": 8.26, "age2": 20, "age3":20},
-{ "area": "Central Highlands", "age1": 2.47, "age2": 20, "age3":20 },
-{ "area": "South East", "age1": 8.02, "age2": 20, "age3":20},
-{ "area": "Mekong River Delta", "age1": 8.19, "age2": 20, "age3":20}];
-
+	{ "area": "Northern midlands and moutain areas", "age1": 2.95, "age2": 20, "age3":20},
+	{ "area": "North Central and Central Coastal area", "age1": 8.26, "age2": 20, "age3":20},
+	{ "area": "Central Highlands", "age1": 2.47, "age2": 20, "age3":20 },
+	{ "area": "South East", "age1": 8.02, "age2": 20, "age3":20},
+	{ "area": "Mekong River Delta", "age1": 8.19, "age2": 20, "age3":20}];
 
 var barWidth = 85;
 var w = data.length * barWidth;
@@ -18,6 +17,7 @@ var margin = {
 	left: 100,
 	right: 100
 };
+
 var width = w - margin.left - margin.right;
 var height = h - margin.top - margin.bottom;
 var formatAsPercentage = d3.format(".1%");

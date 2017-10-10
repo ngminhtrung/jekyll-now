@@ -25,7 +25,7 @@ Học D3.js để làm gì? có công ty nào ở Việt Nam cần nó? liệu �
 
 1. Học D3.js để làm gì? Để phục vụ cho thú vui cá nhân (tạo những đồ thị, bảng biểu có độ tuỳ chỉnh và tương tác cao vượt khỏi khả năng của Excel). Để đi làm kiếm tiền! 
 
-2. Công ty nào ở Việt Nam cần D3.js? Chắc là không có, tìm thử trên [itviec.com][2] hay [topdev.comf ][3] đều không có kết quả nào :( Ở ngoài Việt Nam thì ok hơn, nhưng đương nhiên là không thể nhiều bằng các kỹ năng khác rồi. Đây là các tìm kiếm ở [indeed.com][4], [upwork.com][5] hay [glassdoor.co.uk][6]. Kết luận sơ bộ là việc chỉ dùng đến D3.js thì rất ít, và cũng chẳng công ty nào thuê 1 ông chỉ biết mỗi D3 trong khi các front-end technologies khác bẻ đôi không biết. 
+2. Công ty nào ở Việt Nam cần D3.js? Chắc là không có, tìm thử trên [itviec.com][2] hay [topdev.com][3] đều không có kết quả nào :( Ở ngoài Việt Nam thì ok hơn, nhưng đương nhiên là không thể nhiều bằng các kỹ năng khác rồi. Đây là các tìm kiếm ở [indeed.com][4], [upwork.com][5] hay [glassdoor.co.uk][6]. Kết luận sơ bộ là việc chỉ dùng đến D3.js thì rất ít, và cũng chẳng công ty nào thuê 1 ông chỉ biết mỗi D3 trong khi các front-end technologies khác bẻ đôi không biết. 
 
 3. Thế giới họ có thắc mắc giống mình hay không? Dân tình bàn tán ra sao? Tham khảo các bạn trên Quora nói gì ở bên dưới. 
 

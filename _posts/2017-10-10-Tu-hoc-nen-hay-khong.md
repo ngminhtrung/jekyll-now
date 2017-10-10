@@ -1,7 +1,7 @@
 ---
-id: 
+id: 106
 title: '[John Sonmez] Tự học lập trình? Dễ hay khó? Nên chăng?'
-date: 2017-10-10
+date: 2017-10-06
 author: ngminhtrung
 layout: post
 guid: 
