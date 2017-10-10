@@ -9,7 +9,7 @@ var sound = document.getElementById("sound");
 
 	var margin = { top: 50, right: 20, bottom: 50, left: 20 };
 	var w = 1255 - margin.left - margin.right;
-	var h = 800 - margin.top - margin.bottom;
+	var h = 600 - margin.top - margin.bottom;
 	var i = 0;
 
 	var mymap = L.map('mapid').setView([0.55, 80.89], 3);
