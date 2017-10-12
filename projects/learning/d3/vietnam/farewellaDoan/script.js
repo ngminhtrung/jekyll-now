@@ -1,26 +1,26 @@
 var sound = document.getElementById("sound");
 
-	var data = [];
-	var data1 = [];
-	var data2 = [];
-	var data3 = [];
-	var arr = [];
-	var arrAnimation = [""]
+var data = [];
+var data1 = [];
+var data2 = [];
+var data3 = [];
+var arr = [];
+var arrAnimation = [""]
 
-	var margin = { top: 50, right: 20, bottom: 50, left: 20 };
-	var w = 1255 - margin.left - margin.right;
-	var h = 600 - margin.top - margin.bottom;
-	var i = 0;
+var margin = { top: 50, right: 20, bottom: 50, left: 20 };
+var w = 1255 - margin.left - margin.right;
+var h = 600 - margin.top - margin.bottom;
+var i = 0;
 
-	var mymap = L.map('mapid').setView([0.55, 80.89], 3);
+var mymap = L.map('mapid').setView([0.55, 80.89], 3);
 
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		maxZoom: 19,
-		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-	}).addTo(mymap);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(mymap);
 
-	// get data from data-02.csv 
-	setTimeout(d3Function,5000);
+// get data from data-02.csv 
+// setTimeout(d3Function,5000);
 
 	function d3Function() {
 
@@ -65,6 +65,7 @@ var sound = document.getElementById("sound");
 							var g1 = svg1.append("g")
 								.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 							var data = []
+
 							var illustration = setInterval(function () {
 								number.style.fontSize = "80px";
 								data[i] = data1[i]
@@ -72,12 +73,9 @@ var sound = document.getElementById("sound");
 									drawBarChat1(data, g1, x1, y1);
 									time.innerHTML = data1[i].time;
 									number.innerHTML = data1[i].Accumulated;
-									
 									plotMarkers(data2, i);
 									i++;
-
 									if (i % 4 == 0) { sound.play();}
-									
 								} else {
 									clearInterval(illustration);
 								}

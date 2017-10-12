@@ -24,7 +24,6 @@ body {
 }
 
 #month {
-
     margin: 30px;
 }
 
@@ -39,11 +38,12 @@ body {
     width: 1255px;
     height: 800px;
     background-color: rgba(255, 255, 255, 0.1);
-    /* background-color: purple; */
-    /* opacity: 0.5; */
     top: 50px;
 
 }
+
+// D3.js
+
 
 .enter {
     fill: green;
@@ -59,14 +59,4 @@ body {
     color: rgba(255, 255, 255, 0);
     font-size: 0px;
 
-}
-
-blink_me {
-    animation: blinker 0.5s linear infinite;
-}
-
-@keyframes blinker {
-    50% {
-        opacity: 0;
-    }
 }
