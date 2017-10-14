@@ -1,6 +1,6 @@
 ---
 id: 106
-title: '[John Sonmez] Tự học lập trình? Dễ hay khó? Nên chăng?'
+title: '[John Sonmez] Tự học lập trình? Dễ hay khó? Nên chăng? - Phần 1/2'
 date: 2017-10-20
 author: ngminhtrung
 layout: post
@@ -21,7 +21,7 @@ Sau một thời gian đi học về lập trình front-end (HTML, CSS, JavaScri
 
 Chỉ khoảng 5% là có khả năng tự học 100% từ đầu thông qua sách vở, giáo trình, khoá học online. Khoa học máy tính nói chung và lập trình nói riêng là một lĩnh vực phức tạp, tầng tầng lớp lớp các hệ thống logic đan xen với nhau, vừa rất rộng, lại cũng rất sâu. Một người chưa biết gì về lập trình/ kỹ thuật máy tính mà muốn nghiêm túc phát triển sự nghiệp theo hướng này không nên tiếc thời gian, công sức, và tiền bạc để những người có kinh nghiệm trong ngành chỉ bảo, tránh đi lan man không hiệu quả trong thời gian ban đầu ( 9 tháng - 12 tháng). Tôi muốn nhấn mạnh cụm *trong thời gian ban đầu*. Sau này, tuy việc *có 1 người mentor tốt cho mình lời khuyên trong công việc vẫn vô cùng quan trọng*, nhưng lúc đó bản thân đã cứng cáp hơn, đa có thể tự đi nhiều hơn so lúc ban đầu. 
 
-Hôm nay đọc chương "**Teaching Yourself** (Tạm dịch: *Tự dạy bản thân*)"trong quyển "[The Complete Software Developer's Career Guide](https://www.amazon.com/Complete-Software-Developers-Career-Guide-ebook/dp/B073X6GNJ1) (Tạm dịch: *Toàn tập Hướng dẫn nghề nghiệp cho Lập trình viên*)" của John Sonmez, cảm thấy có một vài điều ưng ý nên lược dịch một chút để ai vào đây có thể tham khảo. Các bạn có thể mua ebook/ hoặc sách giấy từ Amazon.
+Hôm nay đọc chương "**Teaching Yourself** (Tạm dịch: *Tự dạy bản thân*)" trong quyển "[The Complete Software Developer's Career Guide](https://www.amazon.com/Complete-Software-Developers-Career-Guide-ebook/dp/B073X6GNJ1) (Tạm dịch: *Toàn tập Hướng dẫn nghề nghiệp cho Lập trình viên*)" của John Sonmez, cảm thấy có một vài điều ưng ý nên lược dịch một chút để ai vào đây có thể tham khảo. Các bạn có thể mua ebook/ hoặc sách giấy từ Amazon.
 
 - *Lưu ý 1*: Một quyển tiếng Việt có nội dung tương tự cho thị trường Việt Nam là cuốn "[Code Dạo Ký sự - Lập trình viên đâu phải chỉ biết code](https://tiki.vn/code-dao-ki-su-p580509.html)" của [Phạm Huy Hoàng](https://toidicodedao.com/about/) (hiện đang là Full-stack Developer tại Lancaster ISS, Singapore). Tiền sách chỉ bằng một vài cốc cà phê/ trà sữa Đài Loan. 
 - *Lưu ý 2*: Sách của John Sonmez thực ra là tập hợp lại các bài viết blog trên website của John. Hầu hết bài của anh này đều viết dưới dạng văn nói, nên tuy cấu trúc chung thì rõ ràng, nhưng các đoạn văn cụ thể thì nhiều chỗ rườm rà, lủng củng, và tối nghĩa nữa. Tôi sẽ cố gắng dịch lấy ý chứ không dịch từng chữ bài của John. 
