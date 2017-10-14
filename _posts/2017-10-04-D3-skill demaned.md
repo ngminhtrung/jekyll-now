@@ -6,7 +6,7 @@ author: ngminhtrung
 layout: post
 guid: 
 permalink: 
-categories:
+category:
   - dataviz
 tags:
   - javascript
