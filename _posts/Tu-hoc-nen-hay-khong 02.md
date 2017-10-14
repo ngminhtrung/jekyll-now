@@ -69,51 +69,23 @@ Mỗi khi có bài [thuyết trình về năm kỹ năng mềm hàng đầu](htt
 
 Tôi không thể tìm cách tốt hơn để nhấn mạnh tầm quan trọng của kỹ năng này cả trong cuộc sống đời thường lẫn trong lĩnh vực khoa học máy tính và phát triển phần mềm. **Với những ai có thể tự học, cả thế giới sẽ nằm trong tay họ, các cơ hội sẽ rộng mở hơn với họ so với người không biết cách tự học**. 
 
-**There are few things that are more difficult to learn in life than learning to program on your own**.
+Tôi biết một vài người sẽ không đồng ý với quan điểm dưới đây, nhưng từ kinh nghiệm tự học rất nhiều kỹ năng, cũng như kinh nghiệm hướng dẫn các kỹ năng sống trong suốt 1 thời gian dài, tôi có thể nói rằng chỉ có 1 thử thách còn khó hơn việc học lập trình, đó là "học kinh doanh". 
 
-I know some people will disagree with me on that statement, but I have taught myself many skills and I have been a teacher of all kinds of life skills for a long time, and I’ve only encountered one challenge greater than that of learning to code: learning to be an entrepreneur.”
+### HỌC VỚI TỐC ĐỘ CỦA BẠN
 
-### “YOU CAN LEARN AT YOUR OWN PACE”
+Đối với những ai tham gia các trường học chính quy, hoặc các khoá học ở boot camps, một trong những vấn đề họ hay gặp phải đó là tốc độ trên lớp hoặc quá nhanh hoặc quá chậm so với khả năng của họ. Mỗi người có một nền tảng, trí thông minh, và khả năng tập trung khác nhau, cho nên họ cũng sẽ tiếp thu kiến thức mới với tốc độ không giống nhau. **Bạn sẽ thấy chán nản, phí thời gian, và đánh mất sự tập trung nếu ở lớp các giảng viên đang giảng bải chậm hơn so với những gì bạn có thể học**. Điều này cũng đúng trong trường hợp mọi thứ lại diễn ra quá nhanh, trong khi bạn còn chưa kịp hiểu giảng viên vừa dạy thứ gì. 
 
-“One of the major struggles people have with traditional education or boot camps is that they either move too quickly or too slowly.
+Nếu bạn tự học, những vấn đề trên sẽ biến mất, bạn có thể đi nhanh hoặc đi chậm miễn là cảm thấy thoải mái. Và như thế, bạn sẽ hiểu được kiến thức tốt hơn do có thời gian để suy nghĩ trước khi chuyển sang chủ đề tiếp theo. Đây là một lợi thế lớn đối với những ai cảm thấy mình học quá chậm hoặc quá nhanh so với phần đông bạn bè. Đó là lý do mà tôi (John Sonmez) luôn cố gắng tự học nhiều nhất có thể. 
 
-Different people, with varied backgrounds, intelligence levels, and concentration abilities are going to learn and grasp things at a different pace.
+### BẠN CÓ THỂ LÀM CHỦ LỊCH HỌC CỦA MÌNH
 
-**It can be frustrating to be in a setting where the teacher is teaching at a slower pace than what would be optimal for you**, because it feels like you are wasting your time and you may become bored and not pay attention.
+Khi quyết định học ở trường hoặc ở boot camp, bạn đã tự cam kết một lượng lớn thời gian hàng ngày và một phần cuộc đời mình cho việc học này. Điều đó sẽ ổn thôi nếu bạn có thời gian, chưa vướng bận việc gì, chỉ có một mối quan tâm là học và lấy bằng cấp. **Nhưng sẽ như thế nào nếu bạn đang đi làm toàn thời gian, hoặc có lịch làm việc không có định? thế thì tự học sẽ là một lựa chọn tốt hơn**. Mà thực tế thì trong trường học này, bạn chỉ có 1 lựa chọn duy nhất là tự học. 
 
-On the other hand, **it can also be equally frustrating when you are sitting in a class that seems to be moving too quickly** and you are having trouble understanding what is going on.
+Với bản thân mình, tôi đã tự học lập trình, rồi lấy bằng thông qua 1 chương trình học từ xa. Thời điểm đấy tôi đang có một công việc quá tốt để từ bỏ, và tự học là một giải pháp linh hoạt phù hợp lúc bấy giờ. Cho nên, nếu bạn chưa muốn vứt bỏ mọi thứ trong cuộc sống của mình chỉ để tập trung vào lập trình, thì bạn nên chọn con đường tự học. 
 
-By teaching yourself how to program, you can avoid this problem completely and move at the pace that is most comfortable to you.
+### BẠN CÓ THỂ ĐÀO SÂU THÊM VÀO NHỮNG CHỦ ĐỀ QUAN TÂM
 
-In the end, you’ll probably have a better understanding of what you are learning, because you’ll be able to completely explore a concept before moving on to the next one.
-
-If you consider yourself a slow learner or a very rapid learner, this could be a big advantage that you may want to consider.
-
-I[…]”
-
-### “YOU CAN WORK AROUND YOUR SCHEDULE”
-
-“When you decide to go to college or a coding boot camp, you are committing a huge amount of time in both your daily schedule and your life to one specific endeavor.
-
-This can be great if you don’t have other commitments and you have the luxury of focusing on just learning to program or getting your degree, **but if you already have a hectic schedule and you don’t want to quit your full-time job, learning on your own can be a much better choice**.
-
-In fact, it may be your only choice.
-
-I learned programming on my own and then completed my degree on my own through a correspondence school.
-
-I needed that flexibility since I already had a really good job that I had no interest in leaving.
-
-So, if you don’t want to drop everything else in your life to focus on learning to program, this could be a pretty big reason to learn on your own.”
-
-### “YOU CAN GO DEEP ON SUBJECTS YOU ARE INTERESTED IN”
-
-“One of the things I found best about learning on my own is that I could go really deep into the subjects I was most interested in.
-
-**When I did go to a traditional college, I was constantly frustrated by having to move on before I felt like I had completely explored a topic**.
-
-I often felt like we were just rushing through the material so we could complete the textbook—not really trying to learn.”
-
-“If you find yourself to be a very curious person who really wants to dig deep and understand what they are learning, you will probably be frustrated in college—and perhaps in coding boot camps—where there is often an emphasis on rushing to cover the required material, rather than going deep to gain true understanding.”
+Một trong những lợi thế rõ ràng nhất của tự học đó là việc ta có thể đào sâu hơn vào những chủ đề bản thân quan tâm. **Khi tôi còn đi học ở trường, việc phải chuyển sang một chủ đề khác trong khi còn đang chưa tìm hiểu hết chủ đề còn lại khiến tôi cảm thấy không thích chút nào**. Thường là chúng ta sẽ đi thật nhanh qua các tài liệu tham khảo chỉ để hoàn thành xong giáo trình chứ không phải để thực sự học cái gì đó. Vậy nên nếu bạn nghĩ mình là dạng người tò mò, hay đào sâu để hiểu chi tiết ngọn ngành một chủ đề nào đó, thì trường học và boot camp không dành cho bạn, hãy tự học để có được hiểu biết thấu đáo nhất. 
 
 ## “DISADVANTAGES TO SELF-TAUGHT PROGRAMMING”
 
