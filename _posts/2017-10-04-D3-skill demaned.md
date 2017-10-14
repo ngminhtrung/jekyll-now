@@ -7,7 +7,7 @@ layout: post
 guid: 
 permalink: 
 categories:
-  - D3.js
+  - dataviz
 tags:
   - javascript
   - front-end
