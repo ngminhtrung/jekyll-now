@@ -6,8 +6,8 @@ author: ngminhtrung
 layout: post
 guid: http://travisnguyen.net/?p=87
 permalink: /review-sach-lam-sao-noi-ve-nhung-cuon-sach-chua-doc/
-categories:
-  - Review sách
+category:
+  - reading
 ---
 **Làm sao nói về những cuốn sách chưa đọc?**
   
