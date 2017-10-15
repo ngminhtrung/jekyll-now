@@ -31,8 +31,7 @@ Bài dịch này sẽ chia làm 2 phần ứng với 2 mục lớn của bài g�
 1. Phần 1: Ưu điểm của việc tự học lập trình
 2. Phần 2: Nhược điểm của việc tự học lập trình
 
-Dưới đây là phần 1: "Ưu điểm của việc tự học lập trình"
-
+Dưới đây là phần 1: "Ưu điểm của việc tự học lập trình". Phần 2 sẽ được dịch và đăng trong tháng 11. 
 
 ***
 
@@ -91,3 +90,6 @@ Với bản thân mình, tôi đã tự học lập trình, rồi lấy bằng t
 ### BẠN CÓ THỂ ĐÀO SÂU THÊM VÀO NHỮNG CHỦ ĐỀ QUAN TÂM
 
 Một trong những lợi thế rõ ràng nhất của tự học đó là việc ta có thể đào sâu hơn vào những chủ đề bản thân quan tâm. **Khi tôi còn đi học ở trường, việc phải chuyển sang một chủ đề khác trong khi còn đang chưa tìm hiểu hết chủ đề còn lại khiến tôi cảm thấy không thích chút nào**. Thường là chúng ta sẽ đi thật nhanh qua các tài liệu tham khảo chỉ để hoàn thành xong giáo trình chứ không phải để thực sự học cái gì đó. Vậy nên nếu bạn nghĩ mình là dạng người tò mò, hay đào sâu để hiểu chi tiết ngọn ngành một chủ đề nào đó, thì trường học và boot camp không dành cho bạn, hãy tự học để có được hiểu biết thấu đáo nhất. 
+
+
+- Hết phần 1. Phần 2 sẽ được dịch và đăng vào tuần thứ 1 tháng 11 -
