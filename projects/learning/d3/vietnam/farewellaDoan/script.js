@@ -20,7 +20,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(mymap);
 
 // get data from data-02.csv 
-// setTimeout(d3Function,5000);
+setTimeout(d3Function,5000);
 
 	function d3Function() {
 

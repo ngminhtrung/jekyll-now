@@ -76,7 +76,6 @@ Tôi biết một vài người sẽ không đồng ý với quan điểm dướ
 Đối với những ai tham gia các trường học chính quy, hoặc các khoá học ở boot camps, một trong những vấn đề họ hay gặp phải đó là tốc độ trên lớp hoặc quá nhanh hoặc quá chậm so với khả năng của họ. Mỗi người có một nền tảng, trí thông minh, và khả năng tập trung khác nhau, cho nên họ cũng sẽ tiếp thu kiến thức mới với tốc độ không giống nhau. **Bạn sẽ thấy chán nản, phí thời gian, và đánh mất sự tập trung nếu ở lớp các giảng viên đang giảng bải chậm hơn so với những gì bạn có thể học**. Điều này cũng đúng trong trường hợp mọi thứ lại diễn ra quá nhanh, trong khi bạn còn chưa kịp hiểu giảng viên vừa dạy thứ gì. 
 
 Nếu bạn tự học, những vấn đề trên sẽ biến mất, bạn có thể đi nhanh hoặc đi chậm miễn là cảm thấy thoải mái. Và như thế, bạn sẽ hiểu được kiến thức tốt hơn do có thời gian để suy nghĩ trước khi chuyển sang chủ đề tiếp theo. Đây là một lợi thế lớn đối với những ai cảm thấy mình học quá chậm hoặc quá nhanh so với phần đông bạn bè. Đó là lý do mà tôi (John Sonmez) luôn cố gắng tự học nhiều nhất có thể. 
-
 ### BẠN CÓ THỂ LÀM CHỦ LỊCH HỌC CỦA MÌNH
 
 Khi quyết định học ở trường hoặc ở boot camp, bạn đã tự cam kết một lượng lớn thời gian hàng ngày và một phần cuộc đời mình cho việc học này. Điều đó sẽ ổn thôi nếu bạn có thời gian, chưa vướng bận việc gì, chỉ có một mối quan tâm là học và lấy bằng cấp. **Nhưng sẽ như thế nào nếu bạn đang đi làm toàn thời gian, hoặc có lịch làm việc không có định? thế thì tự học sẽ là một lựa chọn tốt hơn**. Mà thực tế thì trong trường học này, bạn chỉ có 1 lựa chọn duy nhất là tự học. 
@@ -183,3 +182,5 @@ That is because when you work in isolation and solve problems on your own, you s
 This isn’t necessarily bad, but it can be if the way you figure out how to do things greatly differs than what is commonly accepted and you aren’t willing to learn and change once you get a real job.
 
 “You can, of course, combat this by purposely trying to add computer science material to your self-study program and working on shared projects, like open-source for example, but **just be aware that you are likely to have some gaps in your education** that you won’t be aware of.”
+
+Hà Nội mùa này vắng những cơn mưa 
