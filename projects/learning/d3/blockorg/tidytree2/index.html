@@ -119,6 +119,7 @@ var treeData =
 
 var background_color = "#FFFFFF";
 var link_color = "#008000";
+var symbol_size = 12;
 					
 var chart = d3.select("#chart_box").append("svg")
 	.attr("width", width + margin.left + margin.right)
@@ -126,7 +127,9 @@ var chart = d3.select("#chart_box").append("svg")
 					
 var option = {
 	background_color: background_color,
-	link_color: link_color
+	link_color: link_color,
+	symbol_size: symbol_size
+
 }
 
 draw.call(chart, option)
