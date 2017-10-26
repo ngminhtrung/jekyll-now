@@ -94,8 +94,8 @@ function draw(params) {
         .attr("class", "link")
         .attr("d", function (d) {
             return "M" + d.x + "," + d.y
-                + "C" + d.x + "," + (d.y + d.parent.y) / 2
-                + " " + d.parent.x + "," + (d.y + d.parent.y) / 2
+                // + "C" + d.x + "," + (d.y + d.parent.y) / 2
+                // + " " + d.parent.x + "," + (d.y + d.parent.y) / 2
                 + " " + d.parent.x + "," + d.parent.y;
         })
         .style("stroke", params.link_color);
