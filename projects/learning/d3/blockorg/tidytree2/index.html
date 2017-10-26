@@ -20,7 +20,7 @@
 		}
 
 		.node text {
-			font: 12px sans-serif;
+			font: sans-serif;
 		}
 
 		.link {
@@ -44,7 +44,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 	<!-- load the d3.js library -->
-	<script src="http://d3js.org/d3.v4.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
 
 	<link href="prism.css" rel="stylesheet" />
 
@@ -60,13 +60,17 @@
 			<div class="col-xs-6">
 				<div id="control_box">
 					<div class="row">
-						<div class="col-xs-6">
-							<p>Select Background Color</p>
+						<div class="col-xs-4">
+							<p>Background Color</p>
 							<input type="color" class="form-control" id="backgroundColor" value="#FFFFFF">
 						</div>
-						<div class="col-xs-6">
-							<p>Select Line Color</p>
+						<div class="col-xs-4">
+							<p>Line Color</p>
 							<input type="color" class="form-control" id="linkColor" value="#008000">
+						</div>
+						<div class="col-xs-4">
+							<p>Symbol Size</p>
+							<input type="number" class="form-control" id="symbolSize" min="8" max="40" value="10">
 						</div>
 					</div>
 					<br>

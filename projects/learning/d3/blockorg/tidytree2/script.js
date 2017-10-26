@@ -38,9 +38,12 @@ var margin = { top: 50, right: 50, bottom: 50, left: 50 },
     width = 550 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
+var drawBtn = document.getElementById("draw");
+
 var background_color = "#FFFFFF";
 var link_color = "#008000";
-var drawBtn = document.getElementById("draw");
+var symbol_size = 10;
+
 
 var chart = d3.select("#chart_box").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -48,7 +51,8 @@ var chart = d3.select("#chart_box").append("svg")
 
 var option = {
     background_color: background_color,
-    link_color: link_color
+    link_color: link_color,
+    symbol_size: symbol_size
 }
 
 draw.call(chart, option)
@@ -58,7 +62,8 @@ drawBtn.addEventListener("click", function () {
 })
 
 function draw(params) {
-    console.log("Drawing the chart!");
+    console.log("Symbol Size: " + params.symbol_size);
+    // var strFontSize = '"' + params.font_size + 'px"';
 
     this.style("background-color", params.background_color);
     // declares a tree layout and assigns the size
@@ -109,29 +114,46 @@ function draw(params) {
 
     // adds the circle to the node
     node.append("circle")
-        .attr("r", 10);
+        .attr("r", params.symbol_size);
 
     // adds the text to the node
     node.append("text")
         .attr("dy", ".35em")
         .attr("y", function (d) { return d.children ? -20 : 20; })
+        // .style("font-size", strFontSize )
         .style("text-anchor", "middle")
+        .style("font-size", "12px")
+       
         .text(function (d) { return d.data.name; });
+    
+    // console.log(strFontSize);
 }
 
 window.addEventListener("load", startup, false);
 
 function startup() {
+
+    // listen to input of Background Color
     colorPickerBackground = document.querySelector("#backgroundColor");
     colorPickerBackground.value = background_color;
     colorPickerBackground.addEventListener("input", updateFirstBackground, false);
     colorPickerBackground.addEventListener("change", updateBackground, false);
     colorPickerBackground.select();
+
+    // listen to input of Line Color
     colorPickerLine = document.querySelector("#linkColor");
     colorPickerLine.value = link_color;
-    colorPickerLine.addEventListener("input", updateFirstLink, false);
-    colorPickerLine.addEventListener("change", updateLink, false);
+    colorPickerLine.addEventListener("input", updateFirstLineColor, false);
+    colorPickerLine.addEventListener("change", updateLineColor, false);
     colorPickerLine.select();
+
+    // listen to input of Symbol Size
+
+    symbolSizePicker = document.querySelector("#symbolSize");
+    symbolSizePicker.value = symbol_size;
+    symbolSizePicker.addEventListener("input", updateFirstSymbolSize, false);
+    symbolSizePicker.addEventListener("change", updateSymbolSize, false);
+    symbolSizePicker.select();
 }
 function updateFirstBackground(event) {
     option.background_color = event.target.value;
@@ -141,10 +163,20 @@ function updateBackground(event) {
     option.background_color = event.target.value;
 }
 
-function updateFirstLink(event) {
+function updateFirstLineColor(event) {
     option.link_color = event.target.value;
 }
 
-function updateLink(event) {
+function updateLineColor(event) {
     option.link_color = event.target.value;
+}
+
+// font size 
+
+function updateFirstSymbolSize(event) {
+    option.symbol_size = event.target.value;
+}
+
+function updateSymbolSize(event) {
+    option.symbol_size = event.target.value;
 }
