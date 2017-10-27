@@ -12,20 +12,16 @@
 			margin: auto;
 			margin-top: 5px;
 		}
-
-		.node circle {
-			fill: white;
-			stroke: steelblue;
-			stroke-width: 3px;
-		}
-
 		.node text {
 			font: sans-serif;
 		}
 
 		.link {
 			fill: none;
-			stroke-width: 2px;
+		}
+
+		.highlighted {
+			stroke-width: 3px;
 		}
 
 		h1 {
@@ -55,18 +51,21 @@
 	<div class="container-fluid">
 		<h1>Network Chart</h1>
 
-		<div class="row">
+		<div id="chart_box">
+			</div>
 
-			<div class="col-xs-6">
+		<!-- <div class="row">
+
+			<div class="col-xs-12">
 				<div id="control_box">
 					<div class="row">
 						<div class="col-xs-4">
 							<p>Background Color</p>
-							<input type="color" class="form-control" id="backgroundColor" value="#FFFFFF">
+							<input type="color" class="form-control" id="backgroundColor" value="#2B2B2B">
 						</div>
 						<div class="col-xs-4">
 							<p>Line Color</p>
-							<input type="color" class="form-control" id="linkColor" value="#008000">
+							<input type="color" class="form-control" id="linkColor" value="#6E7382">
 						</div>
 						<div class="col-xs-4">
 							<p>Symbol Size</p>
@@ -76,13 +75,12 @@
 					<br>
 					<button class="btn btn-primary" id="draw">Draw the chart</button>
 				</div>
-				<div id="chart_box">
-					</div>
-			</div>
-
-			<dive class="col-xs-6">
+				
+			</div> -->
+<!-- 
+			<dive class="col-xs-2">
 				<p>Sample Code </p>
-				<pre><code class="language-javascript">
+				<pre><code class="language-javascript"> 
 var treeData =
 {
 	"name": "A",
@@ -147,7 +145,7 @@ draw.call(chart, option)
 
 
 
-	</div>
+	</div>-->
 	<script src="script.js"></script>
 	<script src="prism.js"></script>
 

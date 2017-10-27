@@ -1,34 +1,24 @@
 var treeData =
     {
-        "name": "A",
+        "name": "VP",
         "children": [
             {
-                "name": "B.1",
+                "name": "VP",
                 "children": [
 
-                    { "name": "B.1.1",
+                    { "name": "VP_OBJ",
                       "children": [
-                          {"name": "B.1.1.1"},
-                          {"name": "B.1.1.2"}
+                          {"name": "VP",
+                        "children": [
+                            {"name": "NP_SBJ"},
+                            {"name": "NP_SBJ"},
+                            {"name": "NP_AJT"}
+                        ]},
+                          {"name": "NP_AJT"},
+                          {"name": "NP_OBJ"}
                       ]},
-                    { "name": "B.1.2" },
-                    { "name": "B.1.3" },
-                    { "name": "B.1.4" }
                 ]
             },
-            {
-                "name": "C",
-                "children": [
-                    { "name": "C.1" }
-                ]
-            },
-            {
-                "name": "D",
-                "children": [
-                    { "name": "D.1" },
-                    { "name": "D.2" }
-                ]
-            }
         ]
     };
     
