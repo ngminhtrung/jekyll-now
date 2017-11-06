@@ -3,6 +3,10 @@ var width = 960,
 
 var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody().strength(-100))
+    // alphaDecay controls how quickly the simulation cools
+    // To have the simulation run forever at the current alpha, 
+    // set the decay rate to zero; alternatively, 
+    // set a target alpha greater than the minimum alpha.
     .alphaDecay(0);
     
 

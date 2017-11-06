@@ -25,6 +25,7 @@ var treeData = [
     }
 ];
 
+
 // ************** Generate the tree diagram	 *****************
 var margin = { top: 40, right: 120, bottom: 20, left: 120 },
     width = 960 - margin.right - margin.left,
@@ -39,16 +40,12 @@ var tree = d3.layout.tree()
 // var tree = d3.tree()
 //     .size([height, width]);
 
-
 // about "diagonal": http://bl.ocks.org/aaizemberg/8693661
 // Bézier curve: https://en.wikipedia.org/wiki/Bézier_curve
 // # diagonal.projection([projection])
 
-
 var diagonal = d3.svg.diagonal()
     .projection(function (d) { return [d.x, d.y]; });
-
-    
 
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.right + margin.left)
@@ -72,7 +69,6 @@ function update(source) {
     var nodes = tree.nodes(root), //reserved() là default method của object dạng array
         links = tree.links(nodes); // 
         console.log(nodes);
-        console.log("Hello");
         console.log(links);
 
     // Normalize for fixed-depth.
