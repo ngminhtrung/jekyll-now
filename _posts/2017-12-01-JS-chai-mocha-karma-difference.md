@@ -16,9 +16,9 @@ tags:
   - karma
 ---
 
-Nếu tưởng tượng Khoa học Máy tính (Computer Science) là một thế giới mới mà bạn đang khám phá, thì mỗi lĩnh vực trong đó lại là những thế giới con cũng phức tạp không kém, với trùng trùng điệp điệp các khái niệm, thuật ngữ và công cụ phức tạp. Lần này tôi lạc vào 1 thế giới khác - "_Software Testing (Kiểm thử Phần mềm)_", chạm vào chỉ một phần nhỏ (nếu không nói là phần rìa) của nó là **T**est **D**riven **D**evelopment sử dụng **Mocha**, **Chai.js** để test các ứng dụng **JavaScript**. 
+Nếu tưởng tượng _Khoa học Máy tính (Computer Science)_ là một thế giới mới mà bạn đang khám phá, thì mỗi lĩnh vực trong đó lại là những thế giới con cũng phức tạp không kém, với trùng trùng điệp điệp các khái niệm, thuật ngữ và công cụ phức tạp. Lần này tôi lạc vào 1 thế giới khác - "_Software Testing (Kiểm thử Phần mềm)_", chạm vào chỉ một phần nhỏ (nếu không nói là phần rìa) của nó là **T**est **D**riven **D**evelopment sử dụng **Mocha**, **Chai.js** để test các ứng dụng **JavaScript**. 
 
-Có lẽ có nhiều cách để phân loại (trừu tượng hóa) các cấp độ trong kiểm thử phần mềm, ở đây, tôi chỉ giới hạn vào một góc nhìn rằng việc các phép kiểm thử ứng dụng **JavaScript** được chia ra làm 4 cấp:
+Có lẽ có nhiều cách để phân loại (trừu tượng hóa) các cấp độ trong kiểm thử phần mềm, ở đây, tôi chỉ giới hạn vào một góc nhìn rằng các phép kiểm thử ứng dụng **JavaScript** được chia ra làm 4 cấp, xếp theo thứ tự thấp dần như sau:
 1. **Test Runner** (hay là Test Enviroment như _karma_)
 2. **Testing Frameworks** (như _mocha_ hay _jasmine_)
 3. **Assertion Libraries** (như là _should.js_, _chai.js_)
@@ -72,7 +72,7 @@ describe('mycode.doSomething', function() { // mocha
 
 # **Testing Environments** là gì?
 
-Với người mới, khái niệm này tương đối khó hiểu. Theo định nghĩa, nó là môi trường mà lập trình viên chạy toàn bộ việc kiểm thử trong đó. _Karam_ là một testing enviroment. Môi trường này chứa các thành phần liên quan đến phần mềm, phần cứng, và network đã được cấu hình sẵn để giúp việc thực thi việc kiểm thử. Việc cấu hình phải giúp biến môi trường test thành gần như tương đồng với môi trường thực mà sản phẩm sẽ chạy sau này. Chỉ có như thế thì việc test mới giúp lập trình viên phát hiện ra các lỗi của chương trình.
+Với người mới, khái niệm này tương đối khó hiểu. Theo định nghĩa, nó là môi trường mà lập trình viên chạy toàn bộ việc kiểm thử trong đó. Môi trường này chứa các thành phần liên quan đến phần mềm, phần cứng, và network đã được cấu hình sẵn để giúp việc thực thi việc kiểm thử. Việc cấu hình phải giúp biến môi trường test thành gần như tương đồng với môi trường thực mà sản phẩm sẽ chạy sau này. Chỉ có như thế thì việc test mới giúp lập trình viên phát hiện ra các lỗi của chương trình.
 
 Ví dụ về cấu hình cho Test Enviroment để kiểm tra một ứng dụng web:
 ```js
