@@ -109,7 +109,7 @@ describe('API integration', function(){
 
 Dẫu chưa chỉ ra hết các đặc tính, việc phân loại như trên cũng giúp những lập trình viên mới nắm bắt được bản chất của từng công cụ. Ranh giới của từng công cụ riêng lẻ sẽ còn phải thảo luận thêm (ví dụ như Mocha vừa là testing framework, vừa là testing enviroment). Các vấn đề này sẽ được thảo luận trong những bài tiếp theo.
 
-<a name="footnote1_stub">1</a>: Nếu bạn là một lập trình viên web thì kiểu gì bạn cũng cần kết nối đến API của bên thứ 3 (như của Twilio, GitHub, Twitter, hoặc Mailgun), hoặc là kết nối đến các microservice khác của chính bạn. Dẫu vậy, khi làm unit test, thì ngược lại, bạn không muốn tạo HTTP requests đến các dịch vụ kia. Thay vì thế, bạn lại thích các tạo các “fake” request, và nhận về một "stub", từ đó đánh lừa hệ thống là request đã được tạo. 
+<a name="footnote1_stub">1</a>: _Nếu bạn là một lập trình viên web thì kiểu gì bạn cũng cần kết nối đến API của bên thứ 3 (như của Twilio, GitHub, Twitter, hoặc Mailgun), hoặc là kết nối đến các microservice khác của chính bạn. Dẫu vậy, khi làm unit test, thì ngược lại, bạn không muốn tạo HTTP requests đến các dịch vụ kia. Thay vì thế, bạn lại thích các tạo các “fake” request, và nhận về một "stub", từ đó đánh lừa hệ thống là request đã được tạo._ 
 
 
 
