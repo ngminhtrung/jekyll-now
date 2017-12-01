@@ -20,7 +20,6 @@ var y = d3.scaleLinear()
 var z = d3.scaleOrdinal()
             .range(["#a05d56", "#d0743c", "#ff8c00"]);
 
-
 var svg = d3.select("body").append("svg")
             .attr("id", "chart")
             .attr("width", w)
@@ -36,11 +35,10 @@ var div = d3.select("body").append("div")
 
 var tool_tip = d3.tip()
             .attr("class", "d3-tip")
-            .offset([-8, 0])
+            .offset([0, 0])
             .html(function(d,i) { return "Unemployment rate: <span style='color:red'>" + d.value + "%</span>"; });
 svg.call(tool_tip);
           
-
 d3.csv("data.csv", function(d, i, columns) {
 
 // If a row conversion function is specified, the specified function
@@ -95,12 +93,7 @@ d3.csv("data.csv", function(d, i, columns) {
                 .data(function(d) { return keys.map(function(key) { return {key: key, value: d[key]}; }); })
                 // join data through columns [starting from column 1]
                 .enter().append("rect")
-                    .classed("sub-categories", true)
-                    .on("mouseover", function(d,i){
-                        d3.select(this).style("fill", "purple");
-                        div.transition()		
-                            .duration(500)		
-                            .style("opacity", .9);	})	
+                    .classed("sub-categories", true)	
                     .on("mouseover",tool_tip.show)
                     .on("mouseout", tool_tip.hide)
                     .attr("x", function(d) { return x1(d.key); })

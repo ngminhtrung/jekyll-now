@@ -1,5 +1,5 @@
 ---
-id: 108
+id: 109
 title: 'Trung Quốc - một thế giới mới CNTT so với phần còn lại của nhân loại'
 date: 2017-10-30
 author: ngminhtrung
@@ -16,9 +16,7 @@ tags:
   - career
 ---
 
-Xin chia sẻ về 1 một podcast của Software Engineering Daily bàn về sự phát triển công nghệ thông tin ở Trung Quốc. Đây là cuộc hội thoại giữa người điều hành Software Engineering Daily với *Bernard Leong* (Trưởng bộ phận Post Office Network & Digital Services của tờ Singapore Post).
-
-Ỏ nước Mỹ, các công tỵ công 
+Xin chia sẻ về 1 một podcast của Software Engineering Daily bàn về sự phát triển công nghệ thông tin ở Trung Quốc. Đây là cuộc hội thoại giữa người điều hành Software Engineering Daily với *Bernard Leong* (Trưởng bộ phận Post Office Network & Digital Services của tờ Singapore Post). Bài
 
 In America, the tech companies we focus on are commonly known as FAANG: Facebook, Amazon, Apple, Netflix, Google. We all know what these companies do because they impact our daily lives. In Asia, there are three giant tech companies that have similar scale: Baidu, Alibaba, and Tencent, otherwise known as BAT.
 
