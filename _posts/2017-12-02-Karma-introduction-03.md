@@ -60,7 +60,7 @@ Như đã nói ở trên, đây là chuỗi thao tác đặc trưng của lập 
 
 Karma hướng đến việc giảm bớt chuỗi thao tác, mỗi lần lập trình viên nhấn save, họ phải nhìn thấy kết quả test ngay lập tức, ngay trong trình soạn thảo mà không phải chuyển sang trình duyệt. Nếu cần kích hoạt một phép kiểm thử thủ công thì việc đó cũng có thể được làm ngay trong cửa sổ console của IDE. Đây chính là tính năng "kiểm soát từ xa" mà Karma cần có.
 
-### 3.2.3 Tăng tốc độ test
+### 3.2.3. Tăng tốc độ test
 
 Đợi chờ kết quả test thì thường là không thích thú lắm, thời gian đợi có thể lên tới một vài phút. Do đó mà lập trình viên có xu hướng chỉ chạy tests vài lần trong ngày, và họ sẽ khó để sửa lỗi phát hiện qua test failed. Lý do cho điều này rất đơn giản, là vì nếu càng thêm nhiều code vào sau lần chạy test lần cuối cùng, thì sẽ vùng tìm kiếm lỗi sẽ rộng ra hơn. 
 
@@ -68,4 +68,23 @@ Tôi muốn thu nhỏ không gian tìm kiếm nói trên bằng cách cho phép 
 
 Thêm nữa, Karrma cần cung cấp cơ chế để tập trung test một phần nhỏ trong cả kịch bản test lớn. Ví dụ, nếu lập trình viên đang làm việc trên 1 tính năng nhất định nào, họ chỉ cần các phép tests liên quan trực tiếp đến tính năng đó thôi. Nếu tests toàn bộ một dự án (lớn), vốn có hàng nghìn phép tests, thì thời gian chạy sẽ rất lâu. Như thế, khả năng chạy một phần nhỏ của kịch bản bản test sẽ khiến lập trình viên thực hiện kiểm thử thường xuyên hơn. 
 
-**Vậy, ý tưởng cốt lõi ở đây là luôn có phản hồi liên tục từ test, giảm thiểu sự xao nhãng của lập trình viên**.
+**Vậy, ý tưởng cốt lõi ở đây là luôn có phản hồi liên tục từ test, giảm thiểu sự sao nhãng của lập trình viên**.
+
+### 3.2.4. Tích hợp với các IDE và trình soạn thảo (text editor)
+
+Karma cần phải được tích hợp nhưng không phụ thuộc vào IDE và trình soạn thảo. Nghĩa là công cụ này cần cung cấp các tính năng cơ bản như "watching" phần code, và thực thi phần test mỗi khi có bất kỳ sự thay đổi nào với code, hoặc chỉ chạy một phần nhỏ trong kịch bản test trong khi không cần bất kỳ hỗ trợ nào từ IDE hoặc trình soạn thảo. 
+
+### 3.2.5. Tích hợp với các CI Servers
+
+Continuous Integration (CI - tam hiểu là "tích hợp liên tục") ban đầu là thao tác gộp code của các lập trình viên ở các chỗ (trên máy tính chẳng hạn) vào 1 nơi (trên server chung chẳng hạn) để phòng trách các vấn đề liên quan đến tích hợp. Còn ngày nay, lý do chính để có CI server là để giúp build toàn bộ project, kiểm thử trên các thiết bị khác nhau mà việc này vốn tốn nhiều thời gian không thể làm được trên máy tính của lập trình viên. Hơn nữa, lập trình viên cũng chẳng có toàn bộ các thiết bị để thử nghiệm. Do vậy, thường thì họ chỉ chạy một vài test nhẹ trên máy, phần còn lại sẽ chạy trên CI Server. CI Server sẽ chạy testing mỗi lần code được đẩy lên repository, hoặc thậm chí trước cả lúc đấy. 
+
+Việc debug trên CIT server khá là khó khăn bởi không được làm trực tiếp, chưa kể các giới hạn về quyền truy cập. Từ lý do này, Karma sẽ cần phải tích hợp tốt với CI server, cho phép sử dụng cùng cấu hình test cả khi làm trên máy cục bộ lẫn trên CI server. Muốn được như vậy, Karma sẽ phải có khả năng xuất kết quả dưới dạng XML, cung cấp 1 mode đặc biệt mà ở đó mọi test được thực thi một lần, trả kết quả ngay lập tức, cho người dùng biết là test thành công hay failed. 
+
+### 3.2.6. Khả năng mở rộng
+
+Karma sẽ cho phép bên thứ ba tích hợp các phần mở rộng (plugin), để bổ sung thêm tính năng cũng như hỗ trợ tích hợp với bất kỳ framework hoặc thư viện nào. 
+
+### 3.2.7. Debugging 
+
+Quá trình debug là việc loại bỏ các lỗi xảy ra khi chạy chương trình. Hầu hết các công cụ lập trình đều cho phép người dùng mở 1 chế độ đặc biệt để nhìn vào những ngóc ngách khi code thực thi. Do tính quan trọng của debg, Karma sẽ cần hỗ trợ việc này, cho phép kích hoạt chương trình debug của trình duyệt theo cả 2 cách, từ trong trình duyệt hoặc từ IDEs. 
+
