@@ -1,6 +1,6 @@
 ---
 id: 110
-title: 'Sự khác nhau giữa test runner, testing framwork, assertion library, và testing plugin? '
+title: 'Sự khác nhau giữa test runner, testing framework, assertion library, và testing plugin? '
 date: 2017-12-01
 author: ngminhtrung
 layout: post
@@ -22,7 +22,7 @@ Có lẽ có nhiều cách để phân loại (trừu tượng hóa) các cấp 
 1. **Test Runner** (hay là Test Enviroment như _karma_)
 2. **Testing Frameworks** (như _mocha_ hay _jasmine_)
 3. **Assertion Libraries** (như là _should.js_, _chai.js_)
-4. **Testing pluging** (như là _sinon_)
+4. **Testing plugin** (như là _sinon_)
 
 Để cho dễ hiểu, các khái niệm trên không được trình bày theo thứ tự mà đảo đi một chút. 
 
