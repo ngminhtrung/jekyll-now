@@ -28,13 +28,15 @@ Cuối cùng cái ngày định mệnh đó cũng đã đến. Tôi đã code xo
 
 Rất tiếc là lúc đấy quá hoảng loạn tôi đã không chụp lại màn hình để các bạn mới vào nghề hiểu được cái sự "_vài trăm dòng báo lỗi_" nó kinh hoàng như thế nào.
 
-Quay ra hỏi đồng nghiệp là chuyện vớ vẩn gì đang xảy ra!!!!. Nhận được cái nhìn đầy thương cảm, được giải thích rằng codebase của công ty đã tích hợp với [`ESlint`](https://eslint.org/), một công cụ để kiểm tra định dạng và chất lượng code, để đảm bảo rằng code của từng người trước khi đưa lên server phải được sửa cho thống nhất với quy chuẩn. Quy chuẩn (JavaScript Style Guide) ở công ty này là theo [quy chuẩn của Airbnb](https://github.com/airbnb/javascript). Lòng ngậm ngùi, không có cách nào khác là phải sửa code của mình bởi đấy là quy định bắt buộc. 
+Quay ra hỏi đồng nghiệp là chuyện vớ vẩn gì đang xảy ra!!!!. Nhận được cái nhìn đầy thương cảm, được giải thích rằng codebase của công ty đã tích hợp với [`ESlint`](https://eslint.org/), một công cụ để kiểm tra định dạng và chất lượng code theo `ES6`, để đảm bảo rằng code của từng người trước khi đưa lên server phải được sửa cho thống nhất với quy chuẩn. Quy chuẩn (JavaScript Style Guide) ở công ty này là theo [quy chuẩn của Airbnb](https://github.com/airbnb/javascript). Lòng ngậm ngùi, không có cách nào khác là phải sửa code của mình bởi đấy là quy định bắt buộc. 
 
 Sau khoảng gần 1h ngồi sửa từng lỗi một theo thông báo chạy ra từ `npm run build`, tôi bắt đầu nản. Bởi có nhiều lỗi khiến mình phải xóa dòng, mà xóa dòng thì chỉ mục của phần thông báo lỗi kia lại không dùng được nữa (số dòng bị lệch). Vậy là tôi thử google, tìm được cách cài `ESlint` như một extension vào [`Visual Studio code`](https://code.visualstudio.com/), từ đó dù chưa chạy `npm run build` thì `vs code` cũng tự báo ngay cho tôi trên cửa sổ soạn thảo những chỗ định dạng cần phải thay đổi. Thậm chí sau khi `turn on` chế độ "_sửa ngay sau khi nhấn Save_", rất nhiều lỗi đã được `vs code` _auto fix_, rất tiện. Với sự giúp đỡ của `ESlint extension` này, tôi xử lý được toàn bộ các lỗi còn lại trong vòng 30 phút, thay vì dành cả chiều cho nó. Một cảm giác thật dễ chịu. 
 
 Nhân vụ này, tôi thử tìm hiểu về `ESlint` xem nó là gì. Và khi `ESlint` còn chưa xong, lại lòi ra thêm 1 anh tên là [`Prettier`](https://prettier.io/), cho nên tôi viết luôn vào bài này để tiện so sánh 2 công cụ đắc lực cho anh em lập trình. Dưới đây là chi tiết các câu hỏi mà tôi đặt ra khi tìm hiểu về 2 cộng cụ đó. 
 
 ### 1. **ESlint** là gì?
+
+![logo ESlint][img01]
 
 ESLint là một chương trình mã nguồn mở, theo thuật ngữ tiếng Anh là _JavaScript **linting utility**_ do Nicholas C. Zakas viết ra vào tháng Sáu 2013. _Code linting_ là một dạng phân tích tĩnh (_static analysis_) thường được sử dụng để tìm những patterns hoặc code có vấn đề. Việc đánh giá code có vấn đề hay không sẽ căn cứ vào những quy chuẩn về cách viết code đã thống nhất từ trước (trong nội bộ nhóm, nội bộ công ty, hay ngành nhỏ). Hầu hết các ngôn ngữ lập trình đều có các công cụ _code linters_ riêng, và trình biên dịch của ngôn ngữ đó thường đi kèm việc _linting_ ngay trong quá trình biên dịch.
 
@@ -68,7 +70,6 @@ Chương trình này sẽ giúp cảnh báo các kiểu viết code trông "khô
 - Vấn đề #1: _Code chạy ngon lành lúc phát triển, còn khi release sản phẩm thì lỗi_. Tại sao? Ví dụ nhé: Giả sử bạn thiếu một dấu chấm phẩy trong đoạn code JavaScript thì việc chạy chương trình trên browser vẫn ổn. Nhưng lúc _minified_ đoạn code đó để đóng gói sản phẩm, thì mấy công cụ giúp _minification_ lại không báo cho bạn biết dấu chấm phẩy nào bị thiếu. Một khi code đã bị _minified_, thì trình duyệt lúc này lại đỏng đảnh không chấp nhận lỗi nào, bao gồm cái lỗi mà nó vốn bỏ qua với code nguyên bản.
 
 - Vấn đề #2: _Xung đột phạm vi biến (Scope)_. Ví dụ nhé: Chắc chắn code của bạn sẽ có 1 đống biến đặt tên là "id", "name", hoặc "value". Không chỉ bạn, mà ai trong nhóm của bạn cũng đặt tên như thế. Ok, một ngày đẹp trời, đứa đồng nghiệp trong nhóm vô tư bắt đầu việc khai báo biến với từ khóa _var_, thế là biến của hắn có nguy cơ ghi đè giá trị lên biến cùng tên của bạn, thế có nguy hiểm không? Bởi lúc mà chương trình lỗi thì không hiểu là cái lỗi chết tiệt đó nó ở chỗ nào. Điều này sẽ xảy ra. Và người ta thì sẽ luôn luôn quên mất là không được dùng _var_. Bạn cũng thế. Thế giới vẫn quay và bạn vẫn sẽ luôn ngồi tìm và sửa bug.   
-
 - Vấn đề #3..N: Còn nhiều còn nhiều nữa.
 
 Việc "_linkting_" code JavaScript còn giúp bạn tránh được các lỗ hổng bảo mật thông dụng (như XSS), vấn đề liên quan đến "viết code sao cho dễ đọc dễ nhìn", v.v.
@@ -82,6 +83,16 @@ Có các cách sử dụng ESlint nào?
 - Command line
 - Build process
 
+![ESlint alert][img02]
+
+![ESlint alert][img03]
+
+![ESlint alert][img04]
+
+![ESlint alert][img05]
+
+![ESlint alert][img06]
+
 ### 7. Sử dụng ESlint phức tạp không?
 
 Nếu cài đặt ESlint như một extension với VS Code thì khá dễ. Nhưng cài cho node.js và chạy trên toàn bộ project thì trông có vẻ phức tạp với người mới. 
@@ -92,25 +103,29 @@ Nếu cài đặt ESlint như một extension với VS Code thì khá dễ. Như
 
 > Note: Trong tiếng Anh, _pretty_ (tính từ) nghĩa là đẹp, còn _prettier_ (tính từ so sánh) nghĩa là (một cái gì đó) đẹp "hơn". 
 
+![Prettier logo][img07]
+
 **Prettier** là một công cụ giúp format code của bạn cho _đẹp_ hơn. _Đẹp_ ở đây hoàn toàn mang quan điểm chủ quan của tác giả chương trình này (thế nên nó mới được gọi là "_an opinionated code formatter_"). Chương trình này sẽ yêu cầu code của bạn phải theo một format nhất định và thống nhất, thực hiện qua quá trình "parsing" và "re-printing" toàn bộ code của bạn dựa trên những quy tắc nào đó, ví dụ ngắt dòng, thêm/ bớt ngoặc tròn ngoặc nhọn khi cần.
 
 ### Vậy chạy **Prettier** xong thì trông nó như thế nào?
 
 Code ban đầu:
-``` js
+{% highlight javascript linenos%}
 foo(reallyLongArg(), omgSoManyParameters(), IShouldRefactorThis(), isThereSeriouslyAnotherOne());
-```
+{% endhighlight %}
 
 Code sau khi được Prettier parse và re-print:
-``` js
+{% highlight javascript linenos%}
 foo(
   reallyLongArg(),
   omgSoManyParameters(),
   IShouldRefactorThis(),
   isThereSeriouslyAnotherOne()
 );
+{% endhighlight %}
 
-```
+![Prettier before after][img10]
+
 
 [Source: Prettier - Opinionated Code Formatter](https://github.com/prettier/prettier/blob/master/README.md#how-does-it-compare-to-eslint-or-tslint-stylelint)
 
@@ -123,14 +138,16 @@ Vậy _tokens_ là gì? Hiểu nhanh nhất là với đoạn `var a = 2;` thì 
 Hình minh họa cho **AST** bên dưới lấy từ bài "_An Introduction to Speculative Optimization in V8_" (Ponyfoo.com)
 
 Đoạn code trước khi được _parsing_:
-```js
+{% highlight javascript linenos%}
  function add(x, y) {
   return x + y;
 }
 console.log(add(1, 2));
-```
+{% endhighlight %}
 
 Cây Cấu trúc Trừu tượng (AST) hình thành bởi đoạn code kia sẽ trông như sau:
+
+![parsing code][img08]
 
 Source:
 - [An Introduction to Speculative Optimization in V8](https://ponyfoo.com/articles/an-introduction-to-speculative-optimization-in-v8)
@@ -170,6 +187,8 @@ Prettier tổng hợp và sử dụng những quy chuẩn code ít bị tranh c�
 
 Nhìn vào hình bên dưới, có thể thấy mặc dù **Prettier** có dẫm chân vào 1 mảng mà **ESlint** đang làm, nhưng trong khi **ESlint** chỉ dừng ở mức độ cảnh báo, thì **Prettier** lại "hành độ", trả lại code đã được format theo chuẩn. Bản chất cơ chế hoạt động của 2 bên cũng khác nhau, nếu như **ESlint** dùng cơ chế "static analysis" thì **Prettier** lại "parsing code" vào JavaScript engine rồi in lại ra editor.  
 
+![ESlint vs Prettier][img09]
+
 ### 13. Quan điểm của tác giả **Prettier** về thế nào là "code đẹp"?
 
 Muốn được coi là "đẹp" thì code phải thỏa mãn những tiêu chuẩn sau:
@@ -208,3 +227,16 @@ Hoặc truy cập trực tiếp vào [Visual Studio - Marketplace: Prettier - Co
 ](https://www.39digits.com/configure-prettier-and-eslint-in-visual-studio-code/)
 - [Medium - Even faster code formatting using ESLint](https://medium.com/@netczuk/even-faster-code-formatting-using-eslint-22b80d061461)
 - [Medium - Your last ESLint config](https://medium.com/@netczuk/your-last-eslint-config-9e35bace2f99)
+
+
+[img01]: https://ngminhtrung.github.io/images/PostIMG/20171208-img-01.png
+[img02]: https://ngminhtrung.github.io/images/PostIMG/20171208-img-02.png
+[img03]: https://ngminhtrung.github.io/images/PostIMG/20171208-img-03.png
+[img04]: https://ngminhtrung.github.io/images/PostIMG/20171208-img-04.png
+[img05]: https://ngminhtrung.github.io/images/PostIMG/20171208-img-05.png
+[img06]: https://ngminhtrung.github.io/images/PostIMG/20171208-img-06.png
+[img07]: https://ngminhtrung.github.io/images/PostIMG/20171208-img-07.png
+[img08]: https://ngminhtrung.github.io/images/PostIMG/20171208-img-08.png
+[img09]: https://ngminhtrung.github.io/images/PostIMG/20171208-img-09.png
+[img10]: https://ngminhtrung.github.io/images/PostIMG/20171208-img-10.png
+
