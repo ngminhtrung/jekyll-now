@@ -1,3 +1,4 @@
+
 ---
 id: 114
 title: 'ESlint, Prettier và VS Code'
@@ -16,6 +17,31 @@ tags:
   - eslint
   - prettier
 ---
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [1. **ESlint** là gì?](#1-eslint-l%C3%A0-g%C3%AC)
+- [2. **Linting utility** là gì?](#2-linting-utility-l%C3%A0-g%C3%AC)
+- [3. **Phân tích tĩnh (static analysis)** là gì?](#3-ph%C3%A2n-t%C3%ADch-t%C4%A9nh-static-analysis-l%C3%A0-g%C3%AC)
+- [4. Lợi ích của **ESlint** là gì?](#4-l%E1%BB%A3i-%C3%ADch-c%E1%BB%A7a-eslint-l%C3%A0-g%C3%AC)
+- [5. Vậy **ESlint** giúp xử lý vấn đề gì của code của chúng ta?](#5-v%E1%BA%ADy-eslint-gi%C3%BAp-x%E1%BB%AD-l%C3%BD-v%E1%BA%A5n-%C4%91%E1%BB%81-g%C3%AC-c%E1%BB%A7a-code-c%E1%BB%A7a-ch%C3%BAng-ta)
+- [6. Cách dùng ESLint với vs code?](#6-c%C3%A1ch-d%C3%B9ng-eslint-v%E1%BB%9Bi-vs-code)
+- [7. Sử dụng ESlint phức tạp không?](#7-s%E1%BB%AD-d%E1%BB%A5ng-eslint-ph%E1%BB%A9c-t%E1%BA%A1p-kh%C3%B4ng)
+- [7. Ngoài **ESlint** ra còn có công cụ nào tương tự?](#7-ngo%C3%A0i-eslint-ra-c%C3%B2n-c%C3%B3-c%C3%B4ng-c%E1%BB%A5-n%C3%A0o-t%C6%B0%C6%A1ng-t%E1%BB%B1)
+- [8. **Prettier** là ông nào?](#8-prettier-l%C3%A0-%C3%B4ng-n%C3%A0o)
+- [Vậy chạy **Prettier** xong thì trông nó như thế nào?](#v%E1%BA%ADy-ch%E1%BA%A1y-prettier-xong-th%C3%AC-tr%C3%B4ng-n%C3%B3-nh%C6%B0-th%E1%BA%BF-n%C3%A0o)
+- [9. **parsing code** là gì?](#9-parsing-code-l%C3%A0-g%C3%AC)
+- [10. **re-printing code** là gì?](#10-re-printing-code-l%C3%A0-g%C3%AC)
+- [11. Tại sao cần **Prettier**?](#11-t%E1%BA%A1i-sao-c%E1%BA%A7n-prettier)
+- [12. Có **ESlint** rồi còn cần **Prettier** để làm gì?](#12-c%C3%B3-eslint-r%E1%BB%93i-c%C3%B2n-c%E1%BA%A7n-prettier-%C4%91%E1%BB%83-l%C3%A0m-g%C3%AC)
+- [13. Quan điểm của tác giả **Prettier** về thế nào là "code đẹp"?](#13-quan-%C4%91i%E1%BB%83m-c%E1%BB%A7a-t%C3%A1c-gi%E1%BA%A3-prettier-v%E1%BB%81-th%E1%BA%BF-n%C3%A0o-l%C3%A0-code-%C4%91%E1%BA%B9p)
+- [14. Có cách nào để chạy **Prettier**?](#14-c%C3%B3-c%C3%A1ch-n%C3%A0o-%C4%91%E1%BB%83-ch%E1%BA%A1y-prettier)
+- [Tham khảo chung](#tham-kh%E1%BA%A3o-chung)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 Cuối cùng cái ngày định mệnh đó cũng đã đến. Tôi đã code xong phần của mình, trong dự án đầu tiên của cuộc đời lập trình viên. Không gì sung sướng bằng việc ngắm code của mình chạy ngon lành trên máy. Còn giờ là lúc commit lên git để team leader review, rồi merge vào codebase. Nhưng đời không dễ như mơ, làm theo hướng dẫn của đồng nghiệp, động tác đầu tiên trước khi `commit` là `npm run build` để kiểm tra xem code của tôi có vấn đề gì ko. Tự nhủ trong lòng đã test kỹ càng, thì có vấn đề thế quái nào được. Ấy vậy mà vừa dứt Enter, dễ có phải đến vài trăm dòng xổ ra bắt lỗi từng li từng tí của không dưới 5 file ```JavaScript```. Đại loại cứ cái gì tôi đụng vào là có lỗi. Lỗi gì? Giời ơi toàn lỗi giời ơi đất hỡi:
 - Không lùi vào đủ 5 ```tab``` mà chỉ có 4 ```tab```
