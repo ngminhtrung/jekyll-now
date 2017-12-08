@@ -1,4 +1,3 @@
-
 ---
 id: 114
 title: 'ESlint, Prettier và VS Code'
