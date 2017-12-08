@@ -110,11 +110,13 @@ Nếu cài đặt ESlint như một extension với VS Code thì khá dễ. Như
 ### Vậy chạy **Prettier** xong thì trông nó như thế nào?
 
 Code ban đầu:
+
 {% highlight javascript linenos%}
 foo(reallyLongArg(), omgSoManyParameters(), IShouldRefactorThis(), isThereSeriouslyAnotherOne());
 {% endhighlight %}
 
 Code sau khi được Prettier parse và re-print:
+
 {% highlight javascript linenos%}
 foo(
   reallyLongArg(),
