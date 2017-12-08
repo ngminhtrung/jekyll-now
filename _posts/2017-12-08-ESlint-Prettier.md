@@ -17,7 +17,7 @@ tags:
   - prettier
 ---
 
-Cuối cùng cái ngày định mệnh đó cũng đã đến. Tôi đã code xong phần của mình, trong dự án đầu tiên của cuộc đời lập trình viên. Không gì sung sướng bằng việc ngắm code của mình chạy ngon lành trên máy. Còn giờ là lúc commit lên git để team leader review, rồi merge vào codebase. Nhưng đời không dễ như mơ, làm theo hướng dẫn của đồng nghiệp, động tác đầu tiên trước khi ```commit``` là ```npm run build``` để kiểm tra xem code của tôi có vấn đề gì ko. Tự nhủ trong lòng đã test kỹ càng, thì có vấn đề thế quái nào được. Ấy vậy mà vừa dứt Enter, dễ có phải đến vài trăm dòng xổ ra bắt lỗi từng li từng tí của không dưới 5 file ```JavaScript```. Đại loại cứ cái gì tôi đụng vào là có lỗi. Lỗi gì? Giời ơi toàn lỗi giời ơi đất hỡi:
+Cuối cùng cái ngày định mệnh đó cũng đã đến. Tôi đã code xong phần của mình, trong dự án đầu tiên của cuộc đời lập trình viên. Không gì sung sướng bằng việc ngắm code của mình chạy ngon lành trên máy. Còn giờ là lúc commit lên git để team leader review, rồi merge vào codebase. Nhưng đời không dễ như mơ, làm theo hướng dẫn của đồng nghiệp, động tác đầu tiên trước khi `commit` là `npm run build` để kiểm tra xem code của tôi có vấn đề gì ko. Tự nhủ trong lòng đã test kỹ càng, thì có vấn đề thế quái nào được. Ấy vậy mà vừa dứt Enter, dễ có phải đến vài trăm dòng xổ ra bắt lỗi từng li từng tí của không dưới 5 file ```JavaScript```. Đại loại cứ cái gì tôi đụng vào là có lỗi. Lỗi gì? Giời ơi toàn lỗi giời ơi đất hỡi:
 - Không lùi vào đủ 5 ```tab``` mà chỉ có 4 ```tab```
 - Sau ký tự cuối cùng của dòng vẫn còn khoảng trắng (`space`)
 - Dùng `var` thay vì dùng `let`, dùng `let` thay vì `const` ở những chỗ mà giá trị của biến chỉ được gán một lần. 
