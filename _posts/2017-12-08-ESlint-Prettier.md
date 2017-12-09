@@ -123,7 +123,7 @@ Nếu cài đặt ESlint như một extension với VS Code thì khá dễ. Như
 
 > Note: Trong tiếng Anh, _pretty_ (tính từ) nghĩa là đẹp, còn _prettier_ (tính từ so sánh) nghĩa là (một cái gì đó) đẹp "hơn". 
 
-![Prettier logo][img07]
+
 
 **Prettier** là một công cụ giúp format code của bạn cho _đẹp_ hơn. _Đẹp_ ở đây hoàn toàn mang quan điểm chủ quan của tác giả chương trình này (thế nên nó mới được gọi là "_an opinionated code formatter_"). Chương trình này sẽ yêu cầu code của bạn phải theo một format nhất định và thống nhất, thực hiện qua quá trình "parsing" và "re-printing" toàn bộ code của bạn dựa trên những quy tắc nào đó, ví dụ ngắt dòng, thêm/ bớt ngoặc tròn ngoặc nhọn khi cần.
 
