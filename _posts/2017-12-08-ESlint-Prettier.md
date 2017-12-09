@@ -64,7 +64,7 @@ ESLint là một chương trình mã nguồn mở, theo thuật ngữ tiếng An
 
 ## 2. **Linting utility** là gì?
 
-Trong lĩnh vực lập trình máy tính, _link_ là một ứng dụng Unix giúp cảnh báo các vấn đề khi viết code của ngôn cữ _C_. Nói rộng ra, _lint_ hoặc _linter_ là công cụ giúp phát hiện và cảnh báo các sai sót khi viết ngôn ngữ lập trình, bao gồm cả các vấn đề liên quan đến định dạng (như dấu chấm phẩy, xuống dòng, lùi vào đầu dòng, v.v.). Các công cụ này thường thực hiện phép _phân tích tĩnh (static analysis)_ các đoạn code.
+Trong lĩnh vực lập trình máy tính, _lin_ là một ứng dụng Unix giúp cảnh báo các vấn đề khi viết code của ngôn cữ _C_. Nói rộng ra, _lint_ hoặc _linter_ là công cụ giúp phát hiện và cảnh báo các sai sót khi viết ngôn ngữ lập trình, bao gồm cả các vấn đề liên quan đến định dạng (như dấu chấm phẩy, xuống dòng, lùi vào đầu dòng, v.v.). Các công cụ này thường thực hiện phép _phân tích tĩnh (static analysis)_ các đoạn code.
 
 Rộng hơn nữa, _Lint_ còn được sử dụng để phân tích các khác biệt về mặt cú pháp trong lập trình, đặc biệt với các ngôn ngữ thông dịch như JavaScript và Python. Ví dụ nhé: các công cụ lint hiện đại thường giúp lập trình viên kiểm tra xem định dạng code của họ có nằm trong quy định chung của ngành/ của công ty/ của nhóm hay không. Bởi vì những ngôn ngữ thông dịch kia thiếu một quá trình biên dịch giúp phát hiện lỗi trước khi thực thi, cho nên các công cụ lint hoạt động như một chương trình debug đơn giản cho các lỗi thông thường (viết sai cú pháp chẳng hạn), hoặc cho các lỗi khó mà tìm thấy (thuật ngữ cho loại lỗi này là _heisenbugs_).
 
@@ -122,8 +122,6 @@ Nếu cài đặt ESlint như một extension với VS Code thì khá dễ. Như
 ## 9. **Prettier** là ông nào?
 
 > Note: Trong tiếng Anh, _pretty_ (tính từ) nghĩa là đẹp, còn _prettier_ (tính từ so sánh) nghĩa là (một cái gì đó) đẹp "hơn". 
-
-![Prettier logo][img07]
 
 **Prettier** là một công cụ giúp format code của bạn cho _đẹp_ hơn. _Đẹp_ ở đây hoàn toàn mang quan điểm chủ quan của tác giả chương trình này (thế nên nó mới được gọi là "_an opinionated code formatter_"). Chương trình này sẽ yêu cầu code của bạn phải theo một format nhất định và thống nhất, thực hiện qua quá trình "parsing" và "re-printing" toàn bộ code của bạn dựa trên những quy tắc nào đó, ví dụ ngắt dòng, thêm/ bớt ngoặc tròn ngoặc nhọn khi cần.
 
