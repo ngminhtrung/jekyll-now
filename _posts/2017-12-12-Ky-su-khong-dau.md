@@ -76,7 +76,7 @@ Tham khảo tại [đây](https://developers.google.com/web/updates/2017/04/head
  4. Chụp màn hình
  5. Chạy chế độ REPL (read-eval-print-loop)
 
- ## Kết luận & bài viết để tham khảo sau này:
+## Kết luận & bài viết để tham khảo sau này:
 ---
 
 1. [Automated testing with Headless Chrome](https://developers.google.com/web/updates/2017/06/headless-karma-mocha-chai)
