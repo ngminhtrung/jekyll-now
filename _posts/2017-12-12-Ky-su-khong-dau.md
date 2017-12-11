@@ -29,19 +29,19 @@ Tham khảo tại [đây](https://en.wikipedia.org/wiki/Headless_browser).
 ## Dùng Headless browswer vào việc gì?
 ---
 
-- Tự động hóa việc test cho các ứng dụng web |
-- Chụp màn hình của trang web |
-- Chạy các test tự động cho các thư viện JavaScript |
-- Duyệt web để thu thập dữ liệu |
-- Tự động hóa quá trình tương tác với web |
-- Chạy trình duyệt trên server |
+- Tự động hóa việc test cho các ứng dụng web
+- Chụp màn hình của trang web
+- Chạy các test tự động cho các thư viện JavaScript
+- Duyệt web để thu thập dữ liệu
+- Tự động hóa quá trình tương tác với web
+- Chạy trình duyệt trên server
 
 ## Có thể dùng headless browswer cho mục đích xấu nào?
 ---
 
-- Tiến hành tấn công website bằng phương thức DDOS  |
-- Làm tăng lượng truy cập ảo để nâng điểm quảng cáo |
-- Chạy web cho các mục đích đáng ngờ, ví dụ "_credential stuffing_"|
+- Tiến hành tấn công website bằng phương thức DDOS
+- Làm tăng lượng truy cập ảo để nâng điểm quảng cáo
+- Chạy web cho các mục đích đáng ngờ, ví dụ "_credential stuffing_"
 
 Ghi chú: _Credential stuffing_ là một dạng tấn công mạng để ăn cắp quyền truy cập website của một thành viên của website đấy. Việc tấn công thực hiện qua việc gửi một lượng lớn các yêu cầu truy cập đến trang web. 
 
@@ -49,12 +49,12 @@ Ghi chú: _Credential stuffing_ là một dạng tấn công mạng để ăn c�
 ---
 
 Không! Internet Explorer và Microsoft Edge không hỗ trợ. Và chế độ này còn tùy thuộc vào hệ điều hành của người dùng. Dưới đây là danh sách các trình duyệt cung cấp chế độ headless (hỗ trợ một phần hoặc 100%):
-1. [_Google Chrome_](https://developers.google.com/web/updates/2017/04/headless-chrome) -> từ version 59 cho Linux và macOS. 
-2. [_Firefox_](https://developer.mozilla.org/en-US/Firefox/Headless_mode) --> từ version 56 cho cả Linux, Windows và macOS.
-3. [_PhantomJS_](http://phantomjs.org/) - một headless browswer sử dụng engine WebKit cho việc rendering trang web cũng như JavaScriptCore để chạy các kịch bản test.
-4. _HtmlUnit_ -> một headless browser viết bằng Java, sử dụng engine Rhino. 
-5. _TrifleJS_ -> một headless Internet Explorer scriptable browser sử dụng engine Trident. 
-6. _Spalsh_ 
+1. [_**Google Chrome**_](https://developers.google.com/web/updates/2017/04/headless-chrome) -> từ version 59 cho Linux và macOS. 
+2. [_**Firefox**_](https://developer.mozilla.org/en-US/Firefox/Headless_mode) --> từ version 56 cho cả Linux, Windows và macOS.
+3. [_**PhantomJS**_](http://phantomjs.org/) - một headless browswer sử dụng engine WebKit cho việc rendering trang web cũng như JavaScriptCore để chạy các kịch bản test.
+4. _**HtmlUnit**_ -> một headless browser viết bằng Java, sử dụng engine Rhino. 
+5. _**TrifleJS**_ -> một headless Internet Explorer scriptable browser sử dụng engine Trident. 
+6. _**Spalsh**_ 
 
 ## Ngoài "headless browswer" ra, còn cái gì "headless" khác nữa không?
 ---
