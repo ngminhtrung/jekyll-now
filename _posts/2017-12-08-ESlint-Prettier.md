@@ -35,7 +35,7 @@ Sau khoảng gần 1h ngồi sửa từng lỗi một theo thông báo chạy ra
 Nhân vụ này, tôi thử tìm hiểu về `ESlint` xem nó là gì. Và khi `ESlint` còn chưa xong, lại lòi ra thêm 1 anh tên là [`Prettier`](https://prettier.io/), cho nên tôi viết luôn vào bài này để tiện so sánh 2 công cụ đắc lực cho anh em lập trình. Dưới đây là chi tiết các câu hỏi mà tôi đặt ra khi tìm hiểu về 2 cộng cụ đó. 
 
 ## ESlint là gì?
-
+---
 ![logo ESlint][img01]
 
 ESLint là một chương trình mã nguồn mở, theo thuật ngữ tiếng Anh là _JavaScript **linting utility**_ do Nicholas C. Zakas viết ra vào tháng Sáu 2013. _Code linting_ là một dạng phân tích tĩnh (_static analysis_) thường được sử dụng để tìm những patterns hoặc code có vấn đề. Việc đánh giá code có vấn đề hay không sẽ căn cứ vào những quy chuẩn về cách viết code đã thống nhất từ trước (trong nội bộ nhóm, nội bộ công ty, hay ngành nhỏ). Hầu hết các ngôn ngữ lập trình đều có các công cụ _code linters_ riêng, và trình biên dịch của ngôn ngữ đó thường đi kèm việc _linting_ ngay trong quá trình biên dịch.
@@ -43,7 +43,7 @@ ESLint là một chương trình mã nguồn mở, theo thuật ngữ tiếng An
 [Source: ESLint Documentation - About](https://eslint.org/docs/about/)
 
 ## Linting utility là gì?
-
+---
 Trong lĩnh vực lập trình máy tính, _lint_ là một ứng dụng Unix giúp cảnh báo các vấn đề khi viết code của ngôn cữ _C_. Nói rộng ra, _lint_ hoặc _linter_ là công cụ giúp phát hiện và cảnh báo các sai sót khi viết ngôn ngữ lập trình, bao gồm cả các vấn đề liên quan đến định dạng (như dấu chấm phẩy, xuống dòng, lùi vào đầu dòng, v.v.). Các công cụ này thường thực hiện phép _phân tích tĩnh (static analysis)_ các đoạn code.
 
 Rộng hơn nữa, _Lint_ còn được sử dụng để phân tích các khác biệt về mặt cú pháp trong lập trình, đặc biệt với các ngôn ngữ thông dịch như JavaScript và Python. Ví dụ nhé: các công cụ lint hiện đại thường giúp lập trình viên kiểm tra xem định dạng code của họ có nằm trong quy định chung của ngành/ của công ty/ của nhóm hay không. Bởi vì những ngôn ngữ thông dịch kia thiếu một quá trình biên dịch giúp phát hiện lỗi trước khi thực thi, cho nên các công cụ lint hoạt động như một chương trình debug đơn giản cho các lỗi thông thường (viết sai cú pháp chẳng hạn), hoặc cho các lỗi khó mà tìm thấy (thuật ngữ cho loại lỗi này là _heisenbugs_).
@@ -51,20 +51,20 @@ Rộng hơn nữa, _Lint_ còn được sử dụng để phân tích các khác
 [Source: Wikipedia - lint (software)](https://en.wikipedia.org/wiki/Lint_(software))
 
 ### Phân tích tĩnh (static analysis) là gì?
-
+---
 _Phân tích tĩnh_ là phép phân tích xem một chương trình sẽ hoạt động như thế nào trong khi không hề thực thi chương trình đó. Cách phân tích này khác với phép _phân tích động (dynamic analysis)_ cần phải chạy chương trình thì mới biết nó hoạt động ra sao. Thuật ngữ _phân tích tĩnh_ thường được dùng cho các phép phân tích bằng công cụ tự động với mục đích review code (và còn một vài mục đích khác như programing understanding, program comprehension).
 
 [Source: Wikipedia - Static program analysis](https://en.wikipedia.org/wiki/Static_program_analysis)
 
 ## Lợi ích của ESlint là gì?
-
+---
 - Giúp ngăn ngữ một vài loại bug, bao gồm cả những loại bug đem loại rất nhiều phiền hà cho quá trình gỡ lỗi, khiến chương trình không chạy được.
 - Tiết kiệm thời gian của lập trình viên.
 - Giúp việc viết code ngon lành hơn.
 - Dễ dàng sử dụng.
 
 ## Vậy ESlint giúp xử lý vấn đề gì của code của chúng ta?
-
+---
 Chương trình này sẽ giúp cảnh báo các kiểu viết code trông "không hợp nhãn" về cả phía con người lẫn phía trình biên dịch của JavaScript.
 
 - Vấn đề #1: _Code chạy ngon lành lúc phát triển, còn khi release sản phẩm thì lỗi_. Tại sao? Ví dụ nhé: Giả sử bạn thiếu một dấu chấm phẩy trong đoạn code JavaScript thì việc chạy chương trình trên browser vẫn ổn. Nhưng lúc _minified_ đoạn code đó để đóng gói sản phẩm, thì mấy công cụ giúp _minification_ lại không báo cho bạn biết dấu chấm phẩy nào bị thiếu. Một khi code đã bị _minified_, thì trình duyệt lúc này lại đỏng đảnh không chấp nhận lỗi nào, bao gồm cái lỗi mà nó vốn bỏ qua với code nguyên bản.
@@ -77,7 +77,7 @@ Việc "_linkting_" code JavaScript còn giúp bạn tránh được các lỗ h
 [Source: Javascript Linting: What Developers Need to Know](http://mikecavaliere.com/javascript-linting-what-developers-need-to-know/)
 
 ## Cách dùng ESLint với vs code?
-
+---
 Có các cách sử dụng ESlint nào?
 - Trong code editor
 - Command line
@@ -94,19 +94,19 @@ Có các cách sử dụng ESlint nào?
 ![ESlint alert][img06]
 
 ## Sử dụng ESlint phức tạp không?
-
+---
 Nếu cài đặt ESlint như một extension với VS Code thì khá dễ. Nhưng cài cho node.js và chạy trên toàn bộ project thì trông có vẻ phức tạp với người mới. 
 
 ## Ngoài ESlint ra còn có công cụ nào tương tự?
-
+---
 ## Prettier là ông nào?
-
+---
 > Note: Trong tiếng Anh, _pretty_ (tính từ) nghĩa là đẹp, còn _prettier_ (tính từ so sánh) nghĩa là (một cái gì đó) đẹp "hơn". 
 
 **Prettier** là một công cụ giúp format code của bạn cho _đẹp_ hơn. _Đẹp_ ở đây hoàn toàn mang quan điểm chủ quan của tác giả chương trình này (thế nên nó mới được gọi là "_an opinionated code formatter_"). Chương trình này sẽ yêu cầu code của bạn phải theo một format nhất định và thống nhất, thực hiện qua quá trình "parsing" và "re-printing" toàn bộ code của bạn dựa trên những quy tắc nào đó, ví dụ ngắt dòng, thêm/ bớt ngoặc tròn ngoặc nhọn khi cần.
 
 ### Vậy chạy **Prettier** xong thì trông nó như thế nào?
-
+---
 Code ban đầu:
 
 {% highlight javascript linenos%}
@@ -130,7 +130,7 @@ foo(
 [Source: Prettier - Opinionated Code Formatter](https://github.com/prettier/prettier/blob/master/README.md#how-does-it-compare-to-eslint-or-tslint-stylelint)
 
 ## Parsing code là gì?
-
+---
 Theo Kyle Sympson (tác giả của "You Don't Know JS"), **parsing** là một _"quá trình phân tích cú pháp cho đoạn code"_ thực hiện bởi trình biên dịch. Quá trình này lấy đầu vào là 1 _chuỗi các tokens_, ghép chúng lên các nhánh trông như dạng cây, mục đích là để biểu diễn cấu trúc ngữ pháp của chương trình. Do trông như hình cây, nên cách biểu diễn này được gọi là <b>A</b>bstract <b>S</b>yntax <b>T</b>ree (viết tắt là "**AST**", dịch nôm là "_Cây Cú pháp Trừu tượng_"). 
 
 Vậy _tokens_ là gì? Hiểu nhanh nhất là với đoạn `var a = 2;` thì trình biên dịch sẽ chia đoạn đó ra thành các phần tử nhỏ hơn, bao gồm `var`, `a`, `=`, `2`, và `;`. Mỗi phần tử "có nghĩa" kia, khi đã chia nhỏ nhất có thể, thì được gọi là 1 **token**. Quá trình _parsing_ sẽ giúp "treo" các _tokens_ kia lên _cây_ AST, trông nó sẽ giống như hình minh họa dưới đây. 
@@ -154,11 +154,11 @@ Source:
 - [You Don't Know JS - Scope and Closure](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures)
 
 ## Re-printing code là gì?
-
+---
 Tạm hiểu _re-printing code_ là chương trình **Prettier** sau khi lấy toàn bộ code, cho đi qua quá trình **parsing**, thu lại được một cây AST nhìn từ góc độ của trình biên dịch JavaScript, từ đó "_in ra_" cây AST đó vào trình soạn thảo. Việc này sẽ giúp việc trình bày code trong trình soạn thảo có cấu trúc giống với cách mà trình biên dịch nhận thức.
 
 ## Tại sao cần Prettier?
-
+---
 1. _Xây dựng và cưỡng chế việc sử dụng 1 định dạng code chung_
 
 Ghi chú: Trong văn cảnh của xã hội Việt Nam hiện tại (2017), từ _"cưỡng chế" (enforce)_ nghe không được tích cực cho lắm. Nhưng với môi trường làm lập trình, thuật ngữ này được hiểu một cách trung tính hơn. 
@@ -184,13 +184,13 @@ Prettier tổng hợp và sử dụng những quy chuẩn code ít bị tranh c�
 [Source: Why Prettier?](https://prettier.io/docs/en/why-prettier.html)
 
 ## Có ESlint rồi còn cần Prettier để làm gì?
-
+---
 Nhìn vào hình bên dưới, có thể thấy mặc dù **Prettier** có dẫm chân vào 1 mảng mà **ESlint** đang làm, nhưng trong khi **ESlint** chỉ dừng ở mức độ cảnh báo, thì **Prettier** lại "hành độ", trả lại code đã được format theo chuẩn. Bản chất cơ chế hoạt động của 2 bên cũng khác nhau, nếu như **ESlint** dùng cơ chế "static analysis" thì **Prettier** lại "parsing code" vào JavaScript engine rồi in lại ra editor.  
 
 ![ESlint vs Prettier][img09]
 
 ## Quan điểm của tác giả Prettier về thế nào là "code đẹp"?
-
+---
 Muốn được coi là "đẹp" thì code phải thỏa mãn những tiêu chuẩn sau:
 
 - Phải thống nhất: 
@@ -209,7 +209,7 @@ Prettier không quan tâm đến những gì?
 [Source: Prettier- Rationale?](https://prettier.io/docs/en/rationale.html)
 
 ## Có cách nào để chạy Prettier?
-
+---
 Prettier có thể được chạy qua những cách sau:
 - Trong trình soạn thảo sau mỗi lần nhấn "save"
 - Đính kèm vào quy định commit code 
@@ -221,7 +221,7 @@ Hoặc truy cập trực tiếp vào [Visual Studio - Marketplace: Prettier - Co
 
 
 ## Tham khảo chung
-
+---
 - [Hackernoon - How linting and ESLint improve code quality](https://hackernoon.com/how-linting-and-eslint-improve-code-quality-fa83d2469efe)
 - [Configure Prettier and ESLint in Visual Studio Code
 ](https://www.39digits.com/configure-prettier-and-eslint-in-visual-studio-code/)
