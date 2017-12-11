@@ -17,7 +17,7 @@ tags:
 
 Thỉnh thoảng lướt bản tin [JavaScript Weekly](http://javascriptweekly.com), tôi lại thấy có những thuật ngữ khá lạ như _headless browswer_, rồi _headless mode_ cho _Chrome_, _Firefox_, v.v. Cái gì mà "trình duyệt _không đầu_"? Nhìn là liên tưởng đến nhân vật [Nick không đầu](http://harrypotter.wikia.com/wiki/Nicholas_de_Mimsy-Porpington) trong Harry Potter. Do thấy nó vừa lạ vừa không liên quan, tôi cố tránh đụng vào nó khi chưa cần thiết. Nhưng đến giờ khi đụng vào viết test cho thư viện JavaScript đang làm, nhìn cấu hình cho Karma thì cái từ khóa hài hước kia lại xuất hiện. Vậy đành làm một vài phép google nhanh để hiểu thế nào là "không đầu", nó dùng vào việc gì? Những gì phức tạp hơn sẽ dành cho 1 bài viết khác. 
 
-![alt text][nick]
+![alt text][nick]{: .center-image }
 
 ## Headless browswer là gì?
 
@@ -27,7 +27,7 @@ Tham khảo tại [đây](https://en.wikipedia.org/wiki/Headless_browser).
 
 ## Dùng Headless browswer vào việc gì?
 
-| # | Dùng cho việc gì?|
+|TT | Dùng cho việc gì?|
 |---|--------------------------------------------|
 | 1 | Tự động hóa việc test cho các ứng dụng web |
 | 2 | Chụp màn hình của trang web |
@@ -38,7 +38,7 @@ Tham khảo tại [đây](https://en.wikipedia.org/wiki/Headless_browser).
 
 ## Có thể dùng headless browswer cho mục đích xấu nào?
 
-| # | Headless browswer có thể dùng cho mục đích xấu|
+|TT | Headless browswer có thể dùng cho mục đích xấu|
 |---|--------------------------------------------|
 | 1 | Tiến hành tấn công website bằng phương thức DDOS  |
 | 2 | Làm tăng lượng truy cập ảo để nâng điểm quảng cáo |
