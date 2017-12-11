@@ -20,33 +20,33 @@ Thỉnh thoảng lướt bản tin [JavaScript Weekly](http://javascriptweekly.c
 ![alt text][nick]{: .center-image }
 
 ## Headless browswer là gì?
+---
 
 Một **"Headless** [hed-lis] **browser"** là khi trình duyệt hoạt động không có giao diện người dùng (GUI - _graphical user interface_). Headless browsers cung cấp công cụ để lập trình viên có thể thao tác với trang web thông qua dòng lệnh hoặc điều khiển từ xa qua mạng. 
 
 Tham khảo tại [đây](https://en.wikipedia.org/wiki/Headless_browser).
 
 ## Dùng Headless browswer vào việc gì?
+---
 
-|TT | Dùng cho việc gì?|
-|---|--------------------------------------------|
-| 1 | Tự động hóa việc test cho các ứng dụng web |
-| 2 | Chụp màn hình của trang web |
-| 3 | Chạy các test tự động cho các thư viện JavaScript |
-| 4 | Duyệt web để thu thập dữ liệu |
-| 5 | Tự động hóa quá trình tương tác với web |
-| 6 | Chạy trình duyệt trên server |
+- Tự động hóa việc test cho các ứng dụng web |
+- Chụp màn hình của trang web |
+- Chạy các test tự động cho các thư viện JavaScript |
+- Duyệt web để thu thập dữ liệu |
+- Tự động hóa quá trình tương tác với web |
+- Chạy trình duyệt trên server |
 
 ## Có thể dùng headless browswer cho mục đích xấu nào?
+---
 
-|TT | Headless browswer có thể dùng cho mục đích xấu|
-|---|--------------------------------------------|
-| 1 | Tiến hành tấn công website bằng phương thức DDOS  |
-| 2 | Làm tăng lượng truy cập ảo để nâng điểm quảng cáo |
-| 3 | Chạy web cho các mục đích đáng ngờ, ví dụ "_credential stuffing_"|
+- Tiến hành tấn công website bằng phương thức DDOS  |
+- Làm tăng lượng truy cập ảo để nâng điểm quảng cáo |
+- Chạy web cho các mục đích đáng ngờ, ví dụ "_credential stuffing_"|
 
 Ghi chú: _Credential stuffing_ là một dạng tấn công mạng để ăn cắp quyền truy cập website của một thành viên của website đấy. Việc tấn công thực hiện qua việc gửi một lượng lớn các yêu cầu truy cập đến trang web. 
 
 ## Có phải tất cả các trình duyệt chạy ở bất kỳ hệ điều nào cũng có chế độ headless?
+---
 
 Không! Internet Explorer và Microsoft Edge không hỗ trợ. Và chế độ này còn tùy thuộc vào hệ điều hành của người dùng. Dưới đây là danh sách các trình duyệt cung cấp chế độ headless (hỗ trợ một phần hoặc 100%):
 1. [_Google Chrome_](https://developers.google.com/web/updates/2017/04/headless-chrome) -> từ version 59 cho Linux và macOS. 
@@ -57,6 +57,7 @@ Không! Internet Explorer và Microsoft Edge không hỗ trợ. Và chế độ 
 6. _Spalsh_ 
 
 ## Ngoài "headless browswer" ra, còn cái gì "headless" khác nữa không?
+---
 
 YES!!!. Có "_headless software_" được định nghĩa là những phần mềm có khả năng chạy trên thiết bị không cần giao diện đồ họa người dụng. Những phần mềm này nhận thông số đầu vào và xuất tín hiệu đầu ra thông qua các giao diện như network, cổng serial, thường được cài trên servers hoặc các thiết bị nhúng.
 
@@ -65,6 +66,7 @@ Ngoài ra còn có "_headless computer_" là những thiết bị không dùng m
 Tham khảo tại [đây](https://en.wikipedia.org/wiki/Headless_software) và [đây](https://en.wikipedia.org/wiki/Headless_computer).
 
 ## Một vài lệnh cơ bản với Headless Chrome
+---
 
 Tham khảo tại [đây](https://developers.google.com/web/updates/2017/04/headless-chrome).
 
@@ -75,6 +77,7 @@ Tham khảo tại [đây](https://developers.google.com/web/updates/2017/04/head
  5. Chạy chế độ REPL (read-eval-print-loop)
 
  ## Kết luận & bài viết để tham khảo sau này:
+---
 
 1. [Automated testing with Headless Chrome](https://developers.google.com/web/updates/2017/06/headless-karma-mocha-chai)
 2. [Introduction to Headless Browser Testing](https://blog.logrocket.com/introduction-to-headless-browser-testing-44b82310b27c)
