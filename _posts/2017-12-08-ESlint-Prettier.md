@@ -227,7 +227,7 @@ Hoặc truy cập trực tiếp vào [Visual Studio - Marketplace: Prettier - Co
 ](https://www.39digits.com/configure-prettier-and-eslint-in-visual-studio-code/)
 - [Medium - Even faster code formatting using ESLint](https://medium.com/@netczuk/even-faster-code-formatting-using-eslint-22b80d061461)
 - [Medium - Your last ESLint config](https://medium.com/@netczuk/your-last-eslint-config-9e35bace2f99)
-
+- [Configure ESLint In Visual Studio Code](http://shripalsoni.com/blog/configure-eslint-in-visual-studio-code/)
 
 [img01]: https://ngminhtrung.github.io/images/PostIMG/20171208-img-01.png
 [img02]: https://ngminhtrung.github.io/images/PostIMG/20171208-img-02.png
