@@ -1,5 +1,5 @@
 ---
-id: 116
+id: 108
 title: '[JavaScript] Khi Object được tạo từ hư vô'
 date: 2017-12-16
 author: ngminhtrung
@@ -23,14 +23,14 @@ Ghi chú: Tiêu đề hoàn toàn mang tính câu view
 
 Một ngày đẹp giời tôi cần kiểm tra thuộc tính của 1 object trước khi thực hiện một vài thao tác khác. Theo thói quen từ lúc đi học, cú pháp rất thông dụng `obj.hasOwnProperty(tên-thuộc-tính-cần-kiểm-tra)` sẽ được dùng, trả về `true` nếu `obj` của ta đúng là có thuộc tính kia, trả về `false` trong trường hợp ngược lại. Ấy vậy mà cú pháp này bị ESlint (một công cụ linting trong JavaScript mà các công ty hay dùng) báo lỗi. Thử ví dụ sau nhé:
 
-{% highlight javascript%}
+```js
 let obj = {
   name: "Nguyen Minh Trung",
   skill: "JavaScript"
 };
 
 let hasSkill = obj.hasOwnProperty("skill");
-{% endhighlight %}
+```
 
  Với ESlint, dòng code trên là chưa đạt "chuẩn", một khi không sửa thì nó sẽ không cho _build_ project. Lỗi đây:
 
@@ -38,7 +38,7 @@ let hasSkill = obj.hasOwnProperty("skill");
 
 ESlint phân loại lỗi trên vào dạng ["_Disallow use of Object.prototypes builtins directly (no-prototype-builtins)_"](https://eslint.org/docs/rules/no-prototype-builtins). Phải sửa như sau:
 
-{% highlight javascript%}
+```js
 // Viết chưa chuẩn --> báo lỗi
 
 let hasSkill = obj.hasOwnProperty("skill");
@@ -46,7 +46,8 @@ let hasSkill = obj.hasOwnProperty("skill");
 // Viết CHUẨN
 
 let hasSkill = Object.prototype.hasOwnProperty.call(obj, "skill");
-{% endhighlight %}
+
+```
 
 Chú ý là `Object` khác với `obj`. Trong ảnh ở trên tôi viết là `object`, tuy vẫn đúng nhưng để cho dễ phân biệt, tôi đã sửa lại trong bài viết này thành `obj` (còn ảnh thì lười quá để tạm).
 
@@ -64,23 +65,23 @@ Dịch nôm na có nghĩa là:
 
 Đoạn trên đọc thì chưa hiểu gì! Chỉ biết đại loại là ESlint cho rằng ta không nên viết code như dưới đây:
 
-{% highlight javascript%}
+```js
 var hasBarProperty = foo.hasOwnProperty("bar");
 
 var isPrototypeOfBar = foo.isPrototypeOf(bar);
 
 var barIsEnumerable = foo.propertyIsEnumerable("bar");
-{% endhighlight %}
+```
 
 mà nên viết là: 
 
-{% highlight javascript%}
+```js
 var hasBarProperty = Object.prototype.hasOwnProperty.call(foo, "bar");
 
 var isPrototypeOfBar = Object.prototype.isPrototypeOf.call(foo, bar);
 
 var barIsEnumerable = {}.propertyIsEnumerable.call(foo, "bar");
-{% endhighlight %}
+```
 
 ### Ok, cứ tạm thế đã. Vậy cách tạo object thông qua Object.create() nghĩa là sao? Lại còn Object.create(null) nữa chứ!!!
 
@@ -92,10 +93,10 @@ Hóa ra vẫn còn 1 cách nữa, đó là dùng `Object.creat()`. Bạn có th�
 
 Trong bài này, chúng ta tập trung vào `Object.create(null)` thôi. Thử luôn trong _Chrome Dev_ nhé:
 
-{% highlight javascript%}
+```js
 var obj1 = Object.create(null),
     obj2 = {};
-{% endhighlight %}
+```
 
 Soi thử xem từng object chứa gì?
 
@@ -112,24 +113,24 @@ Liệu mấy bác ngồi viết ECMAScript có rỗi việc không ạ? Bản th
 > `Object.create` là một cách tuyệt vời để tạo object với prototype. Nhưng vấn đề là nó tạo ra `__proto__` thừa kế mọi properties từ ông tổ `Object`, mà ông tổ này thì hoàn toàn có thể bị chọc ngoáy sửa đổi. Bạn sẽ làm gì nếu chỉ đơn thuần muốn tạo ra 1 object mới, và không cho nó bị thay đổi từ bên ngoài?  Bạn có thể đạt được điều này với `Object.create(null)`.
 
 Xem đoạn code sau:
-{% highlight javascript%}
+```js
 let obj = {}
 
 Object.prototype.sayHello = () => {console.log("Hello")};
 
 obj.sayHello() // return "Hello"
-{% endhighlight %}
+```
 
 Theo Davis Walsh, anh không muốn tạo ra object tên là _obj_, rồi sau đó "bỗng dưng" _obj_ lại mọc thêm 1 method `sayHello` chỉ bởi "ở đâu đó" người khác thay đổi ông tổ  `Object` thông qua `Object.prototype`.
 
 Một khi _obj_ được tạo bằng `Object.create(null)`, thì nó chẳng có `prototype` nữa để mà bị kế thừa từ `Object`. Thử nhé: 
-{% highlight javascript%}
+```js
 let obj2 = Object.create(null)
 
 Object.prototype.sayILoveYou = () => {console.log("I love you")}
 
 obj2.sayILoveYou() // Uncaught TypeError: obj2.sayILoveYou is not a function
-{% endhighlight %}
+```
 
 Và *Dmitry Pashkevich* (cũng là 1 lập trình viên người Mỹ đang làm cho Lucid Chart) trong bài [Object.create(null)](https://coderwall.com/p/dmkwqa/object-create-null) đã khẳng định thêm ý của David Walsh ở trên:
 

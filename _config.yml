@@ -89,4 +89,4 @@ exclude:
   - README.md
   - CNAME
 
-theme: minimal-mistakes-jekyll
+# theme: minimal-mistakes-jekyll
