@@ -99,7 +99,7 @@ var obj1 = Object.create(null),
 
 Soi thử xem từng object chứa gì?
 
-![alt text][image02]{: .center-image }
+![alt text][image02]{: .center-image }{ width: 50%; }
 
 Lạ quá phải không!!! `obj1 = Object.create(null)` lại tạo ra 1 object trống rỗng không có tí properties nào. Bạn `obj2` tưởng là cũng trống rỗng vậy mà vẫn có property tên là `__proto__` được sinh ra. Điều này nghĩa là sao?
 - Tất cả các objects được sinh ra trong JavaScript đều có tối thiểu 1 property tên là `__proto__` với các *properties* và *methods* bên trong được thừa kế từ 1 ông tổ tên là `Object`, chưa cần bạn khai báo thêm gì cả. 
