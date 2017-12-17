@@ -99,7 +99,7 @@ var obj1 = Object.create(null),
 
 Soi thử xem từng object chứa gì?
 
-![alt text][image02]{: .center-image }{ width: 300px; }
+![alt text][image02]{: .center-image }
 
 Lạ quá phải không!!! `obj1 = Object.create(null)` lại tạo ra 1 object trống rỗng không có tí properties nào. Bạn `obj2` tưởng là cũng trống rỗng vậy mà vẫn có property tên là `__proto__` được sinh ra. Điều này nghĩa là sao?
 - Tất cả các objects được sinh ra trong JavaScript đều có tối thiểu 1 property tên là `__proto__` với các *properties* và *methods* bên trong được thừa kế từ 1 ông tổ tên là `Object`, chưa cần bạn khai báo thêm gì cả. 
@@ -152,6 +152,14 @@ Dưới đây là một trong những ý kiến cuối cùng tôi muốn trích 
 
 ### Tóm lại
 
+- Mỗi objects khi được tạo ra, bên cạnh những methods/properties do người dùng tạo ra (gọi là "*OwnProperties*"), thì còn có sẵn những methods/properties mà JavaScript gán cho nó (chính là những *prototype.properties*). Giống như một đứa trẻ mới sinh ra, tuy bố mẹ không dạy cho nó khóc - ăn - ngủ - đái dầm - ị đùn, thì bản năng con người vẫn cho nó các hành động như vậy. Còn trong JavaScript, vừa được tạo ra thì mỗi object đã mang trong mình các methods kiểu như `.hasOwnProperties()`, `isPrototypeOf()`, .v.v. 
+
+- Tuy vậy, có những objects mà lập trình viên cố tình tạo ra để nó không có những methods/properties có sẵn nói trên (tức là không có cả `.hasOwnProperties()`, `isPrototypeOf()`, .v.v. ). Có người gọi đây là những objects "clean" (sạch), "naked" (trần chuồng/ nuy), v.v.  Các object đó được tạo từ `Object.create(null)`, không hề có `Object.prototype`.
+
+- Một khi objects đã "clean", đã "nake" kiểu trên, thì gọi methods như `.hasOwnProperties()` hay `isPrototypeOf()` làm sao được? sẽ bị báo lỗi ngay.
+
+- ESlint đã tạo ra một quy định để ngăn ngừa lập trình viên sử dụng những methods kia để tránh gặp lỗi.
+
 - Nếu đã bật ESlint khi viết code, hãy nhớ tránh dùng:
   - `Object.prototype.hasOwnProperty(prop)`, 
   - `Object.prototype.isPrototypeOf(prop)`, 
@@ -161,8 +169,6 @@ Dưới đây là một trong những ý kiến cuối cùng tôi muốn trích 
   - `Object.prototype.hasOwnProperty.call(obj, prop)`, 
   - `Object.prototype.isPrototypeOf.call(obj, prop)`, 
   - `Object.prototype.propertyIsEnumerable.call(obj, prop)`;
-
-- Lý do? Để tránh việc *obj* đang cần kiểm tra không hề có các methods như `hasOwnProperty`, `isPrototypeOf`, `propertyIsNumberable` bởi vì *obj* đó được tạo từ `Object.create(null)`, không hề có `Object.prototype`.
 
 - Để hiểu được những gì liên quan đến quy đình này thì cần hiểu rất nhiều thứ cơ bản khác như `Object`, `prototype`, các methods để kiểm tra sự tồn tại của property nào đó trong object (như dùng `hasOwnProperties`, dùng toán tử `IN`), hiểu về `map`, v.v. Từ đó mới thấy là kiến thức nhiều chỗ hổng lởm chởm như thế nào.  
 
