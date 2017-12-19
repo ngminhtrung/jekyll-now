@@ -26,6 +26,8 @@ Sau một ngày tìm hiểu về cách xuất chart (vẽ bởi d3.js) sang file
 - Chart mà D3.js được thể hiện trong thẻ `svg`. SVG viết tắt bởi Scalable Vector Graphic, một định dạng ảnh vector có cấu trúc dữ liệu kiểu XML, phục vụ cho việc tạo đồ họa hai chiều, có hỗ trợ việc tương tác cũng như làm hoạt hình. Tìm hiểu nhanh về svg ở đây: [Wikipedia](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics), [Sử dụng file SVG cho Website](https://kipalog.com/posts/Su-dung-file-SVG-cho-website). Chi tiết nhất là [W3C Recommendation on SVG 1.1](https://www.w3.org/TR/SVG/)
 - Một ví dụ chart được vẽ bằng D3.js? Xem [Biểu đồ tỷ lệ thất nghiệm ở Việt Nam năm 2017](https://ngminhtrung.github.io/projects/learning/d3/vietnam/vn-unemployment-2016/)
 
+![alt text][image01]{: .center-image }
+
 ### Vẽ được rồi còn cần làm gì nữa?
 --- 
 Mặc dù chart đã hiện được trên web, nhưng có một nhu cầu lớn đó là xuất ra file ảnh để chèn vào báo cáo. Những định dạng cần được hỗ trợ là:
@@ -89,3 +91,5 @@ Khi xem tính năng export ảnh trên 1 thư viện lâu đời là [Highcharts
 ---
 1. CSS Style Sheets - CSS Object Model (CSSOM) - W3C Working Draft, 17 March 2016. Link [here](https://www.w3.org/TR/cssom-1/#css-style-sheets)
 2. StyleSheet - Moizilla Developer. Link [here](https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet)
+
+[image01]: https://ngminhtrung.github.io/images/PostIMG/2017-12-19-Export-SVG-PNG/image01.gif "Bar Chart D3.js"
