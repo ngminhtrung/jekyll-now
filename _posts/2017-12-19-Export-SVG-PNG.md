@@ -91,5 +91,6 @@ Khi xem tính năng export ảnh trên 1 thư viện lâu đời là [Highcharts
 ---
 1. CSS Style Sheets - CSS Object Model (CSSOM) - W3C Working Draft, 17 March 2016. Link [here](https://www.w3.org/TR/cssom-1/#css-style-sheets)
 2. StyleSheet - Moizilla Developer. Link [here](https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet)
+3. What does CDATA in XML mean? Link [here](https://stackoverflow.com/questions/2784183/what-does-cdata-in-xml-mean)
 
 [image01]: https://ngminhtrung.github.io/images/PostIMG/2017-12-19-Export-SVG-PNG/image01.gif "Bar Chart D3.js"
