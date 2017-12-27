@@ -53,7 +53,7 @@ Vậy là thuộc tính này không chỉ làm việc với text đơn thuần, 
 
 ```js
 blackScript = "<script>alert('Cảnh báo cảnh báo cảnh báo!')</script>";
-el.innerHTML = name; // vẫok trong trường hợp này
+el.innerHTML = name; // vẫn OK trong trường hợp này
 ```
 Lưu ý: Cách làm trên trông giống như một dạng [tấn công `cross-site scripting`](https://en.wikipedia.org/wiki/Cross-site_scripting).
 
