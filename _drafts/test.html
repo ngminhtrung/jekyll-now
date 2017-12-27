@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>D3.js animated line</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+</head>
+
+<body>
+    <div id="lineGenerator">
+            <svg width="400" height="400"></svg>
+    </div>
+    <script type="text/javascript">
+
+        let path = d3.select("svg")
+            .append("path")
+            .style("stroke-width", "5px")
+            .style("stroke", "black")
+            .attr("d", "M0,0 L200,200")
+            .attr("stroke", "#000");
+
+            // console.log(path.node());
+        let totalLength = path.node().getTotalLength();
+
+        path
+            .style("stroke-dasharray", totalLength + " " + totalLength) // nhân đôi path, 1 visible, 1 invisible
+            .style("stroke-dashoffset", totalLength) // dịch toàn bộ path sang bên trái 1 khoảng bằng độ dài path
+            .transition()
+            .duration(3000)
+            .style("stroke-dashoffset", 0); // mỗi lần chạy transition là khoảng offset lại giảm đi một chút, giảm về đến 0, tạo cảm giác đường thẳng đang chạy
+
+    </script>
+</body>
+
+</html>
