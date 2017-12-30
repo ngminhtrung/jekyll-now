@@ -1,7 +1,7 @@
 ---
 id: 119
 title: 'A look back on 2017 before turning to 2018'
-date: 
+date: 2017-12-30
 author: ngminhtrung
 layout: post
 guid: 
