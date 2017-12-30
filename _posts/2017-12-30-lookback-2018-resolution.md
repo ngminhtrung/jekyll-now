@@ -19,9 +19,11 @@ tags:
   - '2018'
 ---
 
-"...*Tri túc tiện túc, đãi túc, hà thời túc*,
-*Tri nhàn tiện nhàn, đãi nhàn, hà thời nhàn ?...*"
-- Nhàn (Nguyễn Công Trứ) -
+> "...*Tri túc tiện túc, đãi túc, hà thời túc*,
+>
+> *Tri nhàn tiện nhàn, đãi nhàn, hà thời nhàn ?...*"
+>
+>  Nhàn (Nguyễn Công Trứ)
 
 "Biết đủ là đủ, đợi cho đủ thì bao giờ mới đủ. Biết nhàn là nhàn, đợi cho nhàn thì bao giờ mới nhàn?". Thôi xin tạm mượn 2 câu của cụ Nguyễn Công Trứ để tổng kết cho 2017 về mặt công việc việc và để lấy đà cho năm 2018.
 
