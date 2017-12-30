@@ -7,7 +7,7 @@ layout: post
 guid: 
 permalink: 
 categories:
-  - Ký sự
+  - selfpondering
 tags:
   - advice
   - học tập
