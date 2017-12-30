@@ -174,7 +174,7 @@ Hoàn thành đúng deadline các task được giao :D.
 
 Năm mới thì bao giờ cũng nhiều thách thức, nhiệm vụ đề ra cho bản thân cũng nhiều vô cùng. Xu hướng là nói nhiều làm ít, đề ra nhiều nhưng cuối cùng thì chẳng làm được bao nhiêu. 
 
-Vì vậy, để 2018 không đến mức lầm vào tình trạng trên, tinh thần chung là:
+Vì vậy, để 2018 không đến mức lâm vào tình trạng trên, tinh thần chung là:
 - dù viết, hay đọc, hay làm projects, cần làm nhanh, ngắn gọn, không sa đà vào những thứ cầu kỳ. 
 - ưu tiên hoàn thành hết các tasks ở mức cơ bản, hơn là chăm chút vào vài tasks quá mức mà mất thời gian làm cái khác.
 - nên điều tiết các hoạt động xã hội sao cho hiệu quả nhất, tránh mất thời gian vào Facebook comment trình bày chat chit nhiều
