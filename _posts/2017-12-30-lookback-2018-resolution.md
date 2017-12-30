@@ -168,13 +168,14 @@ Hoàn thành đúng deadline các task được giao :D.
 
   - Tổ chức gặp gỡ đội Techmaster thường xuyên, khoảng 3 tháng/ lần. Chủ yếu để cập nhật tình hình, kiến thức, thắt chặt quan hệ, và tìm cách support Techmaster nếu cần (và trong khả năng cho phép)
 
-  ## Túm lại
-  ---
 
-  Năm mới thì bao giờ cũng nhiều thách thức, nhiệm vụ đề ra cho bản thân cũng nhiều vô cùng. Xu hướng là nói nhiều làm ít, đề ra nhiều nhưng cuối cùng thì chẳng làm được bao nhiêu. 
+## Túm lại
+---
 
-  Vì vậy, để 2018 không đến mức lầm vào tình trạng trên, tinh thần chung là:
-  - dù viết, hay đọc, hay làm projects, cần làm nhanh, ngắn gọn, không sa đà vào những thứ cầu kỳ. 
-  - ưu tiên hoàn thành hết các tasks ở mức cơ bản, hơn là chăm chút vào vài tasks quá mức mà mất thời gian làm cái khác.
-  - nên điều tiết các hoạt động xã hội sao cho hiệu quả nhất, tránh mất thời gian vào Facebook comment trình bày chat chit nhiều
-  - mỗi ngày viết 1 chút, code 1 chút, nhưng đều đặn từng chút từng chút một. 
+Năm mới thì bao giờ cũng nhiều thách thức, nhiệm vụ đề ra cho bản thân cũng nhiều vô cùng. Xu hướng là nói nhiều làm ít, đề ra nhiều nhưng cuối cùng thì chẳng làm được bao nhiêu. 
+
+Vì vậy, để 2018 không đến mức lầm vào tình trạng trên, tinh thần chung là:
+- dù viết, hay đọc, hay làm projects, cần làm nhanh, ngắn gọn, không sa đà vào những thứ cầu kỳ. 
+- ưu tiên hoàn thành hết các tasks ở mức cơ bản, hơn là chăm chút vào vài tasks quá mức mà mất thời gian làm cái khác.
+- nên điều tiết các hoạt động xã hội sao cho hiệu quả nhất, tránh mất thời gian vào Facebook comment trình bày chat chit nhiều
+- mỗi ngày viết 1 chút, code 1 chút, nhưng đều đặn từng chút từng chút một. 
