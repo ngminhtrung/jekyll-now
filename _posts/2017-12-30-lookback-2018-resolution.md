@@ -30,7 +30,7 @@ tags:
 ## Nhìn lại 2017
 --- 
 
-Năm 2017 quả là một năm đặc biệt, khi tôi chia tay công ty cũ sau 3 năm gắn bó, chia tay "ngành cũ" (điện/ xây dựng) sau ... 14 năm gắn bó (tính cả 5 năm học Đại học). Việc chuyển sang "ngành mới" (lập trình) là một bước nhảy lớn. Có người nói rằng dù gì vẫn là làm ... kỹ thuật, nhưng nói thì dễ, làm không dễ tí nào. Và để chuyển thì cần một động lực (cũng như sự liều lĩnh và chuẩn bị) lớn. Bởi để làm được vẫn cần tích lũy một lượng kiến thức không nhỏ, và để làm tốt và không sai, thì lại cần trải nghiệm, cần thời gian. Mỗi tuổi mỗ i khác, khi người ta không ở độ tuổi 2x, thì việc học cái mới tương đối chậm, chưa kể nhiều người còn có gắng nặng gia đình, vợ con bìu ríu thì khó mà tập trung 100% tâm trí, năng lượng, tiền bạc cho cái mới được. Tuy vậy, dù gì tôi cũng đã "làm được", với những điểm cộng sau đây:
+Năm 2017 quả là một năm đặc biệt, khi tôi chia tay công ty cũ sau 3 năm gắn bó, chia tay "ngành cũ" (điện/ xây dựng) sau ... 14 năm gắn bó (tính cả 5 năm học Đại học). Việc chuyển sang "ngành mới" (lập trình) là một bước nhảy lớn. Có người nói rằng dù gì vẫn là làm ... kỹ thuật, nhưng nói thì dễ, làm không dễ tí nào. Và để chuyển thì cần một động lực (cũng như sự liều lĩnh và chuẩn bị) lớn. Bởi để làm được vẫn cần tích lũy một lượng kiến thức không nhỏ, và để làm tốt và không sai, thì lại cần trải nghiệm, cần thời gian. Mỗi tuổi mỗi khác, khi người ta không ở độ tuổi 2x, thì việc học cái mới tương đối chậm, chưa kể nhiều người còn có gắng nặng gia đình, vợ con bìu ríu thì khó mà tập trung 100% tâm trí, năng lượng, tiền bạc cho cái mới được. Tuy vậy, dù gì tôi cũng đã "làm được", với những điểm cộng sau đây:
 
 1. Đã hoàn thành công việc ở nơi cũ, chia tay trong nụ cười và sự trân trọng của đồng nghiệp
 2. Đã hoàn thành việc học ở Techmaster, có thêm bạn là 1 tá các bạn trẻ, một vài trong số đó thân thiết và quý mến mình.
@@ -167,3 +167,14 @@ Hoàn thành đúng deadline các task được giao :D.
   - Tham gia event của các nhóm khác, ví dụ của *.NET open group*, v.v. 
 
   - Tổ chức gặp gỡ đội Techmaster thường xuyên, khoảng 3 tháng/ lần. Chủ yếu để cập nhật tình hình, kiến thức, thắt chặt quan hệ, và tìm cách support Techmaster nếu cần (và trong khả năng cho phép)
+
+  ## Túm lại
+  ---
+
+  Năm mới thì bao giờ cũng nhiều thách thức, nhiệm vụ đề ra cho bản thân cũng nhiều vô cùng. Xu hướng là nói nhiều làm ít, đề ra nhiều nhưng cuối cùng thì chẳng làm được bao nhiêu. 
+
+  Vì vậy, để 2018 không đến mức lầm vào tình trạng trên, tinh thần chung là:
+  - dù viết, hay đọc, hay làm projects, cần làm nhanh, ngắn gọn, không sa đà vào những thứ cầu kỳ. 
+  - ưu tiên hoàn thành hết các tasks ở mức cơ bản, hơn là chăm chút vào vài tasks quá mức mà mất thời gian làm cái khác.
+  - nên điều tiết các hoạt động xã hội sao cho hiệu quả nhất, tránh mất thời gian vào Facebook comment trình bày chat chit nhiều
+  - mỗi ngày viết 1 chút, code 1 chút, nhưng đều đặn từng chút từng chút một. 
