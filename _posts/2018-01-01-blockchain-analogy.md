@@ -20,6 +20,8 @@ Lưu ý: Hoàn toàn lấy ý tưởng từ [A Super-Simple Guide To Bitcoin And
 
 Hãy tưởng tượng nhóm *freeCodeCamp Hà Nội* gồm Đại, Khánh, Tâm, Thắng, Trung, và Tuyến là 6 bạn học sinh của trường tiểu học Thăng Long. Các bạn này chơi trò đổi *bút chì* lấy *bút mực*, hoặc đổi lấy *thước kẻ* hoặc *cục tẩy*, hoặc đơn giản là đổi lấy *tiền*. Việc đổi chác này hoàn toàn dựa trên sự đồng thuận giữa 2 bạn tại thời điểm diễn ra *giao dịch*. Chỉ có 1 điều không hề thay đổi, đó là mỗi chiếc bút chì được coi là 1 *tài sản* (an asset).
 
+![alt text][image01]{: .center-image }
+
 Lúc đầu, cho mỗi lần đổi chác (ví dụ, Trung muốn đưa cho Tâm 3 chiếc bút chì để đổi lại 1 thứ gì đó), Trung và Tâm sẽ cùng nhau đi gặp cô giáo chủ nhiệm (cô giáo Thảo), nhờ cô ghi lại giao dịch này trong cuốn sổ ghi đầu bài của lớp. Cô Thảo sẽ ghi chép lại mọi đổi chác kiểu này để tránh mọi tranh chấp hay cãi vã của bọn học sinh trong tương lai. 
 
 Trong cuộc đổi chác giữa Trung và Tâm, cô Thảo phải đảm bảo rằng Trung thực sự có 3 chiếc bút chì để đưa cho Tâm. Ngay khi cô Thảo xác nhận điều này, cô phải cập nhật ngay vào sổ ghi đầu bảo, đại ý là kể từ lúc này, trò Trung có ít hơn 3 chiếc bút chì, trò Tâm có thêm 3. 
@@ -48,7 +50,4 @@ Vậy đấy, hóa ra ý tưởng trên đã tồn tại, và nó được gọi
 Vậy đấy, công nghệ tiền mật mã ảo đã mở ra vô số hướng đi cho con người, và câu trả lời là chúng ta sẽ chọn đi theo hướng nào chỉ nằm ở tương lai.
 
 
-
-
-
-[photo01]: https://ngminhtrung.github.io/images/PostIMG/20170928-img-01.jpg "Các trường hợp dễ nhầm lẫn khi sử dụng "this""
+[image01]: https://ngminhtrung.github.io/images/PostIMG/2018-01-01-blockchain/image01.png "Nhóm 6 học sinh"
