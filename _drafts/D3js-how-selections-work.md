@@ -161,7 +161,7 @@ Kết hợp thông qua index là cách tiện nhất nếu tập dữ liệu và
 
 Khi liên kết elements với dữ liệu thông qua key, sẽ có 3 trường hợp xảy ra:
 - Update - Có những element tương ứng với dữ liệu.
-- Enter - Có những element không tương ứng với dữ liệu
+- Enter - Có những element không tương ứng với dữ liệu.
 - Exit - có những dữ liệu không tương ứng với element.
 
 Đây là ba trường hợp của selections được trả về lần lượt bởi `selection.data`, `selection.enter` và `selection.exit`. Để minh họa, hãy hình dung ta có 1 biểu đồ dạng cột (bar chart) củ 5 ký tự đầu tiên của bảng chữ cái (ABCDE), rồi ta cần chuyển dữ liệu này thành 5 nguyên âm nổi tiếng (YEAOI). Bạn có thể sử dụng key function to maintain association of letters to bars across the transition, resulting in the following data join:
