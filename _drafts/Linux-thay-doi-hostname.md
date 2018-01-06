@@ -7,7 +7,7 @@ layout: post
 guid: 
 permalink: 
 categories:
-  - javascript
+  - linux
 tags:
   - javascript
   - front-end
@@ -15,12 +15,7 @@ tags:
   - this
 ---
 
-https://www.fusioncharts.com/chart-primers/radar-chart/
+https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/
 
-https://www.fusioncharts.com/charts/radar-spider-charts/
-
-http://www.quadrigram.com/blog/radar-carts/
-
-https://datavizcatalogue.com/methods/radar_chart.html
 
 [photo01]: https://ngminhtrung.github.io/images/PostIMG/20170928-img-01.jpg "Các trường hợp dễ nhầm lẫn khi sử dụng "this""

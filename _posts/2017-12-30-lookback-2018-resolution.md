@@ -146,7 +146,7 @@ Hoàn thành đúng deadline các task được giao :D.
 
   - *Viết lách*: Tối thiếu 48 bài trên blog cá nhân (trung bình 4 bài/tháng), trong đó chọn được khoảng 5 - 10 bài đăng trên kipalog.
 
-  - *Dịch sách*: Tiếp tục dịch Series "*You don't know JS*" của Kyle Simpson. Hiện đã dịch được 60% cuốn "*Scope and Closure*", trước tháng 6 cần hoàn thành nốt "*Scope and Closure*", và được hoảng 50% "*This and Object prototypes*".
+  - *Dịch sách*: Tiếp tục dịch Series "[*You don't know JS*](https://github.com/ngminhtrung/You-Dont-Know-JS)" của Kyle Simpson. Hiện đã dịch được 60% cuốn "[*Scope and Closure*](https://github.com/ngminhtrung/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures)", trước tháng 6 cần hoàn thành nốt "*Scope and Closure*", và được hoảng 50% "[*This and Object prototypes*](https://github.com/ngminhtrung/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes)".
 
   - *Đọc sách*: Cần hoàn thành các quyển sau (một số quyển đơn thuần là sách thực hành, nhưng vẫn đang dang dở cần làm nốt)
     - The Principles of Object-Oriented JavaScript (Nicholas C. Zakas) (đã được 50%)
