@@ -1,6 +1,6 @@
 ---
 id: 120
-title: '[Dịch] Ví dụ siêu đơn giản để giải thích về bitcoin và blockchain'
+title: '[Tìm hiểu về Blockchain] Bài 01 - Ví dụ siêu đơn giản để giải thích về bitcoin và blockchain'
 date: 2018-01-01
 author: ngminhtrung
 layout: post
@@ -15,8 +15,18 @@ tags:
   - crytography
 ---
 
+Tôi không định đầu tư bitcoin. Tôi chỉ biết "*blockchain là gì?*", "*tại sao nó lại ầm ĩ như thế trên thế giới và Việt Nam?*", "*liệu có thể thông qua blockchain để tìm hiểu về Khoa học Máy tính hay không*?". Tôi muốn hiểu, muốn trình bày lại về blockchain bằng cách giải thích đời thường. Đây sẽ là bài đầu tiên, thứ tự hoàn toàn ngẫu nhiên, về hành trình tìm hiểu của cá nhân tôi. Do vừa đọc vừa viết, tôi không rõ các chủ đề sắp tới sẽ là gì, viết vào thời điểm nào. Trong đầu ít nhất đang nghĩ đến các câu hỏi sau:
+- Mỗi khối block chứa gì?
+- Cách để mô tả khối block và chuỗi block đơn giản nhất thông qua JavaScript
+- Hàm băm là gì? tính chất? lý do?
+- Ví dụ cụ thể nhất (trong khả năng) về ứng dụng của blockchain ngoài tiền ảo
+- Mọi người đang nói những chủ đề gì trong Group Blockchain Developer Việt Nam
+- Ở Việt Nam có những công ty nào nghiên cứu blockchain rồi? ứng dụng ra sao?
 
-Lưu ý: Hoàn toàn lấy ý tưởng từ [A Super-Simple Guide To Bitcoin And The Blockchain](https://dev.to/jordanirabor/a-super-simple-way-to-understand-bitcoin-and-the-blockchain-cg6)
+Mục tiêu là trả lời các câu hỏi trên ngắn gọn, dễ hiểu (cho người Việt).
+
+---
+Lưu ý: Bài này hoàn toàn lấy ý tưởng từ [A Super-Simple Guide To Bitcoin And The Blockchain](https://dev.to/jordanirabor/a-super-simple-way-to-understand-bitcoin-and-the-blockchain-cg6)
 
 Hãy tưởng tượng nhóm *freeCodeCamp Hà Nội* gồm Đại, Khánh, Tâm, Thắng, Trung, và Tuyến là 6 bạn học sinh của trường tiểu học Thăng Long. Các bạn này chơi trò đổi *bút chì* lấy *bút mực*, hoặc đổi lấy *thước kẻ* hoặc *cục tẩy*, hoặc đơn giản là đổi lấy *tiền*. Việc đổi chác này hoàn toàn dựa trên sự đồng thuận giữa 2 bạn tại thời điểm diễn ra *giao dịch*. Chỉ có 1 điều không hề thay đổi, đó là mỗi chiếc bút chì được coi là 1 *tài sản* (an asset).
 
