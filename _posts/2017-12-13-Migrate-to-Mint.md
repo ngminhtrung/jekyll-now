@@ -7,7 +7,7 @@ layout: post
 guid: 
 permalink: 
 categories:
-  - javascript
+  - linux
 tags:
   - javascript
   - mint
