@@ -15,7 +15,7 @@ tags:
   - crytography
 ---
 
-Tôi không định đầu tư bitcoin. Tôi chỉ biết "*blockchain là gì?*", "*tại sao nó lại ầm ĩ như thế trên thế giới và Việt Nam?*", "*liệu có thể thông qua blockchain để tìm hiểu về Khoa học Máy tính hay không*?". Tôi muốn hiểu, muốn trình bày lại về blockchain bằng cách giải thích đời thường. Đây sẽ là bài đầu tiên, thứ tự hoàn toàn ngẫu nhiên, về hành trình tìm hiểu của cá nhân tôi. Do vừa đọc vừa viết, tôi không rõ các chủ đề sắp tới sẽ là gì, viết vào thời điểm nào. Trong đầu ít nhất đang nghĩ đến các câu hỏi sau:
+Tôi không định đầu tư bitcoin. Tôi chỉ muốn biết "*blockchain là gì?*", "*tại sao nó lại ầm ĩ như thế trên thế giới và Việt Nam?*", "*liệu có thể thông qua blockchain để tìm hiểu về Khoa học Máy tính hay không*?". Tôi muốn hiểu, muốn trình bày lại về blockchain bằng cách giải thích đời thường. Đây sẽ là bài đầu tiên, thứ tự hoàn toàn ngẫu nhiên, về hành trình tìm hiểu của cá nhân tôi. Do vừa đọc vừa viết, tôi không rõ các chủ đề sắp tới sẽ là gì, viết vào thời điểm nào. Trong đầu ít nhất đang nghĩ đến các câu hỏi sau:
 - Mỗi khối block chứa gì?
 - Cách để mô tả khối block và chuỗi block đơn giản nhất thông qua JavaScript
 - Hàm băm là gì? tính chất? lý do?
