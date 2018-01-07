@@ -51,7 +51,7 @@ Biết mà không nói là một cái tội. Tỷ lệ lập trình viên Ta ch�
 ### Ok vậy nên viết về đề tài gì?
 ---
 
-Nhiều lắm. Dưới đây là phần mà John Sonmez gợi ý mà tôi ghi lại. 
+Nhiều lắm. Dưới đây là phần mà John Sonmez gợi ý mà tôi ghi lại. Hiện mấy bài viết của 2017 mới chỉ là 1 phần nhỏ trong số những gì có thể viết. Viết nhiều quá mất thời gian học với code. Nói chung cần cân nhắc và giữ mọi thứ cân bằng. 
 
 - Hưỡng dẫn làm cái gì đó
 - Viết review sách hoặc một sản phẩm, công cụ
@@ -100,6 +100,8 @@ Tôi sẽ viết thêm các bài về Github Page, về Jekyll, và hy vọng v�
 ### Kết luận. 
 ---
 
-Viết blog đem lại nhiều cái lợi cho cá nhân. Với tôi, nó vừa là việc cá nhân, vừa là trách nhiệm của một thành viên của cộng đồng lập trình viên cá nhân. Nếu được khuyên ... tôi mong các bạn đang "định" viết blog hãy viết ngay. Ý là NGAY nhé, ngay *bây giờ*, **ngay và luôn**, mở Microsoft Word/ Google Docs/ Libre Office/ Notepad/ Gmail/ bất cứ trình soạn thảo nào có trong tay, hoặc bất kỳ text editor nào (như VS Code) có [Markdown](https://vi.wikipedia.org/wiki/Markdown), viết về bất kỳ một cái gì gợi ý bên trên, bất kỳ cái gì mà bạn có trong đầu. Viết ít nhất 1/2 trang A4, nhiều nhất 1 trang A4. Lưu lại. Đăng lên nếu được. 
+Viết blog đem lại nhiều cái lợi cho cá nhân. Với tôi, nó vừa là việc cá nhân, vừa là trách nhiệm của một thành viên của cộng đồng lập trình viên cá nhân. Nếu được khuyên ... tôi mong các bạn đang "định", hoặc "sẽ" viết blog thì hãy viết ngay. Ý là NGAY nhé, ngay *bây giờ*, **ngay và luôn**, mở Microsoft Word/ Google Docs/ Libre Office/ Notepad/ Gmail/ bất cứ trình soạn thảo nào có trong tay, hoặc bất kỳ text editor nào (như VS Code) có [Markdown](https://vi.wikipedia.org/wiki/Markdown), viết về bất kỳ một cái gì gợi ý bên trên, bất kỳ cái gì mà bạn có trong đầu. Viết ít nhất 1/2 trang A4, nhiều nhất 1 trang A4. Lưu lại. Đăng lên nếu được. 
 
-Sẽ cần chuyên cần. Sẽ cần kỷ luật cá nhân. Sẽ cần kiên trì. Thành quả sẽ đến từ từ, vô hình, trong tương lai (tính bằng năm).
+Sẽ cần chuyên cần. Sẽ cần kỷ luật cá nhân. Sẽ cần kiên trì. Thành quả sẽ đến từ từ, vô hình, trong tương lai (có lẽ, tính bằng 3- 5 năm).
+
+PS: Còn 1 thứ nữa của viết blog. Đó là kiếm tiền. Nhưng vì đó không phải mục đích của tôi, nên ... bỏ qua. 

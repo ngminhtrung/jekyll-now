@@ -22,6 +22,7 @@ Tôi không định đầu tư bitcoin. Tôi chỉ muốn biết "*blockchain l�
 - Ví dụ cụ thể nhất (trong khả năng) về ứng dụng của blockchain ngoài tiền ảo
 - Mọi người đang nói những chủ đề gì trong Group Blockchain Developer Việt Nam
 - Ở Việt Nam có những công ty nào nghiên cứu blockchain rồi? ứng dụng ra sao?
+- Những ý kiến phủ nhận tương lai của blockchain?
 
 Mục tiêu là trả lời các câu hỏi trên ngắn gọn, dễ hiểu (cho người Việt).
 

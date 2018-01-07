@@ -1,0 +1,1 @@
+http://www.perfectlyrandom.org/2014/09/21/try-out-the-fish-shell/
