@@ -74,9 +74,9 @@ Tôi chưa khám phá hết `fish` nói riêng cũng như thế giới *shell* n
 
 [image00]: https://ngminhtrung.github.io/images/PostIMG/2018-01-09-fish-terminal/image00.png "Logo của fish"
 
-[image01]: https://ngminhtrung.github.io/images/PostIMG/2018-01-09-fish-terminal/image01.jpg "Sắc màu của fish"
+[image01]: https://ngminhtrung.github.io/images/PostIMG/2018-01-09-fish-terminal/image01.gif "Sắc màu của fish"
 
-[image02]: https://ngminhtrung.github.io/images/PostIMG/2018-01-09-fish-terminal/image02.jpg "Tính năng đoán và tự động hoàn thành của fish"
+[image02]: https://ngminhtrung.github.io/images/PostIMG/2018-01-09-fish-terminal/image02.gif "Tính năng đoán và tự động hoàn thành của fish"
 
-[image03]: https://ngminhtrung.github.io/images/PostIMG/2018-01-09-fish-terminal/image03.jpg "Trang web cấu hình fish"
+[image03]: https://ngminhtrung.github.io/images/PostIMG/2018-01-09-fish-terminal/image03.gif "Trang web cấu hình fish"
 
