@@ -15,14 +15,7 @@ tags:
   - this
 ---
 
-https://www.fusioncharts.com/chart-primers/radar-chart/
 
-https://www.fusioncharts.com/charts/radar-spider-charts/
-
-http://www.quadrigram.com/blog/radar-carts/
-
-https://datavizcatalogue.com/methods/radar_chart.html
-
-http://bl.ocks.org/chrisrzhou/2421ac6541b68c1680f8
+http://blog.taylormcgann.com/tag/prompt-color/
 
 [photo01]: https://ngminhtrung.github.io/images/PostIMG/20170928-img-01.jpg "Các trường hợp dễ nhầm lẫn khi sử dụng "this""

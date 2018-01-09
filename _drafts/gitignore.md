@@ -1,6 +1,6 @@
 ---
 id: 103
-title: 'Title'
+title: 'Gitignore'
 date: 2017-09-27
 author: ngminhtrung
 layout: post
@@ -15,14 +15,11 @@ tags:
   - this
 ---
 
-https://www.fusioncharts.com/chart-primers/radar-chart/
+https://stackoverflow.com/questions/4308610/how-to-ignore-certain-files-in-git
 
-https://www.fusioncharts.com/charts/radar-spider-charts/
+https://stackoverflow.com/questions/653454/how-do-you-make-git-ignore-files-without-using-gitignore
 
-http://www.quadrigram.com/blog/radar-carts/
+https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files
 
-https://datavizcatalogue.com/methods/radar_chart.html
-
-http://bl.ocks.org/chrisrzhou/2421ac6541b68c1680f8
 
 [photo01]: https://ngminhtrung.github.io/images/PostIMG/20170928-img-01.jpg "Các trường hợp dễ nhầm lẫn khi sử dụng "this""
