@@ -23,6 +23,10 @@ https://codepen.io/andreasmb/pen/GgEyLP
 
 https://bocoup.com/blog/improving-d3-path-animation
 
+http://big-elephants.com/2014-06/unrolling-line-charts-d3js/
+
+https://visual.ly/blog/creating-animations-and-transitions-with-d3-js/
+
 ## Vẽ một đường liền nét
 
 ---

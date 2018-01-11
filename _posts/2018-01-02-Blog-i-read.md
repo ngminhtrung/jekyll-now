@@ -21,7 +21,7 @@ Updated:
 
 # Blog cá nhân/ Personal blog
 
-Lưu ý: Dấu * là độ ưa thích theo cảm tính cá nhân, không liên quan đến chất lượng của blog.
+Lưu ý: Dấu 🌺 là độ ưa thích theo cảm tính cá nhân, không liên quan đến chất lượng của blog.
 
 - [Eric Shull - Exupero](http://exupero.org). Mathematician, programmer, writer. Người Mỹ (đang ở Michigan). Tìm thấy bác này sau 1 lần search về cách xuất ảnh từ D3 SVG sang PNG, vì thế mới có bài [này](http://travisnguyen.net/dataviz/2017/12/19/Export-SVG-PNG/). Bác Eric này có một phần riêng về *sketchnote* tôi rất thích. 
 
