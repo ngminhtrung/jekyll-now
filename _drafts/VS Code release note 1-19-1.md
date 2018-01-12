@@ -15,5 +15,9 @@ tags:
   - this
 ---
 
+https://viblo.asia/p/8-visual-studio-code-extensions-huu-ich-danh-cho-front-end-developer-gGJ59XQplX2
+
+https://hieusensei.com/visual-studio-code-can-ban
+
 
 [photo01]: https://ngminhtrung.github.io/images/PostIMG/20170928-img-01.jpg "Các trường hợp dễ nhầm lẫn khi sử dụng "this""
