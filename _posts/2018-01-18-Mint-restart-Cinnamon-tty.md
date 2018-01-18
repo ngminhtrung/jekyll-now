@@ -7,7 +7,7 @@ layout: post
 guid: 
 permalink: 
 categories:
-  - Linux
+  - linux
 tags:
   - Cinnamon
   - tty
@@ -17,7 +17,11 @@ tags:
 
 Sau một thời gian dùng Mint thì tình trạng máy bị đơ (freezed, không sao làm được gì) xảy ra tương đối thường xuyên. Hồi đầu luống cuống, cứ phải *hard reset* máy bực mình vô cùng và xót máy. Mà chính cái laptop mình đang dùng bị treo thì lấy đâu ra thứ để google cách xử lý? Sau hiểu dần và biết 1 cách êm thấm hơn một chút, đó là "*khởi động lại **Cinnamon***". Nhưng *Cinnamon* là gì, tại sao và làm cách nào để khởi động lại nó, thì xin mời đọc phần ghi chú của tôi dưới đây. 
 
+<<<<<<< HEAD
 ### *Cinnamon* là gì?
+=======
+#### *Cinnamon* là gì?
+>>>>>>> 12efd66232d7048d589f9c474205f648648a23df
 
 - *Cinnamon* ((/ˈsɪnəmən/, quế) là 1 *desktop environment* cho *X Windows System* được cài mặc định cho hệ điều hành Linux Mint. 
 
