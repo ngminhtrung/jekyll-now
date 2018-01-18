@@ -52,7 +52,7 @@ Cách làm?
 
 3. Trong **tty** nào đó, cần đăng nhập với *username* và *password* của máy.
 
-4. Gõ `killall -9 cinnamon` là xong.
+4. Gõ `killall -9 cinnamon`, `Enter`. Sau đó quay lại về giao diện đồ họa bằng `Ctrl + Alt + F7`, sẽ có cửa sổ chờ sẵn hỏi có muốn restart Cinnamon hay không. Chọn *Yes*, mọi tiến trình sẽ được đóng lại, màn hình Login sẽ hiện ra. 
 
 ### Kết luận
 
