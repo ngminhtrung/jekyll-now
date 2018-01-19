@@ -56,7 +56,7 @@ Cách làm?
 
 ### Kết luận
 
-Sẽ còn phải tìm hiểu thêm về *desktop environment* cũng như *X Windows System*, sự khác biệt giữa *console*, *terminal*, *tty* và *sheel*, cũng như những điều mình có thể làm với máy thông quan *tty*. Mục đích chỉ để vận hành chiếc máy của mình trơn tru hơn. 
+Sẽ còn phải tìm hiểu thêm về *desktop environment* cũng như *X Windows System*, sự khác biệt giữa *console*, *terminal*, *tty* và *sheel*, cũng như những điều mình có thể làm với máy thông qua *tty*. Mục đích chỉ để vận hành chiếc máy của mình trơn tru hơn. 
 
 ### Tham khảo
 - [How do I restart Cinnamon from the tty?](https://askubuntu.com/questions/143838/how-do-i-restart-cinnamon-from-the-tty)
