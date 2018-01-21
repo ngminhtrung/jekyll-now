@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./d3.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+        crossorigin="anonymous">
+    <style>
+        body {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+
+    <title>Draw and animate Spirograph with D3.js</title>
+</head>
+
+<body>
+    <div class="pure-g chart-row-01">
+        <div class="pure-u-1-3" id="chart01">
+            <p>R = 90, k = 5, hole offset = 70</p>
+        </div>
+        <div class="pure-u-1-3" id="chart02">
+            <p>R = 90, k = 50, hole offset = 20</p>
+        </div>
+        <div class="pure-u-1-3" id="chart03">
+            <p>R = 100, k = 100, hole offset = 20</p>
+        </div>
+    </div>
+    <div class="pure-g chart-row-02">
+        <div class="pure-u-1-3" id="chart04">
+            <p>R = 90, k = 50, hole offset = 5</p>
+        </div>
+        <div class="pure-u-1-3" id="chart05">
+            <p>R = 90, k = 50, hole offset = 30</p>
+        </div>
+        <div class="pure-u-1-3" id="chart06">
+            <p>R = 90, k = 50, hole offset = 60</p>
+        </div>
+    </div>
+    <script>
+
+        const tau = 2 * Math.PI; // http://tauday.com/tau-manifesto
+        const size = {
+            width: 300,
+            height: 300,
+        }
+        const fixedCircleRadius = size.width / 2 - 60;
+        const dotRadius = 3;
+        const centerPoint = {
+            x: size.width / 2,
+            y: size.height / 2
+        }
+        const color = ["lightblue", "lightcoral", "lightcyan", "lightgreen", "lightpink", "lightSteelBlue "]
+        let svg = [];
+        for (let i = 0; i<6; i++) {
+            svg[i] = d3.select(`#chart0${i+1}`).append("svg")
+            .attr("width", size.width)
+            .attr("height", size.height)
+            .attr("fill", "black")
+            .append("g")
+            .attr("transform", `translate(${centerPoint.x}, ${centerPoint.y})`);
+        }
+        let path =[];
+
+        path[0] = createSpirographInside(fixedCircleRadius, 5, 70);
+        path[1] = createSpirographInside(fixedCircleRadius, 50, 20);
+        path[2] = createSpirographInside(fixedCircleRadius, 100, 20);
+        path[3] = createSpirographOutside(fixedCircleRadius, 50, 5);
+        path[4] = createSpirographOutside(fixedCircleRadius, 50, 30);
+        path[5] = createSpirographOutside(fixedCircleRadius, 50, 60);
+       
+        let myArc = [];
+
+        for (let i = 0; i <6; i++) {
+            myArc[i] = svg[i].append("path")
+            .attr("class", "drawing-arc")
+            .attr("d", path[i].toString())
+            .style("stroke", color[i])
+            .style("stroke-width", "2px")
+            .style("fill", "none");
+        }
+
+        let totalLength = [];
+
+        for (let i=0; i<6; i++) {
+            totalLength[i] = myArc[i].node().getTotalLength();
+        }
+        
+        for (let i=0; i<6; i++) {
+            myArc[i]
+            .style("stroke-dasharray", `${totalLength[i]} ${totalLength[i]}`)
+            .style("stroke-dashoffset", totalLength[i])
+            .transition()
+            .delay(i * 2000)
+            .duration(10000)
+            .ease(d3.easeLinear)
+            .style("stroke-dashoffset", 0)
+        }
+
+        function createSpirographInside(fixedCircleRadius, k, holeOffsetDistance) {
+            let path = d3.path();
+            let R = fixedCircleRadius;
+            let r = R / k;
+            let ρ = holeOffsetDistance;
+
+            for (var i = 0; i < 1.0001; i += 0.001) {
+                let t = i * tau;
+                let nextPoint = {
+                    x: (R - r) * Math.cos(t) + ρ * Math.cos(((R - r) / r) * t),
+                    y: (R - r) * Math.sin(t) - ρ * Math.sin(((R - r) / r) * t)
+                };
+
+                (path.toString() === "") ? path.moveTo(nextPoint.x, nextPoint.y) : path.lineTo(nextPoint.x, nextPoint.y);
+            }
+
+            return path;
+        };
+
+        function createSpirographOutside(fixedCircleRadius, k, holeOffsetDistance) {
+            let path = d3.path();
+            let R = fixedCircleRadius;
+            let r = R / k;
+            let p = holeOffsetDistance;
+
+            for (var i = 0; i < 1.0001; i += 0.001) {
+                let t = i * tau;
+                let nextPoint = {
+                    x: (R + r) * Math.cos(t) - p * Math.cos(((R + r) / r) * t),
+                    y: (R + r) * Math.sin(t) - p * Math.sin(((R + r) / r) * t)
+                };
+
+                (path.toString() === "") ? path.moveTo(nextPoint.x, nextPoint.y) : path.lineTo(nextPoint.x, nextPoint.y);
+            }
+
+            return path;
+        };
+
+    </script>
+
+</body>
+
+</html>
