@@ -11,8 +11,11 @@ categories:
 tags:
   - javascript
   - front-end
-  - javascriptissexy
-  - this
+  - d3.js
+  - spirograph
+  - animation
+  - transition
+  - path
 ---
 
 Chắc hồi trẻ con ai cũng đã từng một lần nghịch 1 cái thước "sáng tạo" tên là "**Spirograph**" (*/ˈspīrəˌɡraf/*). Khi ấy ta đặt 1 vòng tròn nhỏ có bánh răng ngoài vào bên trong 1 vòng tròn to có bánh răng trong, rồi lấy bút chọc vào 1 lỗ bất kỳ của vòng tròn nhỏ, rồi bắt đầu xoay, xoay, xoay đến khi trên tờ giấy hiện lên những đường đối xứng đẹp mắt. Nhân lúc phải tìm hiểu về animate (hoạt hóa) nét vẽ trong D3.js (đối với `svg`), tôi thực hành luôn với *Spirograph* để vừa bớt nhàm chán, vừa là tìm hiểu luôn về nguyên lý của cái thước đầy sáng tạo của tuổi thơ. 
@@ -22,7 +25,7 @@ Chắc hồi trẻ con ai cũng đã từng một lần nghịch 1 cái thước
 ![alt text][image01]{: .center-image }
 
 ## Spirograph là gì?
-
+---
 Về *spirograph*, ta có thể tham khảo [chi tiết hơn trên Wikipedia](https://en.wikipedia.org/wiki/Spirograph). Ngắn gọn thì nó là 1 đồ chơi hình học, giúp tạo ra những đường cong đối xứng với tên gọi kỹ thuật là *hypotrochoid* và *epitrochoid*. Thứ đồ chơi này được phát minh bởi một kỹ sư người Anh tên là Denys Fisher, và được bán lần đầu tiên vào năm 1965. Phần công thức toán phía sau *spirograph* được viết từ những năm 1881 đến 1900 bởi nhà toán học tên là Bruno Abakanowicz. Sau đó đồ chơi kia mới dần hình thành với bánh răng để người ta có thể tạo ra chuyển động quay của hình tròn thứ 2 xunh quanh (hoặc bên trong) hình tròn thứ 1. 
 
 Hãy xem ảnh minh hoạt chuyển động của *Spirograph* và một vài mẫu vẽ ra từ loại đồ chơi (thước) này. Ảnh lấy từ Wikipedia. 
@@ -32,7 +35,7 @@ Hãy xem ảnh minh hoạt chuyển động của *Spirograph* và một vài m�
 ![alt text][image03]{: .center-image }
 
 ## Công thức toán để vẽ Spirograph?
-
+---
 Phần giải thích về công thức toán khá dài, ai quan tâm có thể đọc trong bài Wikipedia trên. Còn đơn giản thì chỉ cần áp dụng công thức sau (chiếu trên hệ tọa độ X, Y, trong đó điểm (0,0) là tâm đường tròn chính):
 
 ![alt text][image04]{: .center-image }
@@ -57,7 +60,7 @@ trong đó:
 Để vẽ tính được x, y, thì cần truyền vào tham số của R, r, và p, với *t* chạy từ 0 cho đến 2Π (tức là trọn 1 vòng tròn), tính theo đơn vị *radian*. Vụ chạy *t* này thì chỉ cần dùng 1 vòng lặp `for` là xong. 
 
 ## Sample code JavaScript để vẽ spirograph 
-
+---
 Sample code để tính tọa độ x, y theo t là:
 ```js
 function createSpirograph(fixedCircleRadius, k, holeOffsetDistance, t) {
@@ -78,7 +81,7 @@ Lần lượt thay vào các giá trị R, k, và holeOffsetDistance khác nhau,
 ![alt text][image06]{: .center-image }
 
 ## Sử dụng D3.js và SVG để vẽ và hoạt hình hóa spirograph
-
+---
 Spirograph có thể vẽ bằng JavaScript thuần với `canvas`. Ai muốn vẽ theo cách này có thể tham khảo ở bài [JavaScript Spirograph](https://maissan.net/articles/javascript-spirograph) viết bởi Chris Maisan (1 anh chàng web developer người Canada, hiện đang làm việc ở Mỹ).
 
 Còn trong phạm vi bài này, ta sẽ dùng **D3.js** (thư viện JS viết tắt của **D**ata-**D**riven **D**ocument) và vẽ với `SVG`. Bài này sẽ áp dụng luôn D3.js và SVG, ai chưa biết về 2 khái niệm này có thể đọc ở [trang chủ D3.js](https://d3js.org/) và [bài về SVG của bạn Huy Trần](https://kipalog.com/posts/Su-dung-file-SVG-cho-website). Hoạt hóa nghĩa là nó sẽ trông như hình dưới đây:
@@ -128,7 +131,7 @@ Nếu muốn tham khảo, bạn có thể xem ở đây:
 - Source code của phần này:
 
 ## Kết luận
-
+---
 Vậy với một chút thí nghiệm bên trên, ta đã đi qua:
 - một chút về *spirograph*, lịch sử cũng như công thức toán đứng sau nó
 - dùng D3.js để vẽ *spirograph* thông qua `d3.path()`.
@@ -143,7 +146,7 @@ Còn nhiều thứ có thể hoàn thiện thêm cho bài này, bao gồm:
 - việc hoạt hóa path có thể thông qua `d3-interpolate`. Tìm hiểu và so sánh.
 
 ## Tham khảo và bookmark
-
+---
 Những bài dưới đây có bài là tham khảo, có bài đơn thuần là bookmark để tra cứu sau này:
 
 - [Maissan - JavaScript Spirograph](https://maissan.net/articles/javascript-spirograph) 
