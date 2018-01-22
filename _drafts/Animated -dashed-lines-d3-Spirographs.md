@@ -15,6 +15,23 @@ tags:
   - this
 ---
 
+Spirograph
+
+https://p5js.org/examples/simulate-spirograph.html
+
+https://maissan.net/articles/javascript-spirograph
+
+https://gist.github.com/benjchristensen/1473535
+
+http://htmlspirograph.com/#0,50,0,1,1,-1.44,30,-700,1174,2.5,120,860,-3.6,100,1050,75,0,0,1,1064
+
+- **R**: bán kính đường tròn ngoài. Không ảnh hưởng đến cấu trúc bên trong của Spirograph. Giá trị to nhỏ của R sẽ tạo ra cùng 1 Spirograph với kích thước khác nhau.
+- **l**: là tỷ lệ *p/r*, trong đó *p* = r - A.
+- **k**: là tỷ lệ *r/R*.
+  - với k = 0, ta có Spirograph là 1 đường tròn bình thường bán kính R.
+  - với k = 1, ta có Spirograph trở thành 1 điểm. 
+
+
 https://www.visualcinnamon.com/2016/01/animating-dashed-line-d3.html
 
 http://bl.ocks.org/duopixel/4063326
@@ -26,6 +43,9 @@ https://bocoup.com/blog/improving-d3-path-animation
 http://big-elephants.com/2014-06/unrolling-line-charts-d3js/
 
 https://visual.ly/blog/creating-animations-and-transitions-with-d3-js/
+
+[D3-PATH - WHAT IS IT GOOD FOR?](http://blog.scottlogic.com/2016/03/10/d3-path-what-is-it-good-for.html)
+
 
 ## Vẽ một đường liền nét
 

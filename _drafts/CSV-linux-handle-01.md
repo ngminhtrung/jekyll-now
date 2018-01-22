@@ -1,6 +1,6 @@
 ---
 id: 103
-title: 'Title'
+title: '[Linux] Sử dụng Command Line để xử lý file CSV'
 date: 2017-09-27
 author: ngminhtrung
 layout: post
