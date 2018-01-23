@@ -69,48 +69,6 @@ Quá ư là ngắn gọn mà vẫn đạt được cùng 1 kết quả!!!!
 ## Xóa thông tin dư thừa trong file CSV
 ---
 
-Giờ thì ta bắt tay vào với việc xử lý file. Nhưng, lại nhưng, muốn xử lý file thì phải hiểu một chút về 2 câu lệnh sau: (1) `grep`, và (2) `wc`.
-- `grep` dùng để so sánh các đoạn trong file xem có giống (hoặc không giống) với điều kiện ta mong muốn hay không, sau đó lọc thứ ta cần ra.
-- `wc` dùng để đếm số từ, ký tự, hoặc dòng trong file
-
-### Sử dụng `grep` cơ bản
- 
-Waaa, google "*về lệnh `grep`*" phát thấy xuất hiện bao nhiêu bài viết bằng tiếng Việt về nó. Đủ hiểu là lệnh này quan trọng và phổ biến như thế nào. Nếu muốn biết, ta có thể tra hướng dẫn về `grep` thông qua `man grep`. Nếu muốn đọc tóm gọn, mời mở bài ["Tìm hiểu về lệnh grep trong Linux" ở Viblo.asia](https://viblo.asia/p/tim-hieu-ve-lenh-grep-trong-linux-DZrGNNDdGVB). Có mấy mục sau để nhớ nhanh:
-
-1. Tìm một chuỗi trong một file
-2. Tìm chuỗi trong nhiều file cùng lúc
-3. Tìm kiếm không phân biệt hoa thường
-4. Tìm kiếm theo regular expression
-5. Tìm chính xác với grep -w
-6. Hiển thị thêm dòng trước, sau, xung quanh dòng chứa kết qủa
-7. Tìm tất cả các file ở tất cả các thư mục con
-8. Tìm kiếm ngược
-9. Đếm số kết qủa
-10. Chỉ hiển thị tên file
-11. Hiển thị số thứ tự của dòng kết qủa
-
-Còn ở bài này, do đang theo mạch xử lý CSV của Brian Connelly, hãy nhớ về câu lệnh giúp xóa tất cả những dòng bắt đầu bởi dấu `#` (đánh dầu comment trong CSV) của *file_01.csv* rồi xuất ra 1 file mới tên là *file_01_no_comments.csv* như sau:
-```
-grep -v "^#" file_01.csv > file_01_no_comments.csv
-```
-trong đó:
--  `-v` để ra lệnh cho `grep` tìm kiếm dạng loại trừ (tìm kiếm ngược). Thay vì tìm những dòng có `#` thì bây giờ tìm những dòng không có `#`. Đơn giản.
-- `^#` chính là tham số đầu vào (1 pattern) để `grep` hiểu ta muốn tìm theo điều kiện gì. Đây cũng chính là *regular expression*, trong đó `^` nghĩa là "*hãy tìm từ đầu của dòng/ file*", kết hợp với `#` tức là "*hãy tìm những dòng bắt đầu bởi #*".
-
-### Sử dụng `wc` cơ bản
-
-Lệnh `wc` cũng phổ biến không kém, google cái ra một loạt bài hướng dẫn bằng tiếng Việt, như là "[Hướng dẫn sử dụng lệnh wc và ví dụ trên Linux - CuongQuach](https://cuongquach.com/huong-dan-su-dung-lenh-wc-linux.html)", hoặc "[Lệnh wc trong Linux - JustPassion](http://www.justpassion.net/tech/programming/bash-shell/lenh-wc-trong-linux.html)". Tốt nhất là đọc phần `man wc` để có thông tin chi tiết, không thì cứ xem mấy bài kia là xong, nhanh gọn. 
-
-Với nội dung CSV này, tạm thời cứ nhớ lệnh `wc -l danhsach.txt` sẽ trả về số dòng trong file *danhsach.txt*. Chấm hết? Chưa!
-- Tham số `-l` là viết tắt của **l**ine (dòng)
-- Chuyển sang đếm từ? viết thành `wc - w` trong đó `w` viết tắt của **w**ord (từ)
-
-Ngoài ra nó còn có thể:
-- đếm số lượng bytes (với `-c`) hoặc ký tự (với `-m`)
-- hiển thị dòng text dài nhất
-
-Lưu ý: Ngoài `wc`, còn [3 lệnh nữa đều cho biết số dòng trong 1 file text](https://cuongquach.com/4-chuong-trinh-lenh-de-biet-luong-dong-cua-1-file-text.html), đó là `awk`, `sed`, và `mapfile` . Nhưng ưu nhược điểm từng thằng ra sao, lúc nào dùng thằng nào thì chưa rõ. Sẽ tìm hiểu sau.
-
 ### Xóa các dòng ghi chú (`comment`) trong file CSV
 
 Comments (ghi chú/ bình luận) là thông tin phụ được lưu luôn trong file CSV cho dù nó không có ý nghĩa về mặt số liệu. Tác giả của file CSV đôi khi muốn lưu vài thứ cá nhân của họ vào, như là tên của người thu thập dữ liệu, ngày tháng, dụng cụ thí nghiệm, một vài điều đặc biệt khác cần lưu tâm. Tuy các comment được phân biệt với dữ liệu thông qua ký tự `#` nhưng không phải chương trình đọc CSV nào cũng phân biệt được và xử lý tốt. Vậy nên nhiều lúc trước khi phân tích dữ liệu, ta cần loại bỏ mấy phần ghi chú này đi. 
@@ -205,6 +163,17 @@ Chuỗi lệnh trên có tác dụng
 
 Ghi chú: Sau khi thử thêm, xóa dữ liệu trong file *input.css* và chạy lệnh trên thì thấy kết quả ra có gì sai sai. Sẽ kiểm tra lại vụ này.
 
+Một cách khác:
+- Xóa header và comment, rồi chỉ lấy dòng đầu tiên trong dữ liệu còn lại
+- Xóa hết các ký tự, chỉ để lại dấu phẩy `,` (sử dụng RegEx `'s/[^,]//g'`)
+- Đếm số dấu phẩy (sử dụng `wc -c` với `c` viết tắt của **c**haracters). 
+
+```
+cat input.csv | grep -v "^#" | sed "1 d" | head - 1 | sed 's/[^,]//g' | wc - c
+```
+
+Mặc dù số dấu phẩy ít hơn số cột, nhưng lệnh `wc - c` tính hteem cả `\n` (ký tự xuống dòng).
+
 ## Gộp nhiều file CSV
 ---
 
@@ -249,6 +218,53 @@ paste -d, input1.csv input2.csv > combined.csv
 
 ### Xử lý file CSV bị nén bởi gzip
 
+
+
+## Câu lệnh cơ bản
+
+Giờ thì ta bắt tay vào với việc xử lý file. Nhưng, lại nhưng, muốn xử lý file thì phải hiểu một chút về 2 câu lệnh sau: (1) `grep`, và (2) `wc`.
+- `grep` dùng để so sánh các đoạn trong file xem có giống (hoặc không giống) với điều kiện ta mong muốn hay không, sau đó lọc thứ ta cần ra.
+- `wc` dùng để đếm số từ, ký tự, hoặc dòng trong file
+
+### Sử dụng `grep` cơ bản
+ 
+Waaa, google "*về lệnh `grep`*" phát thấy xuất hiện bao nhiêu bài viết bằng tiếng Việt về nó. Đủ hiểu là lệnh này quan trọng và phổ biến như thế nào. Nếu muốn biết, ta có thể tra hướng dẫn về `grep` thông qua `man grep`. Nếu muốn đọc tóm gọn, mời mở bài ["Tìm hiểu về lệnh grep trong Linux" ở Viblo.asia](https://viblo.asia/p/tim-hieu-ve-lenh-grep-trong-linux-DZrGNNDdGVB). Có mấy mục sau để nhớ nhanh:
+
+1. Tìm một chuỗi trong một file
+2. Tìm chuỗi trong nhiều file cùng lúc
+3. Tìm kiếm không phân biệt hoa thường
+4. Tìm kiếm theo regular expression
+5. Tìm chính xác với grep -w
+6. Hiển thị thêm dòng trước, sau, xung quanh dòng chứa kết qủa
+7. Tìm tất cả các file ở tất cả các thư mục con
+8. Tìm kiếm ngược
+9. Đếm số kết qủa
+10. Chỉ hiển thị tên file
+11. Hiển thị số thứ tự của dòng kết qủa
+
+Còn ở bài này, do đang theo mạch xử lý CSV của Brian Connelly, hãy nhớ về câu lệnh giúp xóa tất cả những dòng bắt đầu bởi dấu `#` (đánh dầu comment trong CSV) của *file_01.csv* rồi xuất ra 1 file mới tên là *file_01_no_comments.csv* như sau:
+```
+grep -v "^#" file_01.csv > file_01_no_comments.csv
+```
+trong đó:
+-  `-v` để ra lệnh cho `grep` tìm kiếm dạng loại trừ (tìm kiếm ngược). Thay vì tìm những dòng có `#` thì bây giờ tìm những dòng không có `#`. Đơn giản.
+- `^#` chính là tham số đầu vào (1 pattern) để `grep` hiểu ta muốn tìm theo điều kiện gì. Đây cũng chính là *regular expression*, trong đó `^` nghĩa là "*hãy tìm từ đầu của dòng/ file*", kết hợp với `#` tức là "*hãy tìm những dòng bắt đầu bởi #*".
+
+### Sử dụng `wc` cơ bản
+
+Lệnh `wc` cũng phổ biến không kém, google cái ra một loạt bài hướng dẫn bằng tiếng Việt, như là "[Hướng dẫn sử dụng lệnh wc và ví dụ trên Linux - CuongQuach](https://cuongquach.com/huong-dan-su-dung-lenh-wc-linux.html)", hoặc "[Lệnh wc trong Linux - JustPassion](http://www.justpassion.net/tech/programming/bash-shell/lenh-wc-trong-linux.html)". Tốt nhất là đọc phần `man wc` để có thông tin chi tiết, không thì cứ xem mấy bài kia là xong, nhanh gọn. 
+
+Với nội dung CSV này, tạm thời cứ nhớ lệnh `wc -l danhsach.txt` sẽ trả về số dòng trong file *danhsach.txt*. Chấm hết? Chưa!
+- Tham số `-l` là viết tắt của **l**ine (dòng)
+- Chuyển sang đếm từ? viết thành `wc - w` trong đó `w` viết tắt của **w**ord (từ)
+
+Ngoài ra nó còn có thể:
+- đếm số lượng bytes (với `-c`) hoặc ký tự (với `-m`)
+- hiển thị dòng text dài nhất
+
+Lưu ý: Ngoài `wc`, còn [3 lệnh nữa đều cho biết số dòng trong 1 file text](https://cuongquach.com/4-chuong-trinh-lenh-de-biet-luong-dong-cua-1-file-text.html), đó là `awk`, `sed`, và `mapfile` . Nhưng ưu nhược điểm từng thằng ra sao, lúc nào dùng thằng nào thì chưa rõ. Sẽ tìm hiểu sau.
+
+
 ## Tham khảo
 ---
 
@@ -258,5 +274,6 @@ https://www.joeldare.com/wiki/using_awk_on_csv_files
 https://stackoverflow.com/questions/27549368/linux-how-to-manipulate-csv-file
 - [Linux Tutorial - 10. Grep and Regular Expressions](https://ryanstutorials.net/linuxtutorial/grep.php)
 - [ Using Grep & Regular Expressions to Search for Text Patterns in Linux](https://www.digitalocean.com/community/tutorials/using-grep-regular-expressions-to-search-for-text-patterns-in-linux)
+- [How to count number of columns in CSV file using bash shell](https://linuxconfig.org/how-to-count-number-of-columns-in-csv-file-using-bash-shell)
 
 [photo01]: https://ngminhtrung.github.io/images/PostIMG/20170928-img-01.jpg "Các trường hợp dễ nhầm lẫn khi sử dụng "this""

@@ -46,7 +46,7 @@ Hiện thời tôi chỉ tìm được cách duy nhất là *soft restart* (kh�
 
 Cách làm?
 
-1. Hãy thử  tổ hợp phím `Alt F2` trước tiên, rồi nhập chữ `r` vào cửa sổ bé xíu hiện ra giữa màn hình. Nhấn `Enter`. Voila!, bạn may mắn rồi, *Cinnamon* vẫn đang sống và có phản hồi lại tổ hợp phím kia. Nó sẽ khởi động lại, máy lại hoạt động ngon nghẻ (tất nhiên là những thứ của phiên làm việc trước sẽ mất).
+1. Hãy thử  tổ hợp phím `Alt F2` trước tiên, rồi nhập chữ `r` vào cửa sổ bé xíu hiện ra giữa màn hình. Nhấn `Enter`. Voila!, bạn may mắn rồi, *Cinnamon* vẫn đang sống và có phản hồi lại tổ hợp phím kia. Nó sẽ khởi động lại, máy lại hoạt động ngon nghẻ (tất nhiên là những thứ của phiên làm việc trước ~~sẽ mất~~ vẫn còn).
 
 2. Trong nhiều trường hợp còn lại, *Cinnamon* chết hẳn, và tổ hợp phím kia không hoạt động. Lúc này cần đi đến một tầng sâu hơn, đó là **tty** thông qua tổ hợp phím `Ctrl + Alt` và `F1` đến `F6`. Mỗi một `F` sẽ tương ứng với 1 **tty**. LƯU Ý: Trước khi tí toáy nghịch ngợm, hãy nhớ tổ hợp `Ctrl + Alt + F7` để có thể trở về màn hình đồ họa ban đầu. 
 

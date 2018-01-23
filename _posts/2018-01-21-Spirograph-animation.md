@@ -132,7 +132,7 @@ Nếu muốn tham khảo, bạn có thể xem ở đây:
 
 ## Kết luận
 ---
-Vậy với một chút thí nghiệm bên trên, ta đã đi qua:
+Vậy với một thí nghiệm ngắn vừa rồi, ta đã đi qua:
 - một chút về *spirograph*, lịch sử cũng như công thức toán đứng sau nó
 - dùng D3.js để vẽ *spirograph* thông qua `d3.path()`.
 - dùng d3.js để hoạt hóa đường *spirograph* thông qua thuộc tính `stroke-dasharray`, `stroke-dashoffset` và `d3.transition()`.
@@ -160,7 +160,6 @@ Những bài dưới đây có bài là tham khảo, có bài đơn thuần là 
 - [Bocoup - Improving D3 path animation](https://bocoup.com/blog/improving-d3-path-animation)
 - [big elephants - Notes on Animating Line Charts with D3](http://big-elephants.com/2014-06/unrolling-line-charts-d3js/)
 - [Visual.ly - Creating animations and transition with d3.js](https://visual.ly/blog/creating-animations-and-transitions-with-d3-js/)
-
 
 [image01]: https://travisnguyen.net/images/PostIMG/spirograph/image01.jpg "Bộ thước Spirograph"
 
