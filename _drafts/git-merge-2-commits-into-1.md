@@ -41,7 +41,7 @@ Which is to say, the OP (and I) were squashing the wrong way. Squash the newer i
 git log
 ```
 
-
+https://blog.axosoft.com/rebasing-gitkraken-vs-cli/
 
 
 ### Tham khảo

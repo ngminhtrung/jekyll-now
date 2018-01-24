@@ -51,7 +51,7 @@ parseInt('FXX123', 16) // cho kết quả = 15
 
 Đọc đến đây thấy "*Ủa, mọi thứ đều chuẩn mà, mình có làm gì sai đâu?*". 
 
-Đọc tiếp tài liệu của [ESlint - Require Radix Parameter (radix)](https://github.com/eslint/eslint/blob/master/docs/rules/radix.md) thì hiểu là ESLint đang nhắm đến những JavaScript engine tuân theo chuẩn trước cả ECMAScript ...5 (không phải 6 nhé), bởi lúc đó engine sẽ tự động coi rằng: nếu *radix* không được khai báo, và string `x` bắt đầu với số 0, thì mặc định coi người dùng muốn chuyển sang hệ cơ số 8 (*octal*). Vào thời điểm trước ES5, nếu người ta viết là `parseInt("0700")` thì sẽ nhận được kết quả là `448` (theo hệ cơ số 8), còn nếu viết rõ ràng hơn `parseInt("0700",10)` thì nó sẽ trả về `10`.
+Đọc tiếp tài liệu của [ESlint - Require Radix Parameter (radix)](https://github.com/eslint/eslint/blob/master/docs/rules/radix.md) thì hiểu là ESLint đang nhắm đến những JavaScript engine tuân theo chuẩn trước cả ECMAScript ...5 (không phải 6 nhé), bởi lúc đó engine sẽ tự động coi rằng: nếu *radix* không được khai báo, và string `x` bắt đầu với số 0, thì mặc định coi người dùng muốn chuyển sang hệ cơ số 8 (*octal*). Vào thời điểm trước ES5, nếu người ta viết là `parseInt("0700")` thì sẽ nhận được kết quả là `448` (theo hệ cơ số 8), còn nếu viết rõ ràng hơn `parseInt("0700",10)` thì nó sẽ trả về `700`.
 
 ### Kết luận
 
