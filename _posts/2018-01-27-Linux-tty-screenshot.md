@@ -1,18 +1,18 @@
 ---
-id: 103
-title: 'Chụp ảnh màn hình trong chế độ TTY'
-date: 2017-09-27
+id: 131
+title: 'Linux - Chụp ảnh màn hình trong chế độ TTY'
+date: 2018-01-28
 author: ngminhtrung
 layout: post
 guid: 
 permalink: 
 categories:
-  - javascript
+  - linux
 tags:
-  - javascript
-  - front-end
-  - javascriptissexy
-  - this
+  - linux
+  - fbcat
+  - image
+  - screenshot
 ---
 
 How to Take a Screenshot of the Terminal Output in Text Mode (TTY) - Ubuntu/Linux Mint
@@ -33,8 +33,6 @@ Và giờ, bên trong chế độ *tty*, để chụp màn hình ta gõ lệnh:
 ```
 sudo fbcat > image.ppm
 ```
-
-Ảnh thu về sẽ trông như thế này
 
 ### Bước 2: Cài đặt imagemagick để convert ra đuôi .png
 
