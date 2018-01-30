@@ -1,7 +1,7 @@
 ---
 id: 131
 title: 'Linux - Chụp ảnh màn hình trong chế độ TTY'
-date: 2018-01-28
+date: 2018-01-27
 author: ngminhtrung
 layout: post
 guid: 
