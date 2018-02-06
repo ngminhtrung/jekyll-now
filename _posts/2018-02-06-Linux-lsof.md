@@ -1,13 +1,12 @@
 ---
-id: 132
-title: 'Asynchronous flow control using async'
-date: 2018-01-29
+title: 'Linux - Tìm và đóng ứng dụng đang chiếm cổng của mình'
+date: 2018-02-06
 author: ngminhtrung
 layout: post
 guid: 
 permalink: 
 categories:
-  - dataviz
+  - linux
 tags:
   - javascript
   - front-end
