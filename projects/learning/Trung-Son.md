@@ -1,4 +1,4 @@
-1. Hàm để download file từ 1 link nào đó:
+## Hàm để download file từ 1 link nào đó:
 
 ```js
 function downloadURI(uri) {
@@ -17,7 +17,7 @@ Cách dùng:
 - Nhấn `F12` để mở Chrome Developer, chọn tab `Console`.
 - Copy function trên vào Chrome Developer, truyền tham số đường dẫn, nhẫn Enter. Ví dụ: `downloadURI("http://www.cophieu68.vn/export/excelfull.php?id=VCB")`
 
-2. Muốn download nhiều file:
+## Muốn download nhiều file:
 - chạy hàm trên nhiều lần, mỗi lần truyền vào một link (dạng `String`).
 - Link chứa trong 1 mảng, mỗi lần gọi hàm thì truyền vào phần tử trong mảng.
 - Nên có khoảng cách về thời gian giữa mỗi lần gọi hàm, vì không rõ website có chính sách giới hạn số download trong 1 quãng thời gian hay không.
@@ -34,5 +34,10 @@ var i = setInterval(function() {
       clearInterval(i);
     }
 }, 1000); // 1000 = 1000ms 
+```
 
+3. Muốn collect một array các links:
 
+- Cách 1: Xem quy luật của các links + kết hợp với Excel --> copy chỉnh sửa 1 chút.
+
+- Cách 2: Lại dùng JS để xử lý dựa trên structure HTML của website.
