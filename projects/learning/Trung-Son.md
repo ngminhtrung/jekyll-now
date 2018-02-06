@@ -43,7 +43,9 @@ var i = setInterval(function() {
 - Cách 2: Lại dùng JS để xử lý dựa trên structure HTML của website.
 
 
-### Download đoạn code sau copy vào Chrome Developer
+## Toàn bộ code để download.
+
+Copy đoạn code sau copy vào Chrome Developer
 
 
 ```js
