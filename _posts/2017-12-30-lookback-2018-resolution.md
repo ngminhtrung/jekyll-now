@@ -122,7 +122,7 @@ Hoàn thành đúng deadline các task được giao :D.
     - Khóa học **CS50 Introduction to Computer Science** trước tháng 6 (đã được khoảng 20%)
 
 - Hoàn thành trước tháng 9:
-    - Hoàn thành 1 khóa **React - Redux** cơ bản đã mua trên Udemy
+    - ~~Hoàn thành 1 khóa **React - Redux** cơ bản đã mua trên Udemy~~ (cập nhật 2018.02.08. Lý do: Không còn thấy hữu ích.)
 
 ### Kỹ thuật mới cần học:
 
@@ -138,9 +138,14 @@ Hoàn thành đúng deadline các task được giao :D.
 
   - Tạo 1 trang riêng của bản thân chứa các charts vẽ bằng D3.js để mô tả tình hình kinh tế, dân số, giáo dục của Việt Nam (có thể so sánh với các nước khác), số liệu lấy từ Tổng cục Thống kê Việt Nam (và các nguồn khác).[ưu tiên: rất cao]
   
+  - Đọc và trình bày lại các assignments về thống kê và modelling từ thời học TU Delft. [Cập nhật 2018.02.01: cần phải xem lại để biết mình đã từng học cái gì. Ưu tiên: cao]
+
+  - Cải tiến chương trình VBA trong file Excel của vợ. [Cập nhật 2018.02.01: thêm vào do thấy việc giải quyết 1 bài toán business cụ thể lúc nào cũng quan trọng hơn việc chỉ học tool - tức là học code. Ưu tiên: cao]
+
   - Sử dụng D3.js để minh họa các thuật toán sắp xếp. [Ưu tiên: cao]
   
   - Chuyển blog từ Jekyll sang Gastby (sử dụng React) [ưu tiên: thấp]
+  
 
 ### Hoạt động cần tham gia:
 
@@ -153,9 +158,9 @@ Hoàn thành đúng deadline các task được giao :D.
     - You Don't Know JS: this & Object Prototypes (Kyle Simpson) (đã được 50%)
     - The Functional Art: An Introduction to Information Graphics and Visualization (Alberto Cairo)
     - The Pragmatic Programmer: From Journeyman to Master (Andy Hunt) (đã được 20%)
-    - Maintainable JavaScript (Nicholas C. Zakas)
+    - ~~Maintainable JavaScript (Nicholas C. Zakas)~~ [Cập nhật 2018.02.08: Bỏ qua. Tác giả cũng không còn thấy nhu cầu viết tiếp quyển này nữa.]
     - Grokking Algorithms An Illustrated Guide For Programmers and Other Curious People (Aditya Y. Bhargava)
-    - Express in Action: Node Applications with Express and Its Companion Tools (Evan Hahn)
+    - [x] Express in Action: Node Applications with Express and Its Companion Tools (Evan Hahn) [Cập nhật 2018.02.08: Coi như completed.]
 
   
   - *Open Source*: Contribute cho Billboard.js về mặt tài liệu, review và fix bug. 

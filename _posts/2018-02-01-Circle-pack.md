@@ -1,7 +1,6 @@
 ---
-id: 132
 title: 'D3.js - Packs of circles to present hierarchical data'
-date: 2018-01-29
+date: 2018-02-01
 author: ngminhtrung
 layout: post
 guid: 
