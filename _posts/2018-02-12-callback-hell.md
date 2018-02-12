@@ -1,13 +1,12 @@
 ---
-id: 132
-title: 'Asynchronous flow control using async'
-date: 2018-01-29
+title: 'Về Callback Hell'
+date: 2018-02-12
 author: ngminhtrung
 layout: post
 guid: 
 permalink: 
 categories:
-  - dataviz
+  - javascript
 tags:
   - javascript
   - front-end
