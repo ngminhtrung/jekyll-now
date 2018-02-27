@@ -1,5 +1,5 @@
 ---
-title: 'NodeJS - globals in a global'
+title: 'Nodesjs - Require chưa bao giờ hết thắc mắc'
 date: 2018-02-15
 author: ngminhtrung
 layout: post
