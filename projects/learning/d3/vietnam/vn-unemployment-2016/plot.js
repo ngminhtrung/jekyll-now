@@ -186,7 +186,6 @@ function plot(params) {
 				return x(d.area) + 1;
 			})
 			.attr("y", function(d,i) {
-				console.log(y(d.age1))
 				return y(d.age1);
 			})
 			.attr("height", function(d) {

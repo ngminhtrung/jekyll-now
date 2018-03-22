@@ -1,6 +1,6 @@
 {
     "workbench.colorTheme": "Cobalt2",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "eslint.enable": true,
     "eslint.autoFixOnSave": true,
     "git.enableSmartCommit": true,
