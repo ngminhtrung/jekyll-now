@@ -1,5 +1,5 @@
 ---
-title: 'JavaScript - const array vẫn có thể push thêm dữ liệu'
+title: 'React - truyền dữ liệu từ component con đến cha thông qua callback'
 date: 2018-03-14
 author: ngminhtrung
 layout: post
