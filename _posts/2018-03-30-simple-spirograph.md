@@ -31,7 +31,7 @@ tags:
 
 Ghi chú: Phần dưới đây đã không đúng với bản code thực sự nữa. Lý do thay đổi là phần này phức tạp hơn dự tính ban đầu, đi chệch hướng khỏi mục đích cao nhất là học các khái niệm cơ bản của React thật nhanh. 
 
-![Mokcup](./Sipograph.png)
+![Mokcup](../images/PostIMG/2018-03-30-simple-spirograph/Sipograph.png)
 
 - Ô số 1 (bên trái)
     - Nút "Draw" để vẽ
@@ -135,11 +135,10 @@ Component `Spirograph` chứa những method để vẽ spirograph. Các method 
 
 2. shouldComponentUpdate(nextProps, nextState)
 - Mục đích: để khi `App` props mới cho `Drawing`, `Drawing` cho `Spirograph`, thì phần svg mới sẽ được render lại. Người dùng sẽ có hình mới dựa trên thông số nhập vào. 
+
 ```js
 shouldComponentUpdate(nextProps, nextState) {
-
     this.createSpirograph(nextProps);
-
     return true;
 }
 ```
