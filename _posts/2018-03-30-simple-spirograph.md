@@ -25,7 +25,7 @@ tags:
 - Link sản phẩm ở đây: http://travisnguyen.net/react-draw-spirograph/
 - Minh họa:
 
-![Kính vạn hoa](./illustration.gif)
+![Spirograph](../images/PostIMG/2018-03-30-simple-spirograph/illustration.gif)
 
 ## Phác thảo giao diện
 
