@@ -1,5 +1,0 @@
-Name;Measurement_duration_days;Duration_without_error_days;Rated_power_kW;Total_active_MWh;Total_expected_MWh;Total_loss_MWh;Stop_loss_MWh;Curtailemnt_loss_MWh;Unknown_loss_MWh;Capacity_factor_%;Daily_production_MWh;Average_wind_mps;TBA_%;PBA_%;Performance
-WT01;730;721;2049;10119;10320;201;181;1;19;28.56;14.04;6.58;95.11;98.25;5093
-WT02;730;721;2049;9928;10566;638;594;2;41;27.99;13.77;6.45;92.85;94.36;5422
-WT03;730;721;2040;8327;10292;1964;1936;1;27;23.60;11.56;6.57;85.47;81.14;5183
-WT04;730;722;2045;10570;11051;481;464;1;16;29.81;14.64;7.08;95.03;95.80;4843
