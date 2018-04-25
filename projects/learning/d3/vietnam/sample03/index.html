@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Self Organizing Maps</title>
+
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://d3js.org/d3.hexbin.v0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.js"></script>
+
+	<style type="text/css">
+		body {
+			margin: 0px;
+			overflow: hidden;
+			font-family: "Helvetica Neue", Helvetica;
+			font-size: 14px;
+			text-align: center
+		}
+
+		h1 {
+			font-size: 36px;
+			display: block;
+			text-shadow: 0 1px 0 #fff;
+			text-align: center
+		}
+
+		h2 {
+			color: rgb(102, 101, 101);
+			font-size: 16px;
+		}
+
+		#chart {
+			text-align: center;
+		}
+
+		#controls {
+			text-align: center;
+			font-size: 16px;
+		}
+
+		button {
+
+			background-color: #FF7F0E;
+			border-radius: 35px;
+			border-style: none;
+			width: 100px;
+			height: 25px;
+		}
+
+		button:focus {
+			outline: none;
+		}
+
+		button:hover {
+			box-shadow: 0px 2px 2px rgba(50, 50, 50, 0.75);
+			transform: scale(0.90, 0.90);
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Bee Hexagon Colony</h1>
+	<h2>Locate the bee after steps</h2>
+	<p><em>Note</em>: End of each step is marked <span style="color: red">RED</span>. We're currently at step <span id="step-count" style="color: red">0</span>. The map is iniatilized with 16 columns, 16 rows. Center is located at hexa-block (8,8). Bee starts at hexa-block (9,7).</p>
+	<div id="chart"></div>
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>

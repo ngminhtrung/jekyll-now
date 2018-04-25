@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Techmaster Fitness club - Registration Form</title>
+	<!-- Latest compiled and minified CSS -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<style type="text/css">
+
+		.body {
+
+
+		}
+		
+		.container {
+			width: 600px;
+			margin-top: 10px;
+			padding: 30px;
+		}
+
+		.equal {
+			display: flex;
+			display: -webkit-flex;
+			flex-wrap: wrap;
+		}
+
+		.col-sm-6 {
+			padding-top: 10px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+	</style>
+
+
+</head>
+<body>
+	<div class="container">
+
+		<div class="panel panel-default panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title text-center"> Techmaster Fitness Club - Registration form</h3> 
+			</div>
+			<div class="panel-body">
+
+				<form class="" action="account.html" method="get">
+
+					<div class="row equal">
+						<div class="col-sm-6">
+
+							<div class="form-group">
+								<label for="">First name:</label>
+								<input type="text" class="form-control" name="firstName" id="" maxlength="20" pattern="[a-zA-Z][a-zA-Z ]+" title="Alphabet characters only">
+								
+							</div>
+
+						</div>
+
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="">Last name:</label>
+								<input type="text" class="form-control" name="lastName" id="" maxlength="40" pattern="[a-zA-Z][a-zA-Z ]+" title="Alphabet characters only">
+							</div>
+
+						</div>
+
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="">Mobile number:</label>
+								<input type="text" class="form-control" name="mobileNumber" id="" pattern="0(\d){9,10}" title="Please input a Vietnamese mobile number with either 10 or 11 digits, starting with 0. Thank you!">
+							</div>
+
+						</div>
+
+						<div class="col-sm-6">
+
+							<div class="form-group">
+								<label for="">Email address:</label>
+								<input type="email" class="form-control" name="emailAdd" id="" title="Please input a correct email format, with @ and a domain name.">
+							</div>
+						</div>
+
+
+
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="">Year of birth:</label>
+								<input type="number" class="form-control" name="yearOfBirth" id="" min="1900" max="2017">
+							</div>
+						</div>
+
+
+						<div class="col-sm-6">
+
+							<div class="form-group">
+								<label for="">Gender:</label><br>
+								<input type="radio"  name="gender" id="" value="Male"> Male
+								<input type="radio"  name="gender" id="" value="Female"> Female
+								<input type="radio"  name="gender" id="" value="Other"> Other
+							</div>
+
+						</div>						
+
+
+						<div class="col-sm-6">
+
+							<div class="form-group">
+								<label for="">Password:</label>
+								<div class="input-group">
+									<input type="password" class="form-control" name="pwd" id="password1" pattern=".{6,}" title="Six or more characters">
+									<span class="input-group-btn">
+										<button class="btn btn-default btn-pwd" type="button"  onclick="pwdShowHide(this)" value="password1"><i class=" eye fa fa-eye" aria-hidden="true"></i>
+										</button>
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="">Confirm password:</label>
+								<div class="input-group">
+									<input type="password" class="form-control" name="confirmPwd" id="password2" pattern=".{6,}" title="Six or more characters">
+									<span class="input-group-btn">
+										<button class="btn btn-default btn-pwd" type="button"  onclick="pwdShowHide(this)" value="password2" =""><i class=" eye fa fa-eye" aria-hidden="true"></i>
+										</button>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-inline text-center">
+
+						<input type="submit" value="Submit" class="btn btn-success text-center">
+						<input type="reset" class="btn btn-warning text-center">
+						
+
+					</div>
+
+					
+				</form>
+			</div>
+		</div>
+
+
+		
+
+	</div>
+
+	<script>
+
+		var tDay = new Date();
+		document.getElementsByTagName("input")["yearOfBirth"].max = tDay.getFullYear();
+
+		window.onload = function () {
+			document.getElementById("password1").onchange = validatePassword;
+			document.getElementById("password2").onchange = validatePassword;
+		}
+
+		function validatePassword() {
+			var pass1 = document.getElementById("password1").value;
+			var pass2 = document.getElementById("password2").value;
+
+			if (pass1 !== pass2)
+				document.getElementById("password2").setCustomValidity("Passwords are not matched!")
+			else 
+				document.getElementById("password2").setCustomValidity("");
+				// empty string means no error
+			}
+
+			function pwdShowHide(thisBtn) {
+
+				var pwdField = document.getElementById(thisBtn.value);
+				var eyeBtn = thisBtn.children[0]; 
+
+				if(pwdField.type=='text')
+				{
+					pwdField.type='password';
+					eyeBtn.className = "eye fa fa-eye"; 
+				}
+				else 
+				{ 
+					pwdField.type='text'; 
+					eyeBtn.className = "eye fa fa-eye-slash";  
+				}
+			}
+
+
+		</script>
+	</body>
+	</html>

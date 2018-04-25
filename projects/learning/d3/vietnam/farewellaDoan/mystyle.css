@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+}
+
+#mapid {
+    /* margin-top: 50px; */
+    height: 600px;
+    border-style: none;
+    width: 100%;
+    z-index: -3;
+}
+
+#area1 {
+    z-index: 2;
+    position: fixed;
+    background-color: rgba(128, 0, 128, 0.8);
+    height: 280px;
+    width: 200px;
+    right: 25px;
+    top: 150px;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+}
+
+#month {
+    margin: 30px;
+}
+
+#number {
+    margin-top: 30px;
+    color: #FF6A1C;
+}
+
+#area2 {
+    z-index: 1;
+    position: fixed;
+    width: 1255px;
+    height: 800px;
+    background-color: rgba(255, 255, 255, 0.1);
+    top: 50px;
+
+}
+
+// D3.js
+
+
+.enter {
+    fill: green;
+    z-index: 2;
+    font-size: 60px;
+    opacity: 0.8;
+}
+
+.update {
+    fill: #FF6A1C;
+    z-index: 2;
+    opacity: 0.3;
+    color: rgba(255, 255, 255, 0);
+    font-size: 0px;
+
+}

@@ -1,0 +1,15 @@
+id,value
+chart,
+chart.lineChart,
+chart.lineChart.TimeSeriesChart,
+chart.lineChart.SplineChart,
+chart.lineChart.SimpleXYLineChart,
+chart.lineChart.MultipleXYLineChart,
+chart.lineChart.LineChartWithRegions,
+chart.pieChart,
+chart.pieChart.DonutChart
+chart.pieChart.GaugeChart
+chart.others,
+chart.others.StepChart,
+chart.others.ScatterPlot,
+chart.others.CombinationChart
