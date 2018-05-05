@@ -12,12 +12,14 @@ var w = 1255 - margin.left - margin.right;
 var h = 600 - margin.top - margin.bottom;
 var i = 0;
 
-var mymap = L.map('mapid').setView([0.55, 80.89], 3);
+var mymap = L.map('mapid').setView([48.877808, 2.341222], 1);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(mymap);
+
+
 
 // get data from data-02.csv 
 setTimeout(d3Function,5000);
