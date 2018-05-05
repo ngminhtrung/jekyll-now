@@ -8,6 +8,7 @@
     <script src="d3.v4.min.js"></script>
     <script src="console_save.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <style>
         * {
             padding: 0;
@@ -18,6 +19,30 @@
         body {
             background-color: lightgrey;
             font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .chart-overview {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .chart_00 {
+            width: 33.33333333333%;
+        }
+
+        .chart-caption {
+            padding-top: 20px;
+        }
+
+        .rank {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .rank-title {
+            font-weight: bold;
+            font-size: 14px;
         }
 
         header {
@@ -39,7 +64,7 @@
             margin: 0 auto;
         }
 
-        .export-explanation {
+        .description {
             color: white;
             font-size: small;
             padding: 20px;
@@ -51,7 +76,54 @@
 <body>
     <header></header>
     <div class="container">
-        <div class="export-explanation">
+        <div class="description overview">
+            <h2>OVERVIEW</h2>
+            <br>
+            <br> Vietnam is the 24th largest export economy in the world and the 50th most complex economy according to the Economic
+            Complexity Index (ECI). In 2015, Vietnam exported $185B and imported $169B, resulting in a positive trade balance
+            of $15.8B. In 2015 the GDP of Vietnam was $193B and its GDP per capita was $6.03k.
+            <br>
+            <br>
+            <div class="chart-overview">
+                <div class="chart_00 chart_01_export">
+                    <div class="stat_text">
+                        <h3 class="rank rank-title">EXPORTS $192B (2015)</h3>
+                        <p class="rank">24TH OF 221</p>
+                    </div>
+                    <svg width="300" height="100" viewBox="0 0 300 100" preserveAspectRatio="xMidYMid meet"></svg>
+                    <div class="chart-caption">The top exports of Vietnam are Broadcasting Equipment ($30.3B), Integrated Circuits ($10.8B), Computers
+                        ($7.29B), Leather Footwear ($6.27B) and Textile Footwear ($6.01B), using the 1992 revision of the
+                        HS (Harmonized System) classification. Its top imports are Integrated Circuits ($11.2B), Telephones
+                        ($10.6B), Refined Petroleum ($5.81B), Light Rubberized Knitted Fabric ($3.39B) and Crustaceans ($1.88B).</div>
+
+                </div>
+                <div class="chart_00 chart_02_import">
+                    <div class="stat_text">
+                        <h3 class="rank rank-title">IMPORTS $195B (2015)</h3>
+                        <p class="rank">27TH OF 221</p>
+                    </div>
+                    <svg width="300" height="100" viewBox="0 0 300 100" preserveAspectRatio="xMidYMid meet"></svg>
+                    <div class="chart-caption">
+                        The top export destinations of Vietnam are the United States ($38.1B), China ($19.2B), Japan ($15B), South Korea ($9.6B)
+                        and Germany ($8.71B). The top import origins are China ($49.8B), South Korea ($26.6B), Japan ($13.1B),
+                        Other Asia ($9.9B) and Thailand ($8.51B).
+                    </div>
+
+                </div>
+                <div class="chart_00 chart_03_gpdcapita">
+                    <div class="stat_text">
+                        <h3 class="rank rank-title">GPD PER CAPITA $2.06K (2015)</h3>
+                        <p class="rank">123RD OF 184</p>
+                    </div>
+                    <svg width="300" height="100" viewBox="0 0 300 100" preserveAspectRatio="xMidYMid meet"></svg>
+                    <div class="chart-caption">
+                        Vietnam borders China, Cambodia and Laos by land and Indonesia, Malaysia, the Philippines and Thailand by sea.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="description">
             <h2>EXPORTS</h2>
             <br>
             <br> In 2015 Vietnam exported $185B, making it the 24th largest exporter in the world. During the last five years
@@ -62,10 +134,21 @@
         <div class="export-illustration">
             <svg width="960" height="400" viewBox="0 0 960 400" preserveAspectRatio="xMidYMid meet"></svg>
         </div>
+        <footer class="description">
+            <h2>References & Data Source:</h2>
+            <ul>
+                <ol>
+                    <a href="https://comtrade.un.org/">UN Comtrade Database</a>
+                </ol>
+                <ol>
+                    <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD">World Bank - GDP per capita (current US$)</a>
+                </ol>
+            </ul>
+        </footer>
     </div>
 
-
-    <script src=" script.js "></script>
+    <script src="script_treemap_export.js"></script>
+    <script src="script_linechart_overview.js"></script>
 
 </body>
 
