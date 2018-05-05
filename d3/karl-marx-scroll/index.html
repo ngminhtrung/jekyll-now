@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+        crossorigin=""></script>
+
+
+    <script src="d3.v4.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #F1ECE9;
+            color: #333A42;
+        }
+
+        #container {
+            position: relative;
+            z-index: 100;
+            height: 100vh;
+            top: 5vh;
+            overflow: scroll;
+        }
+
+        .panel {
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 25vh;
+            padding-bottom: 25vh;
+        }
+
+        .panel:first-child {
+            padding-top: 30vh;
+        }
+
+        .panel:last-child {
+            padding-bottom: 45vh;
+        }
+
+        #mapid {
+            height: 25vh;
+            width: 100%;
+            position: absolute !important;
+            z-index: 150;
+            top: 5vh;
+            right: 0;
+        }
+
+        header {
+            background-color: #212831;
+            color: white;
+        }
+
+        @media screen and (min-width: 1024px) {
+
+            body {
+                background-color: #1D1F20;
+            }
+            #container {
+                width: 800px;
+                margin: 0 auto;
+                background-color: beige
+            }
+
+            #mapid {
+                width: 800px;
+                margin: 0 auto;
+                height: 25vh;
+                position: sticky !important;
+                z-index: 150;
+                top: 5vh;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        Karl Mark (1818 - 2018)
+    </header>
+    <div id="mapid"></div>
+    <div id="container">
+        <div id="content">
+
+
+            <div class="panel">
+                <p>
+                    <strong>NGÀY 5/5/1818, KARL MARX SINH RA TẠI TRIER, ĐỨC.</strong>
+                    <br>
+                    <br> Marx sinh ra trong một gia đình trưởng giả, cha là luật sư và có tư tưởng cấp tiến, rộng rãi, cởi mở
+                    cả về học thức chính trị lẫn tôn giáo. Nhưng ông bố Marx tự do, phóng khoáng bao nhiêu thì mẹ Marx bảo
+                    thủ, chật hẹp bấy nhiêu, nhất là sau này khi thấy Marx đi vào con đường trái ngược với nếp sống và lý
+                    tưởng của tầng lớp bà. Sau này, khi Marx túng thiếu, bà nhẫn tâm để mặc Marx mà không hề giúp một xu
+                    nào.
+                    <br>
+                    <br> Gia đình Marx là Do Thái nhưng lại chống đối truyền thống chật hẹp, giáo điều của đạo Do Thái và chủ
+                    trương một thái độ lãnh đạm trước mọi tôn giáo. Những điều đó cũng tác động đến Marx nên ngay từ nhỏ,
+                    Marx cũng dửng dưng trước các tôn giáo.
+                    <br>
+                    <br> Marx tới trường năm 1830, học trung bình nhưng rất nghịch và hay làm thơ mỉa mai đả kích những kẻ thù
+                    trong nhà trường. Đó cũng là đặc tính ông giữ mãi trong suốt cuộc đời đấu tranh. Nhưng ngay từ nhỏ, Marx
+                    đã thể hiện những tư tưởng nhân bản. Như trong một bài luận, làm khi mới 16-17 tuổi, Marx viết "Lịch
+                    sử vẫn coi những vĩ nhân là những người tranh đấu cho hạnh phúc của mọi người. Kinh nghiệm cũng chỉ ra
+                    rằng những người hạnh phúc hơn cả là những người mang lại hạnh phúc cho người khác...Còn con người lý
+                    tưởng là con người biết hy sinh cho nhân loại". Có lẽ từ ngày đó, Marx đã ước muốn được cống hiến và
+                    hy sinh cho nhân loại.
+                    <br>
+                    <br>
+                    <strong>NĂM 1835, MARX TỚI HỌC ĐẠI HỌC TẠI BONN</strong>, dù rất chăm chỉ nhưng Marx cũng gia nhập một vài tổ
+                    chức của sinh viên, như "Câu lạc bộ quán rượu" với mục đích du hí. Có lần Marx và bạn bè từng bị cảnh
+                    sát bắt vì uống rượu say và phá rối trật tự, và nhóm "Câu lạc bộ thi sĩ' vì ông thích thơ và thích những
+                    ý tưởng cách mạng. Marx không phải là người ngăn nắp, nhà ông như một kho lớn bụi bặm, đầy giấy tờ chồng
+                    chất lộn xộn. Marx thường ăn mặc xộc xệch, đi đi lại lại trong làn thuốc lá cay sè. Nhưng Marx là một
+                    học giả điềm tĩnh, chậm rãi, tỉ mỉ, cần cù và có lúc cầu toàn.
+                </p>
+            </div>
+
+            <div class="panel">
+                <p> Thiên tài của Marx bộc lộ từ rất sớm. Năm 1837, khi mới 19 tuổi, Marx đã tham gia nhóm "Câu lạc bộ các tiến
+                    sĩ", qui tụ nhiều sinh viên, trí thức, đa phần đều nhiều tuổi hơn. Hàng ngày, họ thường họp tại nhà một
+                    người trong nhóm hay các quán cạnh trường học. Ngày 30/3/1841, Marx được Đại học Berlin cấp chứng chỉ
+                    tốt nghiệp. Ngày 6/4/1841, Marx gửi luận án tiến sĩ "Sự khác biệt giữa triết học và bản chất của Democrite
+                    ( ) và Epicurus ( )". Một vài tuần sau Marx bảo vệ thành công, khi ấy Marx mới 23 tuổi.
+                    <br>
+                    <br>
+                    <strong>NĂM 1843, MARX TỚI PARIS, PHÁP</strong>
+                    <br>
+                    <br> Khi còn đi học, Marx đã mơ được dạy ở Berlin hay ở Bonn, nhưng rồi không thực hiện được. sau đó, Marx
+                    quay sang làm báo, lúc đầu chỉ là cộng tác nhưng sau làm chủ bút và là linh hồn của tờ Rheinische Zeitung,
+                    xuất bản ở Cologne từ 1/1/1842. Sự thông minh, chính trực và thiên tài đã đưa Marx lên địa vị lãnh đạo
+                    dù Marx trẻ hơn nhiều đồng chí của mình. Hess, chủ bút tờ Rheinische Zeitung đã từng ca ngợi rằng Marx
+                    la "nhà triết học hiện đại lớn nhất và có lẽ đích thực nhất...vừa có một bộ óc mỉa mai, vừa có một trí
+                    tuệ triết học sâu sắc tột độ. Anh hãy tưởng tượng Rousseau, Voltaire, Holbach, Lessing, Heine và Hegel
+                    hòa đồng vào một người. Đó là tiến sĩ họ Marx".
+                    <br>
+                    <br> Tờ báo bán rất chạy nhưng vì đả kích nhà vua và đả kích Sa Hoàng nên bị đình bản. Sau đó, Marx sang
+                    Thụy sĩ dựng ra một tờ báo lấy tên "Tập san Pháp-Đức", hy vọng kết hợp ý tưởng của khối óc Đức và tinh
+                    thần cách mạng Pháp. Nhưng số đầu tiên cũng là số cuối cùng. Sau khi hợp tác với một tờ khác cũng thất
+                    bại, Marx bị trục xuất khỏi Paris.
+
+
+
+                </p>
+            </div>
+
+            <div class="panel">
+                <p>
+                    <strong>NGÀY 5/2/1845, MARX ĐẾN BRUSSELES, BỈ</strong>.
+                    <br>
+                    <br> Tình bạn với Engels là điều thực sự có ý nghĩa và quan trọng trong cuộc sống và sự nghiệp của Marx.
+                    Suốt cuộc đời đấu tranh và hoạt động Marx gặp và quen nhiều người nhưng không ai thân thiết và trung
+                    thành như Engels. Từ khi gặp nhau cho đến khi nhắm mắt, trong những thử thách sóng gió của cuộc đấu tranh
+                    cũng như những giờ phút thất bại, lưu đày và cùng cực, hai người không bao giờ bỏ nhau. Engels không
+                    những là người đồng chí có điều kiện nhất để nâng đỡ gia đình Marx trong những ngày túng bấn ở London
+                    mà còn cộng tác chặt chẽ trong quá trình xây dựng chủ nghĩa Marx. Một tình bạn gần 40 năm trời với thư
+                    từ trao đổi giữa hai người gồm 9 tập, mỗi tập gần 300 trang.
+                    <br>
+                    <br> Tháng 6/1847, hội nhóm ở London tổ chức lại và đổi tên thành 'Hội những người Cộng sản', Marx và Engels
+                    đề nghị sửa khẩu hiệu thành "Người vô sản ở mọi xứ hãy đoàn kết lại!". Cuối năm đó, Marx được hội giao
+                    nhiệm vụ viết lời tuyên ngôn. Đầu năm 1848, Marx soạn xong và gửi cho Trung ương. Đó chính là bản Tuyên
+                    ngôn Cộng sản nổi tiếng: "Một bóng ma đang ám ảnh châu Âu: bóng ma của chủ nghĩa Cộng sản!..." Năm đó
+                    Marx mới tròn 30 tuổi.
+                    <strong>NĂM 1848, MARX QUAY VỀ COLOGNE, ĐỨC</strong>.
+                    <br>
+                    <br> Marx không chỉ nổi tiếng vì sự thiên tài mà còn vì sự chính trực của Marx. bất cứ khi nào thấy những
+                    người đồng chí đi ngược lại mục tiêu chung, hoặc có những hành động phi cách mạng, Marx dều chống lại.
+                    Marx chống khuynh hướng “không tưởng” phác họa những viễn cảnh đẹp đẽ nhưng không thể thực hiện được,
+                    vừa chống lại khuynh hướng “hiếu động” theo tình cảm hay quá duy lý mà không dựa vào những phân tích
+                    chính xác. Đã có lần Marx nói “Tôi không phải là người Mác xít”, để chống lại giáo điều cứng nhắc, câu
+                    nệ một cách máy móc. Đảng cộng sản là cần thiết nhưng không nên coi đảng như một đàn cừu chỉ biết vâng
+                    theo một lãnh tụ cách biệt, dù là tài ba, nổi tiếng, hoặc ngược lại bình dân quá mức để quần chúng coi
+                    thường.
+                    <br>
+                    <br> Vào thời gian đầu của sự nghiệp cách mạng, khi còn ở Bruxelles, có một thợ máy người Đức tên là Weitling
+                    đến thăm ông. Weitling là người dạn dày của phong trào công nhân; chân còn mang sẹo của xiềng xích ở
+                    các nhà tù Phổ, và có một thành tựu đầy vinh quang chiến đấu vì lợi ích của công nhân Đức. Weitling đến
+                    để nói với Marx về những vấn đề như công lý, tình anh em và đoàn kết nhưng Weitling đáng thương, bối
+                    rối trước các câu hỏi về nguyên lý cơ bản của chủ nghĩa xã hội. Marx bực dọc đi lại trong phòng, đạp
+                    xuống bán mạnh đến nỗi cây đèn suýt đổ và quát "Sự ngu dốt không bao giờ giúp ai hết!"
+
+
+
+                </p>
+            </div>
+
+            <div class="panel">
+                <p>
+                    <strong>NĂM 1850, MARX ĐẾN LONDON, ANH, VÀ SỐNG TẠI ĐÂY ĐẾN LÚC MÂT NĂM 1883.</strong>
+                    <br>
+                    <br> Nhưng trên hết mọi thứ xảy ra, Marx sống rất nghèo khổ. Hầu như suốt cuộc đời, ông sống một cuộc đời
+                    ít sự kiện ở London, vùi đầu vào những cuốn sách trong thư viện, viết sách và viết báo. Nhưng tất cả
+                    những thứ đó không nuôi nổi Marx và gia đình. Ông và gia đình sống được hoàn toàn nhờ vào Engels. Trong
+                    một bức thư gửi bạn bè, Jenny viết rằng bất chấp mọi cay đắng, cực khổ và thiếu thốn "...Nhưng chồng
+                    tôi lại nghĩ khác. Cả trong những lúc rất khốn cực, chưa bao giờ, anh ấy thất vọng về tương lai mà luôn
+                    luôn giữ vững vẻ vui đùa".
+                    <br>
+                    <br> Năm 1854, gia đình Marx dọn đến khu Soho, khu bình dân nghèo khổ nhất. Năm đó, dịch tả tàn phá cả khu
+                    phố Soho và cướp đi ba người con của ông. Những dự định xuất bản không thành công vì không NXB nào dám
+                    in những cuốn sách như vậy, còn những cuốn về phong trào cộng sản thì chẳng nhận được xu nào vì đó là
+                    viết cho Đảng! Trong thư gửi Engels khi Jenny và con bị ốm, Marx viết "Tôi vẫn chưa đến bác sĩ vì không
+                    còn tiền. từ 8 đến 10 ngày nay, tôi nuôi cả nhà bằng bánh và khoai lang. Và hôm nay, tôi tự hỏi không
+                    biết còn kiếm được gì nữa hay không?".
+                    <br>
+                    <br> Năm 1855, Marx mất đứa con nhỏ nhất khi mới được 4 tháng. Từ năm 1860 đến 1863 có lẽ là những năm tháng
+                    cơ cực nhất của ông. Mọi sự chỉ trông chờ vào Engels, có được đồng tiền nào đều gửi hết cho Marx. Mùa
+                    hè 1862, Marx thử lần cuối cùng, gửi thư xin tiền (không biết xin ai nhỉ?) nhưng bà nhất định từ chối.
+                    Cùng cực quá, Marx làm đơn xin một chân thư ký đường sắt nhưng bị từ chối vì chữ xấu quá. Nhưng bất chấp
+                    tất cả những cùng cực đó, Marx vẫn không quên công trình vĩ đại nhất của mình. Tháng 3/1867, tập đầu
+                    tiên trong bộ "TƯ BẢN" hoàn tất và in xong.
+                    <br>
+                    <br> Lý tưởng Marx là phục vụ nhân loại, đó là nguyên nhân mọi cơ cực lầm than của đời Marx nhưng cũng là
+                    lẽ sống của cuộc đời ông!
+                    <br>
+                    <br> Trích từ:
+                    <br> NHỮNG ĐIỀU CHƯA BIẾT VỀ CUỘC ĐỜI KARL MARX. Nguyễn Cảnh Bình, Tháng 7/2002.
+                    <br>
+                    <br>Nhiều năm qua, sau sự sụp đổ của phong trào cộng sản thế giới, dường như những nghiên cứu về Marx, người
+                    sáng lập Quốc tế Cộng sản thế giới ít được mọi người quan tâm. Rất nhiều người nói về Marx, nói về tư
+                    tưởng và tác phẩm của Marx nhưng rất ít người thực sự biết về con người và cuộc đời của Marx. Bài viết
+                    này chỉ hy vọng mang lại cho bạn đọc một vài nét về tính cách và cuộc đời của ông. Một người rất thiên
+                    tài, rất chính trực và biết hy sinh, nhưng cũng rất lãng mạn.
+
+
+
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        var mymap = L.map('mapid').setView([50.877808, 2.341222], 5);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 5,
+            minZoom: 5,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(mymap);
+
+        const karlMaxPlaces = {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "LineString",
+                        "coordinates": [
+                            [
+                                6.619332723021898,
+                                49.750391594194056
+                            ],
+                            [
+                                7.09836525677224,
+                                50.73542231114523
+                            ],
+                            [
+                                2.351620885385273,
+                                48.856468878620305
+                            ],
+                            [
+                                4.349092520286945,
+                                50.84931560400856
+                            ],
+                            [
+                                6.956432767527076,
+                                50.9465396681795
+                            ],
+                            [
+                                -0.1610613396599092,
+                                51.512770492027144
+                            ]
+                        ]
+                    },
+                    "properties": {}
+                }
+            ]
+        }
+
+        L.geoJSON(karlMaxPlaces).addTo(mymap);
+
+        const karlMarxPath = d3.select("path");
+
+        const underlyingPath = d3.select("svg")
+            .append("path")
+            .attr("class", "underlying-path")
+            .attr("d", karlMarxPath.attr("d"))
+            .attr("stroke-dasharray", "5, 5")
+            .attr("stroke", "lightgrey")
+            .attr("stroke-width", "2px")
+            .attr("fill", "none");
+
+
+        let totalPathLength = karlMarxPath.node().getTotalLength();
+
+        karlMarxPath
+            .attr("stroke-width", "5px")
+            .attr("stroke", "orange")
+            .style("stroke-dasharray", `${totalPathLength} ${totalPathLength}`) // nhân đôi path, 1 visible, 1 invisible
+            .style("stroke-dashoffset", totalPathLength + 'px') // dịch toàn bộ path sang bên trái 1 khoảng bằng độ dài path
+
+        var WIDTH = 0.9 * window.innerWidth / 2;
+        var HEIGHT = 0.9 * window.innerHeight;
+
+        var body = d3.select('body').node();
+        var container = d3.select('#container');
+        var content = d3.select('#content');
+
+        var SCROLL_LENGTH = content.node().getBoundingClientRect().height - HEIGHT;
+
+        var karlMarxPathScale = d3.scaleLinear()
+            .domain([0, SCROLL_LENGTH])
+            .range([0, karlMarxPath.node().getTotalLength()])
+            .clamp(true);
+
+        var scrollTop = 0;
+        var newScrollTop = 0;
+
+        container
+            .on("scroll.scroller", function () {
+                newScrollTop = container.node().scrollTop
+            });
+
+        var setDimensions = function () {
+            WIDTH = 0.9 * window.innerWidth / 2;
+            HEIGHT = 0.9 * window.innerHeight;
+            SCROLL_LENGTH = content.node().getBoundingClientRect().height - HEIGHT;
+
+            karlMarxPathScale
+                .domain([0, SCROLL_LENGTH])
+                .range([0, karlMarxPath.node().getTotalLength()]);
+
+            karlMarxPath
+                .style('stroke-dasharray', function (d) {
+                    var l = d3.select(this).node().getTotalLength();
+                    return l + 'px, ' + l + 'px';
+                })
+                .style('stroke-dashoffset', function (d) {
+                    return d3.select(this).node().getTotalLength() - karlMarxPathScale(scrollTop) + 'px';
+                });
+
+        }
+
+        var render = function () {
+            if (scrollTop !== newScrollTop) {
+                scrollTop = newScrollTop
+
+                karlMarxPath
+                    .style('stroke-dashoffset', function (d) {
+                        return karlMarxPath.node().getTotalLength() - karlMarxPathScale(scrollTop) + 'px';
+                    });
+
+            }
+
+            window.requestAnimationFrame(render)
+        }
+        window.requestAnimationFrame(render)
+
+        window.onresize = setDimensions
+
+    </script>
+</body>
+
+</html>
