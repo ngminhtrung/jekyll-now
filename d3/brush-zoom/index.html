@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <style>
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+        .area {
+            fill: steelblue;
+            clip-path: url(#clip);
+        }
+
+        p {
+            width: 100%;
+            text-align: center;
+            color: orange;
+        }
+
+        header {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .zoom {
+            cursor: move;
+            fill: none;
+            pointer-events: all;
+        }
+    </style>
+    <script src="d3.v4.min.js"></script>    
+    <title>Brush & Zoom</title>
+</head>
+
+<body>
+    <div class="container">
+        <header> Vietnam Consumer Price Index (2010 - 2016) </header>    
+        <h3>Data source: <a href="https://www.gso.gov.vn/Default_en.aspx?tabid=491" target="_blank">Statistic Office of Vietnam</a>. Taken date: 28th April 2018</h3>
+        <p>Chart built by D3.js. Please zoom and brush to explore it!</p>
+        <svg 
+            width="960" 
+            height="500" 
+            viewBox="0 0 960 500"
+            preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+    <script>
+        const svg = d3.select("svg"),
+            margin = { top: 20, right: 20, bottom: 110, left: 40 },
+            margin2 = { top: 430, right: 20, bottom: 30, left: 40 },
+            width = +svg.attr("width") - margin.left - margin.right,
+            height = +svg.attr("height") - margin.top - margin.bottom,
+            height2 = +svg.attr("height") - margin2.top - margin2.bottom;
+
+        const x = d3.scaleTime().range([0, width]),
+            x2 = d3.scaleTime().range([0, width]),
+            y = d3.scaleLinear().range([height, 0]),
+            y2 = d3.scaleLinear().range([height2, 0]);
+
+        const xAxis = d3.axisBottom(x),
+            xAxis2 = d3.axisBottom(x2),
+            yAxis = d3.axisLeft(y);
+
+        const brush = d3.brushX()
+            .extent([[0, 0], [width, height2]]) // chính là toàn bộ area2 bên dưới area1
+            .on("brush end", brushed);
+
+        const zoom = d3.zoom()
+            .scaleExtent([1, Infinity])
+            .translateExtent([[0, 0], [width, height]])
+            .extent([[0, 0], [width, height]])
+            .on("zoom", zoomed);
+
+        const area = d3.area()
+            .curve(d3.curveMonotoneX)
+            .x(function (d) { return x(d.date); })
+            .y0(height)
+            .y1(function (d) { return y(d.price); });
+
+        const area2 = d3.area()
+            .curve(d3.curveMonotoneX)
+            .x(function (d) { return x2(d.date); })
+            .y0(height2)
+            .y1(function (d) { return y2(d.price); });
+
+        svg.append("defs").append("clipPath")
+            .attr("id", "clip")
+            .append("rect")
+            .attr("width", width)
+            .attr("height", height);
+
+        const focus = svg.append("g")
+            .attr("class", "focus")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        const context = svg.append("g")
+            .attr("class", "context")
+            .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
+
+        d3.csv("data.csv", type, function (error, data) {
+            if (error) throw error;
+
+            x.domain(d3.extent(data, function (d) { return d.date; }));
+            y.domain([d3.min(data, function (d) { return d.price; }) - 1, d3.max(data, function (d) { return d.price; })]);
+            x2.domain(x.domain());
+            y2.domain(y.domain());
+
+            const domainX2 = x2.domain();
+            const domainX = x.domain();
+            // console.log({ domainX, domainX2 });
+
+            focus.append("path")
+                .datum(data)
+                .attr("class", "area")
+                .attr("d", area);
+
+            focus.append("g")
+                .attr("class", "axis axis--x")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis);
+
+            focus.append("g")
+                .attr("class", "axis axis--y")
+                .call(yAxis);
+
+            context.append("path")
+                .datum(data)
+                .attr("class", "area")
+                .attr("d", area2);
+
+            context.append("g")
+                .attr("class", "axis axis--x")
+                .attr("transform", "translate(0," + height2 + ")")
+                .call(xAxis2);
+
+            context.append("g")
+                .attr("class", "brush")
+                .call(brush)
+                .call(brush.move, x.range()); 
+            // brush.move(group, selection)
+            // group = context.g.brush
+            // selection = x.range() = [x_min, x_max].
+            // Bởi x thay đổi (do tác động của zoomed), giá trị x.range() cũng sẽ thay đổi theo
+
+            svg.append("rect")
+                .attr("class", "zoom")
+                .attr("width", width)
+                .attr("height", height)
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+                .call(zoom);
+        });
+
+        function brushed() {
+            // Khi zoom, hàm brushed() không được gọi
+            if (d3.event.sourceEvent && d3.event.sourceEvent.type === "zoom") return; // ignore brush-by-zoom
+            const selection = d3.event.selection || x2.range();
+            const d3EventSelection = d3.event.selection;
+            const x2Range = x2.range();
+            console.log(d3EventSelection);
+            console.log(x2.invert, x2);
+            x.domain(selection.map(x2.invert, x2));
+            focus.select(".area").attr("d", area);
+            focus.select(".axis--x").call(xAxis);
+            svg.select(".zoom").call(zoom.transform, d3.zoomIdentity
+                .scale(width / (selection[1] - selection[0]))
+                .translate(-selection[0], 0));
+        }
+
+        function zoomed() {
+            if (d3.event.sourceEvent && d3.event.sourceEvent.type === "brush") return; // ignore zoom-by-brush
+
+            const t = d3.event.transform;
+            const newDomainX2 = t.rescaleX(x2).domain();             
+            x.domain(newDomainX2); 
+            focus.select(".area").attr("d", area);
+            focus.select(".axis--x").call(xAxis);
+            context.select(".brush").call(brush.move, x.range().map(t.invertX, t));
+        }
+
+        const parseDate = d3.timeParse("%b %Y");
+
+        function type(d) {
+            d.date = parseDate(d.date);
+            d.price = +d.price;
+            return d;
+        }
+
+    </script>
+</body>
+
+</html>
