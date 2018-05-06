@@ -8,8 +8,11 @@ var data = [
 	{ "area": "Mekong River Delta", "age1": 8.19, "age2": 20, "age3":20}];
 
 var barWidth = 85;
-var w = data.length * barWidth;
-var h = 600;
+
+const svg = d3.select("svg")
+
+var w = +svg.attr("width");
+var h = +svg.attr("height");
 var barHeight = 30;
 var margin = {
 	top: 100,
@@ -46,10 +49,6 @@ var yGridlines =  d3.axisLeft(y)
 					.tickSize(-width,0,0)
 					.tickFormat("");
 
-var svg = d3.select("body").append("svg")
-			.attr("id", "chart")
-			.attr("width", w)
-			.attr("height", h);
 
 var chart = svg.append("g")
 			.classed("display", true)
