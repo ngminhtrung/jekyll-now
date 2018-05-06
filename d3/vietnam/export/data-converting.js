@@ -28,8 +28,6 @@ d3.csv("data_categories.csv", function (error, data) {
 
         finalData["children"] = arrayOfCategories;
 
-        // console.save(finalData, "finalData.json");
-
     });
 });
 

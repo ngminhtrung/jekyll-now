@@ -23,7 +23,6 @@ function drawGeneralCharts(selector, dataName) {
         .y(d => y(d.value));
 
     d3.csv(dataName, function (d) {
-        console.log(d);
         d.year = parseTime(d.year);
         d.value = +d.value;
         return d;
@@ -32,8 +31,6 @@ function drawGeneralCharts(selector, dataName) {
 
         x.domain(d3.extent(data, d => d.year));
         y.domain(d3.extent(data, d => d.value));
-
-        console.log(y.domain());
 
         g.append("text")
             .attr("class", "x-axis-label-2007")
