@@ -13,6 +13,7 @@
         * {
             padding: 0;
             margin: 0;
+            -webkit-box-sizing: border-box;
             box-sizing: border-box;
         }
 
@@ -22,7 +23,10 @@
         }
 
         .chart-overview {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
         }
 
@@ -47,7 +51,7 @@
 
         header {
             width: 1040px;
-            height: 200px;
+            height: 300px;
             margin: 0 auto;
             background-image: url("./vietnam.jpeg");
             background-size: cover;
@@ -55,8 +59,13 @@
 
         .container {
             background-color: #212831;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
             padding: 20px;
             max-width: 1040px;
@@ -79,9 +88,9 @@
         <div class="description overview">
             <h2>OVERVIEW</h2>
             <br>
-            <br> Vietnam is the 24th largest export economy in the world and the 50th most complex economy according to the Economic
-            Complexity Index (ECI). In 2015, Vietnam exported $185B and imported $169B, resulting in a positive trade balance
-            of $15.8B. In 2015 the GDP of Vietnam was $193B and its GDP per capita was $6.03k.
+            <br> Việt Nam đứng thứ 24 trên thế giới vể tổng giá trị xuất khẩu, và có chỉ số Economic Complexity Index (ECI) đứng
+            thứ 50. Năm 2015, Việt Nam xuất khẩu 185 tỷ USD, và nhập khẩu 169 tỷ USD, đem lại mức thặng dư là 15.8 tỷ USD.
+            Năm 2015, GDP của Việt Nam đạt 193 tỷ USD, GPD trên đầu người là 6003 USD.
             <br>
             <br>
             <div class="chart-overview">
