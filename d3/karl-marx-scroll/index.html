@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
         crossorigin="" />
     <!-- Make sure you put this AFTER Leaflet's CSS -->
@@ -19,31 +20,32 @@
             margin: 0;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
+            font-family: 'Source Sans Pro', sans-serif;
         }
 
         body {
-            background-color: #F1ECE9;
-            color: #333A42;
+            background-color: #333A42;
+            color: white;
         }
 
         #container {
             position: relative;
             z-index: 100;
             height: 100vh;
-            top: 5vh;
+            /* top: 5vh; */
             overflow: scroll;
         }
 
         .panel {
             width: 100%;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-top: 25vh;
+            padding-left: 30px;
+            padding-right: 30px;
+            /* padding-top: 25vh; */
             padding-bottom: 25vh;
         }
 
         .panel:first-child {
-            padding-top: 50vh;
+            padding-top: 55vh;
         }
 
         .panel:last-child {
@@ -67,22 +69,35 @@
         @media screen and (min-width: 1024px) {
 
             body {
-                background-color: #1D1F20;
+                background-color: lightgrey;
             }
             #container {
-                width: 800px;
+                width: 1024px;
                 margin: 0 auto;
-                background-color: beige
+                background-color: #333A42;
+                margin-top: 0vh;
             }
 
             #mapid {
-                width: 800px;
+                width: 1024px;
                 margin: 0 auto;
                 height: 25vh;
                 position: -webkit-sticky !important;
                 position: sticky !important;
                 z-index: 150;
                 top: 5vh;
+            }
+
+            .panel {
+                width: 100%;
+                padding-left: 40px;
+                padding-right: 40px;
+                /* padding-top: 25vh; */
+                padding-bottom: 25vh;
+            }
+
+            .panel:first-child {
+                padding-top: 10vh;
             }
         }
     </style>
