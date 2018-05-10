@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .node {
+            cursor: pointer;
+            stroke: #3182bd;
+            stroke-width: 1.5px;
+        }
+
+        .link {
+            fill: none;
+            stroke: #9ecae1;
+            stroke-width: 1.5px;
+        }
+    </style>
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <title>Collapsable Force Layout With Non-Tree Data</title>
+</head>
+
+<body>
+    <svg width="960" height="500"></svg>
+    <script>
+
+        var root;
+        const svg = d3.select("svg");
+
+        const width = +svg.attr("width");
+        const height = +svg.attr("height");
+
+        const simulation = d3.forceSimulation()
+            .force("link", d3.forceLink().id(d => d.id).strength(0.5))
+            .force("charge", d3.forceManyBody())
+            .force("center", d3.forceCenter(width / 2, height / 2));
+
+        const drag = d3.drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended);
+
+        //Added markers to indicate that this is a directed graph
+        svg.append("defs").selectAll("marker")
+            .data(["arrow"])
+            .enter().append("marker")
+            .attr("id", function (d) { return d; })
+            .attr("viewBox", "0 -5 10 10")
+            .attr("refX", 15)
+            .attr("refY", -1.5)
+            .attr("markerWidth", 4)
+            .attr("markerHeight", 4)
+            .attr("orient", "auto")
+            .append("path")
+            .attr("d", "M0,-5L10,0L0,5");
+
+        let link = svg.selectAll(".link");
+        let node = svg.selectAll(".node");
+
+        d3.json("miserables.json", function (data) {
+            root = data;
+            console.log(root.links);
+            console.log(root.nodes);
+            //Give nodes ids and initialize variables
+
+            for (var i = 0; i < root.nodes.length; i++) {
+                const node = root.nodes[i];
+                // node.id = i;
+                node.collapsing = 0;
+                node.collapsed = false;
+            }
+
+            //Give links ids and initialize variables
+            // for (var i = 0; i < root.links.length; i++) {
+            //     const link = root.links[i];
+            //     link.source = root.nodes[link.source];
+            //     link.target = root.nodes[link.target];
+            //     link.id = i;
+            //     console.log(link);
+            // }
+
+            var link = svg.append("g")
+                .attr("class", "links")
+                .selectAll("line")
+                .data(root.links)
+                .enter().append("line");
+                // .attr("stroke-width", d => Math.sqrt(d.value));
+
+            var node = svg.append("g")
+                .attr("class", "nodes")
+                .selectAll("circle")
+                .data(root.nodes)
+                .enter()
+                .append("circle")
+                .attr("r", 5)
+                .attr("fill", d => color(d.group))
+                .call(drag)
+                .on("click", clickEventHanlder);
+
+
+            simulation
+                .nodes(root.nodes)
+                .on("tick", tickEventHanlder);
+
+            simulation
+                .force("link")
+                .links(root.links);
+
+            update();
+        });
+
+        function update() {
+            //Keep only the visible nodes
+            var nodes = root.nodes.filter(function (d) {
+                return d.collapsing == 0;
+            });
+            var links = root.links;
+            //Keep only the visible links
+            links = root.links.filter(function (d) {
+                return d.source.collapsing == 0 && d.target.collapsing == 0;
+            });
+
+            // Update the links…
+            link = link.data(links, function (d) { return d.id; });
+
+            // Exit any old links.
+            link.exit().remove();
+
+            // Enter any new links.
+            link.enter().insert("line", ".node")
+                .attr("class", "link")
+                .attr("x1", function (d) { return d.source.x; })
+                .attr("y1", function (d) { return d.source.y; })
+                .attr("x2", function (d) { return d.target.x; })
+                .attr("y2", function (d) { return d.target.y; })
+                .attr("marker-end", "url(#arrow)");
+
+            // Update the nodes…
+            // node = node.data(nodes, function (d) { return d.id; }).style("fill", color);
+
+            // Exit any old nodes.
+            // node.exit().remove();
+
+            // Enter any new nodes.
+            // node.enter().append("circle")
+            //     .attr("class", "node")
+            //     .attr("cx", function (d) { return d.x; })
+            //     .attr("cy", function (d) { return d.y; })
+            //     .attr("r", function (d) { return Math.sqrt(d.size) / 10 || 4.5; })
+            //     .style("fill", color)
+            //     .on("click", click)
+            //     .call(drag);
+        }
+
+        function tickEventHanlder() {
+            console.count("ticking ticking ...");
+            link.attr("x1", function (d) { return d.source.x; })
+                .attr("y1", function (d) { return d.source.y; })
+                .attr("x2", function (d) { return d.target.x; })
+                .attr("y2", function (d) { return d.target.y; });
+
+            node.attr("cx", function (d) { return d.x; })
+                .attr("cy", function (d) { return d.y; });
+        }
+
+        // Color leaf nodes orange, and packages white or blue.
+        function color(d) {
+            return d.collapsed ? "#3182bd" : d.children ? "#c6dbef" : "#fd8d3c";
+        }
+
+        // Toggle children on click.
+        function click(d) {
+            if (!d3.event.defaultPrevented) {
+                //check if link is from this node, and if so, collapse
+                root.links.forEach(function (l) {
+                    if (l.source.id == d.id) {
+                        if (d.collapsed) {
+                            l.target.collapsing--;
+                        } else {
+                            l.target.collapsing++;
+                        }
+                    }
+                });
+                d.collapsed = !d.collapsed;
+            }
+            update();
+        }
+
+        function dragstarted(d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+
+        function dragged(d) {
+            d.fx = d3.event.x;
+            d.fy = d3.event.y;
+        }
+
+        function dragended(d) {
+            if (!d3.event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+
+    </script>
+
+</body>
+
+</html>
